@@ -3,6 +3,7 @@ import "@/App.css";
 import { BrowserRouter, Routes, Route, Link, NavLink, useParams, useNavigate } from "react-router-dom";
 import { TRIP, DAYS, GUIDES, DOCUMENTS } from "@/data/trip";
 import daysFull from "@/data/days_full.json";
+import introFull from "@/data/intro_full.json";
 
 const Icon = ({ name }) => <i className={`fa-solid fa-${name}`}></i>;
 
@@ -272,38 +273,17 @@ function MangerPage() {
 }
 
 function Guides() {
+  // Skip the 3 top H1 titles (Carnet de route / Familles / Ouest été 2026) since we already show them elsewhere
+  const blocks = (introFull.blocks || []).filter((b, i) => !(i < 3 && b.type === "h1"));
   return (
     <div className="container" data-testid="guides-page">
       <h1 className="section-title" style={{ fontSize: 32 }}><Icon name="book" /> Infos pratiques</h1>
-      <p style={{ color: "var(--ink-2)", marginTop: -8, marginBottom: 24 }}>Conseils et informations utiles pour votre séjour.</p>
-
-      <div className="guides-grid">
-        {GUIDES.map((g, i) => (
-          <div key={i} className="card" data-testid={`guide-${i}`}>
-            <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 8 }}>
-              <div className="guide-icon"><Icon name={g.icon} /></div>
-              <h3 style={{ margin: 0 }}>{g.title}</h3>
-            </div>
-            <p style={{ marginTop: 8 }}>{g.description}</p>
-          </div>
-        ))}
+      <p style={{ color: "var(--ink-2)", marginTop: -8, marginBottom: 24 }}>
+        Extrait complet du carnet de route original — cartes, circuits, mini-guides et pass parcs.
+      </p>
+      <div className="story" data-testid="guides-intro">
+        <RenderBlocks blocks={blocks} />
       </div>
-
-      <h2 className="section-title" style={{ marginTop: 40 }}><Icon name="file-lines" /> Documents complémentaires</h2>
-      <p style={{ color: "var(--ink-2)", marginTop: -8, marginBottom: 16, fontSize: 14 }}>Cliquez sur un guide pour l'ouvrir sur Google Docs, télécharger en PDF ou EPUB.</p>
-      {DOCUMENTS.map((d, i) => (
-        <div key={i} className="card" style={{ display: "flex", alignItems: "center", gap: 14, padding: "16px 22px" }} data-testid={`document-${i}`}>
-          <div className="guide-icon"><Icon name="file-lines" /></div>
-          <div style={{ flex: 1, minWidth: 0 }}>
-            <div style={{ fontWeight: 600, marginBottom: 4 }}>{d.title}</div>
-            <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-              <a href={d.url} target="_blank" rel="noreferrer" className="chip" style={{ textDecoration: "none" }} data-testid={`doc-open-${i}`}><Icon name="up-right-from-square" /> Ouvrir</a>
-              <a href={d.pdf} target="_blank" rel="noreferrer" className="chip" style={{ textDecoration: "none" }} data-testid={`doc-pdf-${i}`}><Icon name="file-pdf" /> PDF</a>
-              <a href={d.epub} target="_blank" rel="noreferrer" className="chip" style={{ textDecoration: "none" }} data-testid={`doc-epub-${i}`}><Icon name="book" /> EPUB</a>
-            </div>
-          </div>
-        </div>
-      ))}
     </div>
   );
 }
