@@ -47,11 +47,38 @@ function RichText({ text }) {
   return <>{parts}</>;
 }
 
+// Detect if a heading text is about restaurants (to filter these sections from récit)
+function isRestoHeading(text) {
+  if (!text) return false;
+  const t = text.toLowerCase();
+  return t.includes("restaurant") || t.includes("restos") || t.includes("où manger") || t.includes("ou manger");
+}
+
 function RenderBlocks({ blocks }) {
   if (!blocks || blocks.length === 0) return null;
+  // Filter out restaurant sections: from a resto heading, skip until next H heading
+  const filtered = [];
+  let skip = false;
+  for (let i = 0; i < blocks.length; i++) {
+    const b = blocks[i];
+    if ((b.type === "h1" || b.type === "h2" || b.type === "h3" || b.type === "h4")) {
+      if (isRestoHeading(b.text)) { skip = true; continue; }
+      skip = false;
+    }
+    // If in skip mode, only exit when we see a text paragraph starting with "* Nuit" (marks end of day content), or a non-resto heading (handled above)
+    if (skip) {
+      if (b.type === "p" && /^\s*\*\s*Nuit/i.test(b.text)) {
+        skip = false;
+        filtered.push(b);
+      }
+      // otherwise drop
+      continue;
+    }
+    filtered.push(b);
+  }
   return (
     <>
-      {blocks.map((b, i) => {
+      {filtered.map((b, i) => {
         if (b.type === "img") {
           return (
             <figure key={i} className="story-figure" data-testid={`story-img-${i}`}>
@@ -83,14 +110,51 @@ function RenderBlocks({ blocks }) {
   );
 }
 
+function DayNav({ dayId }) {
+  const prev = dayId > 1 ? dayId - 1 : null;
+  const next = dayId < DAYS.length ? dayId + 1 : null;
+  return (
+    <div className="day-nav" data-testid="day-nav">
+      {prev ? (
+        <Link to={`/jour/${prev}`} className="day-nav-btn" data-testid="day-nav-prev">
+          <Icon name="arrow-left" /> Jour {prev}
+        </Link>
+      ) : <span />}
+      <Link to="/" className="day-nav-home" data-testid="day-nav-home">
+        <Icon name="list" /> Itinéraire
+      </Link>
+      {next ? (
+        <Link to={`/jour/${next}`} className="day-nav-btn" data-testid="day-nav-next">
+          Jour {next} <Icon name="arrow-right" />
+        </Link>
+      ) : <span />}
+    </div>
+  );
+}
+
 function Header() {
+  const [openJours, setOpenJours] = React.useState(false);
   return (
     <header className="header" data-testid="app-header">
       <Link to="/" className="brand" data-testid="brand-link">
         <Icon name="book-open-reader" /> USA Ouest 2026
       </Link>
       <nav className="nav">
-        <NavLink to="/" end data-testid="nav-jours"><Icon name="calendar-days" /><span>Jours</span></NavLink>
+        <div className="nav-dropdown" onMouseLeave={() => setOpenJours(false)}>
+          <NavLink to="/" end onMouseEnter={() => setOpenJours(true)} data-testid="nav-jours">
+            <Icon name="calendar-days" /><span>Jours</span> <Icon name="chevron-down" />
+          </NavLink>
+          {openJours && (
+            <div className="nav-dropdown-menu" data-testid="nav-jours-menu">
+              {DAYS.map(d => (
+                <Link key={d.id} to={`/jour/${d.id}`} onClick={() => setOpenJours(false)} data-testid={`jours-menu-${d.id}`}>
+                  <span className="dropdown-num">J{d.id}</span>
+                  <span className="dropdown-date">{d.date}</span>
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
         <NavLink to="/carte" data-testid="nav-carte"><Icon name="map" /><span>Carte</span></NavLink>
         <NavLink to="/recherche" data-testid="nav-recherche"><Icon name="magnifying-glass" /><span>Recherche</span></NavLink>
         <NavLink to="/checklist" data-testid="nav-checklist"><Icon name="clipboard-check" /><span>Checklist</span></NavLink>
@@ -190,6 +254,8 @@ function DayPage() {
           </div>
         ))}
       </div>
+
+      <DayNav dayId={day.id} />
     </div>
   );
 }
@@ -233,6 +299,8 @@ function HotelPage() {
           <p>Pas d'hôtel réservé pour cette nuit (nuit sur la route, camping ou vol de retour).</p>
         </div>
       )}
+
+      <DayNav dayId={day.id} />
     </div>
   );
 }
@@ -264,10 +332,23 @@ function MangerPage() {
             <h3>{r.name}</h3>
             <span className="chip">{r.service}</span>
             <p style={{ marginTop: 10 }}>{r.description}</p>
-            {r.address && <div className="address"><Icon name="location-dot" /> {r.address}</div>}
+            {r.address && (
+              <div className="address" style={{ justifyContent: "space-between", alignItems: "center", flexWrap: "wrap" }}>
+                <span><Icon name="location-dot" /> {r.address}</span>
+                <a
+                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(r.name + " " + r.address)}`}
+                  target="_blank" rel="noreferrer" className="chip" style={{ textDecoration: "none" }}
+                  data-testid={`resto-map-${i}`}
+                >
+                  <Icon name="map-location-dot" /> Google Maps
+                </a>
+              </div>
+            )}
           </div>
         ))
       )}
+
+      <DayNav dayId={day.id} />
     </div>
   );
 }
