@@ -10,6 +10,7 @@ const Icon = ({ name }) => <i className={`fa-solid fa-${name}`}></i>;
 // Reusable tabs for day pages/subpages
 function DayTabs({ day, active }) {
   const cls = (name) => `tab${active === name ? " active" : ""}`;
+  const restoCount = day.restaurants.filter(r => !isChainRestaurant(r.name)).length;
   return (
     <div className="tabs" data-testid="day-tabs">
       <Link to={`/jour/${day.id}`} className={cls("recit")} data-testid="tab-recit">
@@ -19,7 +20,7 @@ function DayTabs({ day, active }) {
         <Icon name="bed" /> Hôtel
       </Link>
       <Link to={`/jour/${day.id}/manger`} className={cls("manger")} data-testid="tab-manger">
-        <Icon name="utensils" /> Où Manger ({day.restaurants.length})
+        <Icon name="utensils" /> Où Manger ({restoCount})
       </Link>
       <span className={cls("lieux")}>
         <Icon name="location-dot" /> Lieux ({day.places.length})
@@ -54,9 +55,36 @@ function isRestoHeading(text) {
   return RESTO_HEADING_RE.test(text.trim());
 }
 
+// Common US chain restaurants — filter them out (user request: "il y en a partout")
+const CHAINS = [
+  "Wendy's","Wendy","Subway","Panda Express","Panda","Del Taco","Taco Bell",
+  "McDonald's","McDonald","Burger King","In-N-Out","Five Guys","Chipotle",
+  "Sonic Drive","Sonic","Denny's","Denny","Cracker Barrel","Chick-fil-A",
+  "Popeyes","Arby's","Jack in the Box","Carl's Jr","Hardee's","Raising Cane",
+  "Domino's","Pizza Hut","Papa John","Little Caesar","Starbucks","Dunkin",
+  "Krispy Kreme","Applebee","Chili's","TGI Friday","Olive Garden","Red Lobster",
+  "Red Robin","Outback Steakhouse","Buffalo Wild Wings","Texas Roadhouse","IHOP",
+  "Waffle House","Panera","Freddy's Frozen","Freddy's","Shake Shack","Culver's",
+  "White Castle","Steak 'n Shake","Steak'n Shake","Farmer Boys","Wingstop",
+  "Church's Chicken","El Pollo Loco","Sprinkles","Krispy Krunchy","Trader Joe",
+  "Safeway","Walmart","Target","Costco","Ralph's","Whole Foods","Bagel Nosh",
+  "Smashburger"
+];
+const CHAINS_RE = new RegExp("(" + CHAINS.map(c => c.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|") + ")", "i");
+function mentionsChain(text) {
+  if (!text) return false;
+  // Exception: Taco Bell Cantina at Pacifica State Beach is a legit ocean-view attraction
+  if (/taco bell cantina/i.test(text)) return false;
+  return CHAINS_RE.test(text);
+}
+function isChainRestaurant(name) {
+  if (!name) return false;
+  return CHAINS_RE.test(name);
+}
+
 function RenderBlocks({ blocks }) {
   if (!blocks || blocks.length === 0) return null;
-  // Filter out restaurant sections: from a resto heading, skip until next H heading
+  // Filter out restaurant sections: from a resto heading, skip until next H heading OR "* Nuit" paragraph
   const filtered = [];
   let skip = false;
   for (let i = 0; i < blocks.length; i++) {
@@ -65,15 +93,15 @@ function RenderBlocks({ blocks }) {
       if (isRestoHeading(b.text)) { skip = true; continue; }
       skip = false;
     }
-    // If in skip mode, only exit when we see a text paragraph starting with "* Nuit" (marks end of day content), or a non-resto heading (handled above)
     if (skip) {
       if (b.type === "p" && /^\s*\*\s*Nuit/i.test(b.text)) {
         skip = false;
         filtered.push(b);
       }
-      // otherwise drop
       continue;
     }
+    // Also drop individual paragraphs that mention fast-food chains (per user request)
+    if (b.type === "p" && mentionsChain(b.text)) continue;
     filtered.push(b);
   }
   return (
@@ -87,15 +115,33 @@ function RenderBlocks({ blocks }) {
           );
         }
         if (b.type === "doc") {
+          // Derive PDF/EPUB from Google Doc URL
+          const idMatch = b.url && b.url.match(/\/document\/d\/([^/]+)/);
+          const docId = idMatch ? idMatch[1] : null;
+          const pdfUrl = docId ? `https://docs.google.com/document/d/${docId}/export?format=pdf` : null;
+          const epubUrl = docId ? `https://docs.google.com/document/d/${docId}/export?format=epub` : null;
           return (
-            <a key={i} href={b.url} target="_blank" rel="noreferrer" className="story-doc" data-testid={`story-doc-${i}`}>
+            <div key={i} className="story-doc" data-testid={`story-doc-${i}`}>
               <div className="guide-icon"><Icon name="file-lines" /></div>
-              <div style={{ flex: 1 }}>
-                <div style={{ fontWeight: 600 }}>{b.title}</div>
-                <div style={{ fontSize: 13, color: "var(--ink-2)" }}>Document complémentaire — Google Docs</div>
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <div style={{ fontWeight: 600, marginBottom: 6 }}>{b.title}</div>
+                <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                  <a href={b.url} target="_blank" rel="noreferrer" className="chip" style={{ textDecoration: "none" }} data-testid={`story-doc-open-${i}`}>
+                    <Icon name="up-right-from-square" /> Ouvrir
+                  </a>
+                  {pdfUrl && (
+                    <a href={pdfUrl} target="_blank" rel="noreferrer" className="chip" style={{ textDecoration: "none" }} data-testid={`story-doc-pdf-${i}`}>
+                      <Icon name="file-pdf" /> PDF
+                    </a>
+                  )}
+                  {epubUrl && (
+                    <a href={epubUrl} target="_blank" rel="noreferrer" className="chip" style={{ textDecoration: "none" }} data-testid={`story-doc-epub-${i}`}>
+                      <Icon name="book" /> EPUB
+                    </a>
+                  )}
+                </div>
               </div>
-              <Icon name="up-right-from-square" />
-            </a>
+            </div>
           );
         }
         if (b.type === "h1" || b.type === "h2") {
@@ -150,6 +196,7 @@ function Header() {
                 <Link key={d.id} to={`/jour/${d.id}`} onClick={() => setOpenJours(false)} data-testid={`jours-menu-${d.id}`}>
                   <span className="dropdown-num">J{d.id}</span>
                   <span className="dropdown-date">{d.date}</span>
+                  <span className="dropdown-loc">{d.location}</span>
                 </Link>
               ))}
             </div>
@@ -324,10 +371,12 @@ function MangerPage() {
 
       <DayTabs day={day} active="manger" />
 
-      {day.restaurants.length === 0 ? (
-        <div className="card"><p>Pas de suggestion pour ce jour — pique-nique conseillé !</p></div>
-      ) : (
-        day.restaurants.map((r, i) => (
+      {(() => {
+        const restos = day.restaurants.filter(r => !isChainRestaurant(r.name));
+        if (restos.length === 0) {
+          return <div className="card"><p>Pas de suggestion pour ce jour — pique-nique conseillé !</p></div>;
+        }
+        return restos.map((r, i) => (
           <div key={i} className="card" data-testid={`restaurant-${i}`}>
             <h3>{r.name}</h3>
             <span className="chip">{r.service}</span>
@@ -345,8 +394,8 @@ function MangerPage() {
               </div>
             )}
           </div>
-        ))
-      )}
+        ));
+      })()}
 
       <DayNav dayId={day.id} />
     </div>

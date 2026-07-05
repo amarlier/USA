@@ -57,21 +57,22 @@ body {
   position: absolute; top: 100%; left: 0; margin-top: 6px;
   background: var(--paper); border: 1px solid var(--border);
   border-radius: 12px; box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-  min-width: 260px; max-height: 400px; overflow-y: auto;
+  min-width: 380px; max-height: 500px; overflow-y: auto;
   z-index: 50; padding: 6px;
 }
 .nav-dropdown-menu a {
-  display: flex; align-items: center; gap: 10px;
+  display: grid; grid-template-columns: 36px 130px 1fr; align-items: center; gap: 8px;
   padding: 8px 12px; border-radius: 8px;
   color: var(--ink) !important; font-size: 14px;
   transition: background 0.15s;
 }
 .nav-dropdown-menu a:hover { background: var(--brand-light); }
 .dropdown-num {
-  min-width: 32px; font-family: 'Fraunces', serif; font-weight: 700;
+  font-family: 'Fraunces', serif; font-weight: 700;
   color: var(--brand); font-size: 14px;
 }
 .dropdown-date { color: var(--ink-2); }
+.dropdown-loc { color: var(--ink); font-weight: 500; font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 /* Day navigation (Prev/Next) */
 .day-nav {
