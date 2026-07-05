@@ -48,10 +48,10 @@ function RichText({ text }) {
 }
 
 // Detect if a heading text is about restaurants (to filter these sections from récit)
+const RESTO_HEADING_RE = /^(suggestion de restaurant|restaurant|resto|autres restaurant|autres suggestion|option[s]? de restauration|options? pour manger|autres options?|manger|petit-?d[ée]jeuner)/i;
 function isRestoHeading(text) {
   if (!text) return false;
-  const t = text.toLowerCase();
-  return t.includes("restaurant") || t.includes("restos") || t.includes("où manger") || t.includes("ou manger");
+  return RESTO_HEADING_RE.test(text.trim());
 }
 
 function RenderBlocks({ blocks }) {
