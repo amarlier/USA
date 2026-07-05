@@ -2,8 +2,66 @@ import React from "react";
 import "@/App.css";
 import { BrowserRouter, Routes, Route, Link, NavLink, useParams, useNavigate } from "react-router-dom";
 import { TRIP, DAYS, GUIDES, DOCUMENTS } from "@/data/trip";
+import daysFull from "@/data/days_full.json";
 
 const Icon = ({ name }) => <i className={`fa-solid fa-${name}`}></i>;
+
+// Renders a paragraph text that may contain [LINK|url|text] markers
+function RichText({ text }) {
+  if (!text) return null;
+  const parts = [];
+  const regex = /\[LINK\|([^|]+)\|([^\]]+)\]/g;
+  let last = 0;
+  let m;
+  let i = 0;
+  while ((m = regex.exec(text)) !== null) {
+    if (m.index > last) parts.push(<span key={i++}>{text.slice(last, m.index)}</span>);
+    parts.push(
+      <a key={i++} href={m[1]} target="_blank" rel="noreferrer" style={{ color: "var(--brand)", textDecoration: "underline" }}>
+        {m[2]}
+      </a>
+    );
+    last = m.index + m[0].length;
+  }
+  if (last < text.length) parts.push(<span key={i++}>{text.slice(last)}</span>);
+  return <>{parts}</>;
+}
+
+function RenderBlocks({ blocks }) {
+  if (!blocks || blocks.length === 0) return null;
+  return (
+    <>
+      {blocks.map((b, i) => {
+        if (b.type === "img") {
+          return (
+            <figure key={i} className="story-figure" data-testid={`story-img-${i}`}>
+              <img src={b.src} alt="" loading="lazy" onError={(e) => (e.target.parentElement.style.display = "none")} />
+            </figure>
+          );
+        }
+        if (b.type === "doc") {
+          return (
+            <a key={i} href={b.url} target="_blank" rel="noreferrer" className="story-doc" data-testid={`story-doc-${i}`}>
+              <div className="guide-icon"><Icon name="file-lines" /></div>
+              <div style={{ flex: 1 }}>
+                <div style={{ fontWeight: 600 }}>{b.title}</div>
+                <div style={{ fontSize: 13, color: "var(--ink-2)" }}>Document complémentaire — Google Docs</div>
+              </div>
+              <Icon name="up-right-from-square" />
+            </a>
+          );
+        }
+        if (b.type === "h1" || b.type === "h2") {
+          return <h2 key={i} className="story-h2">{b.text}</h2>;
+        }
+        if (b.type === "h3" || b.type === "h4") {
+          return <h3 key={i} className="story-h3">{b.text}</h3>;
+        }
+        return <p key={i} className="story-p"><RichText text={b.text} /></p>;
+      })}
+    </>
+  );
+}
 
 function Header() {
   return (
@@ -74,6 +132,10 @@ function DayPage() {
   const day = DAYS.find(d => d.id === parseInt(id));
   if (!day) return <div className="container">Jour introuvable</div>;
 
+  const fullData = daysFull.days[String(day.id)];
+  const blocks = (fullData && fullData.blocks) || [];
+  const hasRichContent = blocks.length > 0;
+
   return (
     <div className="container" data-testid={`day-page-${day.id}`}>
       <button onClick={() => navigate("/")} className="back-link" data-testid="back-to-itineraire">
@@ -86,16 +148,6 @@ function DayPage() {
         <div className="day-hero-resume">{day.resume}</div>
       </div>
 
-      <img src={day.image} alt={day.location} className="day-hero-img" onError={(e) => e.target.style.display='none'} />
-
-      {day.gallery && day.gallery.length > 1 && (
-        <div className="gallery" data-testid="day-gallery">
-          {day.gallery.slice(1).map((src, i) => (
-            <img key={i} src={src} alt={`${day.location} ${i+2}`} className="gallery-img" onError={(e) => e.target.style.display='none'} />
-          ))}
-        </div>
-      )}
-
       <div className="tabs" data-testid="day-tabs">
         <span className="tab active"><Icon name="book-open" /> Le récit</span>
         <Link to={`/jour/${day.id}/hotel`} className="tab" data-testid="tab-hotel"><Icon name="bed" /> Hôtel</Link>
@@ -103,12 +155,18 @@ function DayPage() {
         <span className="tab"><Icon name="location-dot" /> Lieux ({day.places.length})</span>
       </div>
 
-      <div className="card" data-testid="day-story">
-        <h3>{day.location}</h3>
-        <p style={{ whiteSpace: "pre-line" }}>{day.story}</p>
+      <div className="story" data-testid="day-story">
+        {hasRichContent ? (
+          <RenderBlocks blocks={blocks} />
+        ) : (
+          <>
+            <h3 className="story-h3">{day.location}</h3>
+            <p className="story-p" style={{ whiteSpace: "pre-line" }}>{day.story}</p>
+          </>
+        )}
       </div>
 
-      <div className="card">
+      <div className="card" style={{ marginTop: 24 }}>
         <h3><Icon name="location-dot" /> Lieux à découvrir</h3>
         {day.places.map((place, i) => (
           <div key={i} className="place-item">

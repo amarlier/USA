@@ -183,6 +183,19 @@ body {
 .place-item:last-child { border-bottom: none; }
 .place-icon { width: 32px; height: 32px; border-radius: 8px; background: var(--brand-light); color: var(--brand); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 
+/* Rich story blocks (récit avec images inline) */
+.story { background: var(--paper); border: 1px solid var(--border); border-radius: 14px; padding: 28px 34px; margin-bottom: 12px; overflow: hidden; }
+.story-h2 { font-family: 'Fraunces', serif; font-size: 26px; font-weight: 700; margin: 28px 0 12px; color: var(--ink); letter-spacing: -0.01em; }
+.story-h3 { font-family: 'Fraunces', serif; font-size: 20px; font-weight: 600; margin: 22px 0 10px; color: var(--brand); }
+.story-p { line-height: 1.7; color: var(--ink-2); font-size: 15.5px; margin: 10px 0; }
+.story > *:first-child { margin-top: 0; }
+.story-figure { margin: 20px -34px; }
+.story-figure img { width: 100%; height: auto; display: block; max-height: 520px; object-fit: cover; }
+.story-doc { display: flex; align-items: center; gap: 14px; padding: 14px 18px; margin: 16px 0; background: var(--cream); border: 1px solid var(--border); border-radius: 12px; text-decoration: none; color: var(--ink); transition: transform 0.2s, box-shadow 0.2s; }
+.story-doc:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(200,72,30,0.1); }
+@media (max-width: 720px) { .story { padding: 20px 18px; } .story-figure { margin: 16px -18px; } }
+
+
 /* Guides page */
 .guides-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 @media (max-width: 720px) { .guides-grid { grid-template-columns: 1fr; } .hero h1 { font-size: 36px; } .day-hero-title { font-size: 28px; } .nav a span { display:none; } .container { padding: 20px 14px 60px; } }
