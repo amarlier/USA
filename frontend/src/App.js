@@ -212,6 +212,54 @@ function Header() {
   );
 }
 
+function TripCountdown() {
+  // Trip: Day 1 = 28 July 2026, Day 26 = 22 August 2026
+  const startDate = new Date(2026, 6, 28); // Month is 0-indexed
+  const endDate = new Date(2026, 7, 22);
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const diffStart = Math.floor((startDate - today) / (1000 * 60 * 60 * 24));
+  const diffEnd = Math.floor((today - endDate) / (1000 * 60 * 60 * 24));
+
+  let content;
+  if (diffStart > 0) {
+    // Before trip
+    content = (
+      <>
+        <div className="countdown-num">J-{diffStart}</div>
+        <div>
+          <div className="countdown-title">avant le départ</div>
+          <div className="countdown-sub">Direction Los Angeles le mardi 28 juillet 2026</div>
+        </div>
+      </>
+    );
+  } else if (diffEnd > 0) {
+    // After trip
+    content = (
+      <>
+        <div className="countdown-num" style={{ fontSize: 24 }}><Icon name="check-circle" /></div>
+        <div>
+          <div className="countdown-title">Voyage terminé</div>
+          <div className="countdown-sub">Un carnet de souvenirs pour toujours ✨</div>
+        </div>
+      </>
+    );
+  } else {
+    // During trip
+    const dayNum = Math.floor((today - startDate) / (1000 * 60 * 60 * 24)) + 1;
+    content = (
+      <Link to={`/jour/${dayNum}`} className="countdown-during" data-testid="countdown-today-link">
+        <div className="countdown-num">J{dayNum}</div>
+        <div>
+          <div className="countdown-title">aujourd'hui — Jour {dayNum} sur 26</div>
+          <div className="countdown-sub">Voir le programme du jour →</div>
+        </div>
+      </Link>
+    );
+  }
+  return <div className="countdown" data-testid="trip-countdown">{content}</div>;
+}
+
 function Home() {
   return (
     <div className="container" data-testid="home-page">
@@ -228,6 +276,8 @@ function Home() {
         <div className="stat"><div className="stat-icon"><Icon name="calendar-days" /></div><div><div className="stat-num">{TRIP.totalDays}</div><div className="stat-label">jours d'aventure</div></div></div>
         <div className="stat"><div className="stat-icon"><Icon name="location-dot" /></div><div><div className="stat-num">{TRIP.totalPlaces}</div><div className="stat-label">lieux répertoriés</div></div></div>
       </div>
+
+      <TripCountdown />
 
       <Link to="/guides" className="guide-card" data-testid="guides-shortcut">
         <div className="guide-icon"><Icon name="book" /></div>

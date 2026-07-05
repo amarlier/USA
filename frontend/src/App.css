@@ -140,6 +140,23 @@ body {
 .stat-num { font-family: 'Fraunces', serif; font-size: 28px; font-weight: 700; line-height: 1; }
 .stat-label { color: var(--ink-2); font-size: 13px; margin-top: 4px; }
 
+/* Countdown */
+.countdown {
+  display: flex; align-items: center; gap: 18px;
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+  color: white; padding: 20px 26px; border-radius: 16px;
+  margin: 12px 0 20px;
+  box-shadow: 0 10px 24px rgba(200,72,30,0.18);
+}
+.countdown-during { display: flex; align-items: center; gap: 18px; color: white; text-decoration: none; width: 100%; }
+.countdown-num {
+  font-family: 'Fraunces', serif; font-weight: 800;
+  font-size: 44px; line-height: 1; letter-spacing: -0.02em;
+  min-width: 90px;
+}
+.countdown-title { font-family: 'Fraunces', serif; font-size: 20px; font-weight: 600; }
+.countdown-sub { font-size: 13px; opacity: 0.9; margin-top: 3px; }
+
 /* Guide card */
 .guide-card {
   background: var(--paper); border: 1px solid var(--border);
