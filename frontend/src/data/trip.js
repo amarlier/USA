@@ -33,7 +33,7 @@ export const DAYS = [
     resume: "Arrivée 13h50 par vol direct Air France - récupération de votre véhicule de location - transit pour votre hôtel à 1-2h max sur la route du Grand Canyon.",
     location: "Los Angeles / Hesperia",
     image: "/photos/day1.png",
-    gallery: ["/photos/day1.png"],
+    gallery: ["/photos/day1.png", "/photos/day1/image104.png", "/photos/day1/image3.png", "/photos/day1/image97.png"],
     story: "Vous arriverez à l'Aéroport International de Los Angeles (LAX) à 13h50. Comme vous arrivez d'un vol international, vous devrez tout d'abord passer l'immigration. C'est là que seront vérifiés vos passeports et votre ESTA. Le passage à l'immigration peut parfois être long. Une fois cette démarche passée, vous irez récupérer vos bagages puis franchirez la douane. Sortez du terminal pour prendre la navette (Shuttle) de votre agence de location qui vous amènera au centre de location de voiture. En quittant l'aéroport, vous pouvez aller manger un morceau avant de rejoindre votre hôtel de Hesperia sur la route du Grand Canyon.",
     hotel: H("Holiday Inn Express Hotel & Suites Hesperia by IHG", "9750 Key Pointe Ave, Hesperia, CA 92345"),
     restaurants: [
@@ -56,7 +56,7 @@ export const DAYS = [
     resume: "Journée route vers Grand Canyon (7h) avec arrêt à Kingman (musée de la Route 66 et premières courses), détour par la Route 66 entre Kingman et Seligman - coucher de soleil sur le Grand Canyon depuis le Rim Trail.",
     location: "Kingman / Seligman / Grand Canyon",
     image: "/photos/day2.png",
-    gallery: ["/photos/day2.png", "/photos/day2_2.png", "/photos/day2_3.png"],
+    gallery: ["/photos/day2.png", "/photos/day2/image120.png", "/photos/day2/image122.png", "/photos/day2/image150.png", "/photos/day2/image224.png", "/photos/day2/image3.png"],
     story: "Prenez la route direction Victorville, Barstow puis Kingman. Un détour par la Route 66 historique entre Victorville et Barstow est possible. À Kingman, ne manquez pas le Arizona Road 66 Museum et Locomotive Park. Entre Kingman et Seligman, la portion de Route 66 est particulièrement scénique avec le Hackberry General Store, le Peach Springs Trading Post et le mythique Delgadillo's Snow Cap. Arrivée au Grand Canyon en fin d'après-midi pour un coucher de soleil inoubliable depuis Mather Point ou Yavapai Point.",
     hotel: H("Maswik Lodge", "202 Village Loop Drive, Grand Canyon Village, AZ 86023"),
     restaurants: [
@@ -76,7 +76,7 @@ export const DAYS = [
     resume: "Option survol du Grand Canyon en hélicoptère, randonnée sur le South Kaibab Trail, puis route vers Page et le Lake Powell pour baignade et randonnée.",
     location: "Grand Canyon / Page / Lake Powell",
     image: "/photos/day3.png",
-    gallery: ["/photos/day3.png", "/photos/day3_2.png", "/photos/day3_3.png"],
+    gallery: ["/photos/day3.png", "/photos/day3/image114.png", "/photos/day3/image12.png", "/photos/day3/image145.png", "/photos/day3/image176.png", "/photos/day3/image243.png"],
     story: "En option, débutez par un survol du Grand Canyon en hélicoptère au lever du soleil avec Papillon (289$/pers, 25-30 min). Puis marchez sur le South Kaibab Trail : descendez jusqu'à Ooh Aah Point ou Cedar Ridge pour des points de vue vertigineux. En milieu de journée, prenez la route vers Page en passant par Desert View Watchtower et Little Colorado River Gorge. Arrivée à Page pour baignade au Lake Powell (Antelope Point Marina ou The Chains), et coucher de soleil à Horseshoe Bend.",
     hotel: H("Wingate by Wyndham Page Lake Powell", "671 Scenic View Rd, Page, AZ 86040"),
     restaurants: [
@@ -93,7 +93,7 @@ export const DAYS = [
     resume: "Exploration en kayak puis à pied de l'Antelope Canyon, route vers Monument Valley pour un coucher de soleil.",
     location: "Page / Antelope Canyon / Monument Valley",
     image: "/photos/day4.png",
-    gallery: ["/photos/day4.png", "/photos/day4_2.png", "/photos/day4_3.png", "/photos/day4_4.png"],
+    gallery: ["/photos/day4.png", "/photos/day4/image141.png", "/photos/day4/image212.png", "/photos/day4/image215.png", "/photos/day4/image284.png"],
     story: "Autour de Page se trouvent les plus beaux slot canyons de l'ouest américain. L'Antelope Canyon, qui se jette dans le Glen Canyon, possède deux sections visitables dans la réserve Navajo. Le Upper Antelope Canyon est sans doute le slot canyon le plus connu au monde. Explorez-le en kayak sur le Lake Powell puis à pied avec un guide navajo. Reprenez ensuite la route vers le nord jusqu'à Monument Valley pour un coucher de soleil légendaire depuis le Visitor Center ou John Ford Point.",
     hotel: H("The VIEW Campgrounds", "Indian Rte 42, Oljato-Monument Valley, UT 84536"),
     restaurants: [
@@ -106,7 +106,7 @@ export const DAYS = [
     resume: "Balade matinale à Monument Valley ou à cheval, route pour Moab avec traversée de la Valley of the Gods, arrêt au Bluff Fort ou Dinosaur Museum, et balade à Corona Arch.",
     location: "Monument Valley / Moab",
     image: "/photos/day5.png",
-    gallery: ["/photos/day5.png", "/photos/day5_2.png", "/photos/day5_3.png", "/photos/day5_4.png"],
+    gallery: ["/photos/day5.png", "/photos/day5/image159.png", "/photos/day5/image259.png", "/photos/day5/image3.png", "/photos/day5/image60.png", "/photos/day5/image62.png"],
     story: "Le matin, faites la Loop Road en voiture (tôt pour éviter la foule) ou la balade du Wild Cat Trail autour de la West Mitten. Reprenez la route vers Mexican Hat puis empruntez la spectaculaire Valley of the Gods, une mini Monument Valley gratuite et sans touristes. Passez par le Moki Dugway, une route vertigineuse taillée dans la falaise. Arrêt à Bluff Fort Historic Site ou au Dinosaur Museum de Blanding. Fin de journée à Corona Arch, magnifique arche accessible par une belle randonnée.",
     hotel: H("Aarchway Inn", "1551 N Riverview Dr, Moab, UT 84532"),
     restaurants: [
@@ -124,7 +124,7 @@ export const DAYS = [
     resume: "Découverte du Arches National Park avec balades à Park Avenue, Devil's Garden, et une balade au coucher du soleil jusqu'à Delicate Arch.",
     location: "Moab / Arches National Park",
     image: "/photos/day6.png",
-    gallery: ["/photos/day6.png", "/photos/day6_2.png", "/photos/day6_3.png", "/photos/day6_4.png"],
+    gallery: ["/photos/day6.png", "/photos/day6/image130.png", "/photos/day6/image135.png", "/photos/day6/image140.png", "/photos/day6/image235.png", "/photos/day6/image44.png"],
     story: "Arches National Park regroupe la plus grande densité d'arches naturelles au monde, avec plus de 2000 arches réparties sur toute la superficie du parc. Ces arches se forment dans une couche de grès (Sandstone) d'une centaine de mètres d'épaisseur. Commencez par Park Avenue, une balade facile entre deux murs de grès. Continuez avec Double Arch, puis rejoignez Devils Garden pour découvrir Landscape Arch, Partition Arch et Navajo Arch. Terminez par la mythique Delicate Arch au coucher du soleil.",
     hotel: H("Aarchway Inn", "1551 N Riverview Dr, Moab, UT 84532"),
     restaurants: [
@@ -138,7 +138,7 @@ export const DAYS = [
     resume: "Découverte du Canyonlands National Park et du Dead Horse Point State Park, ou exploration matinale des labyrinthes de Fiery Furnace, puis route pour Torrey.",
     location: "Moab / Canyonlands / Torrey",
     image: "/photos/day7.png",
-    gallery: ["/photos/day7.png", "/photos/day7_2.png", "/photos/day7_3.png", "/photos/day7_4.png", "/photos/day7_5.png", "/photos/day7_6.png"],
+    gallery: ["/photos/day7.png", "/photos/day7/image121.png", "/photos/day7/image132.png", "/photos/day7/image15.png", "/photos/day7/image153.png", "/photos/day7/image204.png", "/photos/day7/image219.png", "/photos/day7/image87.png"],
     story: "Option matinale : la balade dans le labyrinthe de Fiery Furnace (permis obligatoire, à réserver 7 jours avant, 10$/pers). Sinon, direction Canyonlands National Park pour découvrir Mesa Arch au lever du soleil, puis les vues époustouflantes sur les canyons creusés par le Colorado et la Green River. Passez au Dead Horse Point State Park pour une vue vertigineuse sur un méandre du Colorado. Reprenez ensuite la route vers Torrey en préparation du Capitol Reef National Park.",
     hotel: H("Days Inn by Wyndham Torrey", "675 E Hwy 24, Torrey, UT 84775"),
     restaurants: [
@@ -152,7 +152,7 @@ export const DAYS = [
     resume: "Randonnée jusqu'à la Cassidy Arch - route pour Bryce via la scénique Highway 12 - arrêt pour descendre en bouée une portion de la Calf Creek sur des toboggans naturels.",
     location: "Capitol Reef / Highway 12 / Bryce",
     image: "/photos/day8.png",
-    gallery: ["/photos/day8.png", "/photos/day8_2.png", "/photos/day8_3.png"],
+    gallery: ["/photos/day8.png", "/photos/day8/image105.png", "/photos/day8/image171.png", "/photos/day8/image187.png", "/photos/day8/image208.png"],
     story: "Le Capitol Reef National Park est souvent traversé mais rarement visité. Il occupe le Waterpocket Fold, un plissement géologique majeur. Commencez la journée par la randonnée à Cassidy Arch, une magnifique arche à travers laquelle on peut marcher. Puis prenez la Highway 12, l'une des routes les plus scéniques d'Amérique, entre Torrey et Bryce Canyon. Arrêt rafraîchissant : descente en bouée sur des toboggans naturels dans la Calf Creek à la jonction de l'Escalante River. Arrivée à Bryce Canyon en fin de journée.",
     hotel: H("Bryce Canyon Inn", "21 N Main St, Tropic, UT 84776"),
     restaurants: [
@@ -167,7 +167,7 @@ export const DAYS = [
     resume: "Incroyable Navajo Trail au milieu des Hoodoos de Bryce Canyon ou Buckhorn Trail au Red Canyon puis route pour St George en traversant le Zion National Park.",
     location: "Bryce Canyon / Zion",
     image: "/photos/day9.png",
-    gallery: ["/photos/day9.png", "/photos/day9_2.png", "/photos/day9_3.png", "/photos/day9_4.png"],
+    gallery: ["/photos/day9.png", "/photos/day9/image110.png", "/photos/day9/image124.png", "/photos/day9/image175.png", "/photos/day9/image224.png", "/photos/day9/image48.png"],
     story: "Bryce Canyon n'est pas un canyon mais un ensemble d'amphithéâtres naturels peuplés de Hoodoos, ces cheminées de fée géologiques. Le Navajo Trail plonge au cœur de ces formations extraordinaires - une balade descendante puis remontante d'environ 2h. Alternative moins fréquentée : le Buckhorn Trail au Red Canyon. Prenez ensuite la Highway 89 puis 9 pour traverser Zion National Park via la Zion Mount Carmel Highway, avec ses tunnels historiques et ses balades le long de la route (Shelf Canyon, Many Pools Trail, Canyon Overlook).",
     hotel: H("Bryce Canyon Inn", "21 N Main St, Tropic, UT 84776"),
     restaurants: [
@@ -182,7 +182,7 @@ export const DAYS = [
     resume: "Balade les pieds dans l'eau dans le slot canyon inondé de la Kanarra Creek avec franchissement de 2 cascades - puis route pour Las Vegas.",
     location: "Kanarra Creek / Las Vegas",
     image: "/photos/day10.png",
-    gallery: ["/photos/day10.png", "/photos/day10_2.png", "/photos/day10_3.png", "/photos/day10_4.png"],
+    gallery: ["/photos/day10.png", "/photos/day10/image115.png", "/photos/day10/image166.png", "/photos/day10/image188.png", "/photos/day10/image214.png", "/photos/day10/image224.png", "/photos/day10/image241.png", "/photos/day10/image242.png", "/photos/day10/image39.png", "/photos/day10/image73.png"],
     story: "Pour cette dernière matinée dans les parcs du Colorado, exploration du slot canyon inondé de la Kanarra Creek (réservation obligatoire). Prenez la I15 direction Cedar City, sortie 51 vers Kanarraville. La balade se fait littéralement les pieds dans l'eau, avec 2 franchissements de cascades aménagées d'échelles. Un moment magique et rafraîchissant. Puis route vers Las Vegas (env. 3h) : arrivée en fin d'après-midi, installation à l'hôtel Park MGM sur le Strip, puis premier contact avec les néons de la ville la nuit tombée.",
     hotel: H("Park MGM Las Vegas", "3770 S Las Vegas Blvd, Las Vegas, NV 89109"),
     restaurants: [
@@ -203,7 +203,7 @@ export const DAYS = [
     resume: "Découverte de Las Vegas - Pinball Hall of Fame, showroom de muscle cars et hot rods, concession Harley Davidson - piscine à l'hôtel - Découverte des casinos du Strip - Possibilité de spectacle de Magie.",
     location: "Las Vegas",
     image: "/photos/day11.png",
-    gallery: ["/photos/day11.png"],
+    gallery: ["/photos/day11.png", "/photos/day11/image116.png", "/photos/day11/image218.png", "/photos/day11/image4.png"],
     story: "Las Vegas est une ville très particulière. Nous vous déconseillons vivement de vous lancer à la découverte sans plan - il faut au contraire être très organisé. Pour cette première journée, commencez par une baignade matinale à la piscine de votre hôtel avant de vous lancer à la découverte du Strip. Le Strip est la portion de Las Vegas Boulevard qui concentre le plus grand nombre d'hôtels casinos géants. Sur 4 km, du Mandalay Bay au Wynn's, sont alignés des dizaines d'établissements thématiques aux décorations extravagantes. Visitez le Pinball Hall of Fame, un musée vivant du flipper, et les showrooms de Count's Kustoms et Shelby American. En soirée, possibilité d'un spectacle de magie.",
     hotel: H("Park MGM Las Vegas", "3770 S Las Vegas Blvd, Las Vegas, NV 89109"),
     restaurants: [
@@ -221,7 +221,7 @@ export const DAYS = [
     resume: "Traversée de la Death Valley, exploration des paysages uniques et des extrêmes, avant de rejoindre Lone Pine et les Alabama Hills.",
     location: "Death Valley / Lone Pine",
     image: "/photos/day12.png",
-    gallery: ["/photos/day12.png", "/photos/day12_2.png", "/photos/day12_3.png", "/photos/day12_4.png", "/photos/day12_5.png", "/photos/day12_6.png"],
+    gallery: ["/photos/day12.png", "/photos/day12/image115.png", "/photos/day12/image138.png", "/photos/day12/image142.png", "/photos/day12/image155.png", "/photos/day12/image164.png", "/photos/day12/image167.png", "/photos/day12/image177.png", "/photos/day12/image178.png", "/photos/day12/image179.png", "/photos/day12/image188.png", "/photos/day12/image198.png", "/photos/day12/image203.png", "/photos/day12/image231.png", "/photos/day12/image242.png", "/photos/day12/image252.png", "/photos/day12/image277.png", "/photos/day12/image278.png", "/photos/day12/image89.png"],
     story: "La Death Valley, un nom qui évoque l'extrême, la chaleur écrasante et des paysages lunaires. Cette journée sera consacrée à la découverte de ce parc national fascinant, le point le plus bas et l'un des plus chauds des États-Unis. Traversez ses étendues désertiques, admirez les formations géologiques uniques et ressentez la puissance de la nature. Commencez par Zabriskie Point au lever du soleil, puis Twenty Mule Team Canyon, Furnace Creek, Badwater Basin (-86m), Devil's Golf Course, Artist Drive et les Mesquite Flat Sand Dunes. Terminez au Alabama Hills près de Lone Pine, décor mythique de nombreux westerns.",
     hotel: H("Dow Villa Hotel & Motel", "310 S Main St, Lone Pine, CA 93545"),
     restaurants: [
@@ -237,7 +237,7 @@ export const DAYS = [
     resume: "Remontée de la Sierra Nevada, visites culturelles au camp de Manzanar, sources chaudes, Mono Lake et ville fantôme de Bodie.",
     location: "Manzanar / Mono Lake / Bodie",
     image: "/photos/day13.png",
-    gallery: ["/photos/day13.png", "/photos/day13_2.png", "/photos/day13_3.png", "/photos/day13_4.png", "/photos/day13_5.png", "/photos/day13_6.png"],
+    gallery: ["/photos/day13.png", "/photos/day13/image133.png", "/photos/day13/image147.png", "/photos/day13/image158.png", "/photos/day13/image16.png", "/photos/day13/image163.png", "/photos/day13/image213.png", "/photos/day13/image214.png", "/photos/day13/image233.png", "/photos/day13/image254.png", "/photos/day13/image31.png", "/photos/day13/image85.png", "/photos/day13/image90.png", "/photos/day13/image92.png", "/photos/day13/image99.png"],
     story: "Aujourd'hui, prenez la route panoramique de la 395 vers le nord, à travers la Sierra Nevada. Le premier arrêt est le Manzanar National Historic Site, ancien camp d'internement des Américains d'origine japonaise pendant la Seconde Guerre mondiale - un lieu émouvant. Continuez avec un plongeon relaxant dans les sources chaudes naturelles autour de Bishop et Mammoth (Willi's Hot Spring, Hilltop). Ensuite, découvrez le Mono Lake et ses tufas au South Tufa Area, puis plongez dans le Wild West à Bodie State Historic Park, ville fantôme parfaitement conservée dans son état d'abandon.",
     hotel: H("Walker River Lodge", "100 Main St, Bridgeport, CA 93517"),
     restaurants: [
@@ -253,7 +253,7 @@ export const DAYS = [
     resume: "Journée d'exploration du parc national de Yosemite, avec une randonnée aventureuse le long de la Tenaya Creek et une immersion dans la majesté des séquoias géants.",
     location: "Yosemite National Park",
     image: "/photos/day14.png",
-    gallery: ["/photos/day14.png", "/photos/day14_2.png", "/photos/day14_3.png"],
+    gallery: ["/photos/day14.png", "/photos/day14/image18.png", "/photos/day14/image236.png", "/photos/day14/image253.png"],
     story: "Aujourd'hui, entrez dans le mythique parc national de Yosemite par la Tioga Pass à l'est. La journée sera consacrée à la découverte des paysages spectaculaires, alliant l'aventure au fil de l'eau à la contemplation des arbres les plus grands du monde. Explorez Tuolumne Meadows, Lembert Dome, puis descendez à la Tenaya Creek et son toboggan naturel - un moment inoubliable pour toute la famille. Baignade au Tenaya Lake. Visite du Tuolumne Grove pour rencontrer les géants séquoias. Fin de journée dans la Yosemite Valley avec Tunnel View et El Capitan.",
     hotel: H("Curry Village", "Curry Village, Yosemite Valley, CA 95389"),
     restaurants: [
@@ -267,7 +267,7 @@ export const DAYS = [
     resume: "Journée intense dans la Yosemite Valley, randonnée sur le Panorama Trail et cascades, avant de prendre la route vers San Francisco.",
     location: "Yosemite Valley / Livermore",
     image: "/photos/day15.png",
-    gallery: ["/photos/day15.png", "/photos/day15_2.png"],
+    gallery: ["/photos/day15.png", "/photos/day15/image17.png", "/photos/day15/image184.png", "/photos/day15/image213.png", "/photos/day15/image3.png", "/photos/day15/image97.png"],
     story: "La Yosemite Valley, un joyau naturel aux paysages époustouflants. Deux options : la randonnée mythique du Panorama Trail (Glacier Point vers la vallée en passant par Illilouette, Nevada et Vernal Falls), ou la découverte plus classique avec le Mist Trail vers Vernal Falls. Puis prenez la route vers l'ouest, direction la Bay Area. Arrêt possible au Bass Pro Shops de Manteca, un incroyable magasin d'articles de plein air au décor unique. Nuit à Livermore, aux portes de San Francisco.",
     hotel: H("Holiday Inn Express Hotel & Suites Livermore", "3000 Constitution Dr, Livermore, CA 94551"),
     restaurants: [
@@ -284,7 +284,7 @@ export const DAYS = [
     resume: "Immersion nature avec le Muir Woods National Monument, découverte des houseboats de Sausalito et traversée emblématique du Golden Gate Bridge.",
     location: "Muir Woods / Sausalito / San Francisco",
     image: "/photos/day16.png",
-    gallery: ["/photos/day16.png", "/photos/day16_2.png", "/photos/day16_3.png"],
+    gallery: ["/photos/day16.png", "/photos/day16/image234.png", "/photos/day16/image246.png", "/photos/day16/image281.png"],
     story: "Aujourd'hui, direction la magnifique côte californienne. Commencez par l'émerveillement face aux séquoias géants côtiers de Muir Woods, cathédrale végétale à quelques minutes de San Francisco. Continuez par le charme unique de Sausalito et ses fascinants houseboats - des maisons flottantes de toutes formes le long des docks. Traversez ensuite l'iconique Golden Gate Bridge, avec des arrêts photos aux points de vue légendaires. Fin d'après-midi à Lands End pour une balade côtière spectaculaire jusqu'aux ruines des Sutro Baths.",
     hotel: H("Marriott Vacation Club, San Francisco", "2620 Jones St, San Francisco, CA 94133"),
     restaurants: [
@@ -298,7 +298,7 @@ export const DAYS = [
     resume: "Exploration des contrastes de San Francisco, du quartier financier aux quais animés, avec une option nocturne vers Alcatraz.",
     location: "San Francisco",
     image: "/photos/day17.png",
-    gallery: ["/photos/day17.png"],
+    gallery: ["/photos/day16.png", "/photos/day16/image234.png", "/photos/day16/image246.png", "/photos/day16/image281.png"],
     story: "Plongez au cœur de San Francisco, une ville de collines emblématiques, de quartiers historiques et d'une baie spectaculaire. Aujourd'hui, découverte de ses facettes modernes : SoMa et le South of Market, l'Embarcadero, le Ferry Building et ses stands gourmets, jusqu'au Fisherman's Wharf. En soirée, excursion inoubliable vers Alcatraz, l'ancienne prison fédérale mythique, pour une visite nocturne particulièrement immersive.",
     hotel: H("Marriott Vacation Club, San Francisco", "2620 Jones St, San Francisco, CA 94133"),
     restaurants: [
@@ -316,7 +316,7 @@ export const DAYS = [
     resume: "Exploration des quartiers historiques : Financial District, North Beach et Chinatown, avec option match de baseball.",
     location: "San Francisco",
     image: "/photos/day18.png",
-    gallery: ["/photos/day18.png"],
+    gallery: ["/photos/day16.png", "/photos/day16/image234.png", "/photos/day16/image246.png", "/photos/day16/image281.png"],
     story: "Troisième jour à San Francisco, consacré aux quartiers emblématiques chargés d'histoire et de culture. Commencez à Union Square, cœur commerçant, puis grimpez Nob Hill et Russian Hill pour la Lombard Street tortueuse. Traversez le Financial District avec ses gratte-ciels, avant de plonger dans North Beach, le Little Italy de SF, puis Chinatown, la plus grande hors d'Asie. L'après-midi : Civic Center, Alamo Square et ses Painted Ladies, puis Haight Ashbury, berceau de la contre-culture des années 60. En soirée, option match de baseball des Giants à Oracle Park.",
     hotel: H("Marriott Vacation Club, San Francisco", "2620 Jones St, San Francisco, CA 94133"),
     restaurants: [
@@ -333,7 +333,7 @@ export const DAYS = [
     resume: "Journée côte Pacifique, du petit-déjeuner face à l'océan à Pacifica jusqu'à l'ambiance festive du Santa Cruz Boardwalk.",
     location: "Pacifica / Santa Cruz",
     image: "/photos/day19.png",
-    gallery: ["/photos/day19.png", "/photos/day19_2.png"],
+    gallery: ["/photos/day19.png", "/photos/day19/image104.png", "/photos/day19/image191.png", "/photos/day19/image3.png", "/photos/day19/image91.png", "/photos/day19/image97.png"],
     story: "Aujourd'hui, prenez la légendaire California 1 pour une exploration côtière. Au programme : un petit-déjeuner unique au Taco Bell Cantina de Pacifica avec vue sur les surfeurs, une balade sur le spectaculaire Devils Slide Trail, un arrêt à Half Moon Bay et un détour à Año Nuevo State Park pour observer les éléphants de mer. L'après-midi, plongée dans l'ambiance festive du Santa Cruz Boardwalk, fête foraine historique en bord de plage avec son mythique Giant Dipper.",
     hotel: H("Marriott Vacation Club, San Francisco", "2620 Jones St, San Francisco, CA 94133"),
     restaurants: [
@@ -350,7 +350,7 @@ export const DAYS = [
     resume: "Falaises de Point Lobos, 17 Miles Drive entre Carmel et Monterey, puis Pismo Beach en passant par Big Sur.",
     location: "Monterey / Big Sur / Pismo Beach",
     image: "/photos/day20.png",
-    gallery: ["/photos/day20.png"],
+    gallery: ["/photos/day20.png", "/photos/day20/image104.png", "/photos/day20/image3.png", "/photos/day20/image97.png"],
     story: "La journée commence à Monterey avec l'exploration de la Old Fisherman's Wharf et de Cannery Row (rendus célèbres par Steinbeck), puis découverte des paysages côtiers spectaculaires de la 17 Miles Drive à travers Pebble Beach et du Point Lobos State Natural Reserve. La route se poursuit le long de la mythique Big Sur avec ses ponts iconiques (Bixby Bridge), cascades (McWay Falls) et falaises vertigineuses. Passage aux Piedras Blancas pour observer les éléphants de mer, puis arrivée à Pismo Beach en fin de journée.",
     hotel: H("Hilton Garden Inn San Luis Obispo/Pismo Beach", "601 James Way, Pismo Beach, CA 93449"),
     restaurants: [
@@ -367,7 +367,7 @@ export const DAYS = [
     resume: "Balade dans les dunes du Rancho Guadalupe, mission espagnole à Lompoc, Santa Barbara, shopping aux Camarillo Outlets, plages de Malibu puis Los Angeles.",
     location: "Santa Barbara / Malibu / Los Angeles",
     image: "/photos/day21.png",
-    gallery: ["/photos/day21.png", "/photos/day21_2.png"],
+    gallery: ["/photos/day21.png", "/photos/day21/image201.png", "/photos/day21/image266.png", "/photos/day21/image3.png"],
     story: "La journée débute par une immersion cinématographique aux Rancho Guadalupe Dunes, décor des Dix Commandements de DeMille. Suivie d'une leçon d'histoire à La Purisima Mission, l'une des missions espagnoles les mieux préservées de Californie. Santa Barbara offre ensuite une promenade architecturale (Courthouse remarquable) et côtière (Stearns Wharf). Détour shopping aux Camarillo Premium Outlets, puis route panoramique le long des plages iconiques de Malibu (Zuma Beach, El Matador) pour finalement arriver à Venice, LA.",
     hotel: H("AirBnB Venice", "441 Canal, Venice, CA 90291"),
     restaurants: [
@@ -384,7 +384,7 @@ export const DAYS = [
     resume: "Découverte de Downtown Los Angeles et de Santa Monica Beach.",
     location: "Downtown LA / Santa Monica",
     image: "/photos/day22.png",
-    gallery: ["/photos/day22.png"],
+    gallery: ["/photos/day22.png", "/photos/day22/image49.png"],
     story: "La journée est consacrée à l'exploration du centre historique de Los Angeles, un mélange fascinant de gratte-ciels modernes et d'architecture Art Deco. Commencez par Pershing Square, puis grimpez au Lobby Lounge de l'InterContinental pour une vue panoramique depuis le 70ème étage. L'après-midi se termine par une visite de la célèbre plage et de la jetée de Santa Monica, avec sa fête foraine et son ambiance californienne emblématique.",
     hotel: H("AirBnB Venice", "441 Canal, Venice, CA 90291"),
     restaurants: [
@@ -401,7 +401,7 @@ export const DAYS = [
     resume: "Journée complète à Universal Studios Hollywood.",
     location: "Universal Studios Hollywood",
     image: "/photos/day23.png",
-    gallery: ["/photos/day23.png"],
+    gallery: ["/photos/day22.png", "/photos/day22/image49.png"],
     story: "Une journée immersive dans le monde du cinéma et de la télévision à Universal Studios Hollywood. Attractions emblématiques (Jurassic World, Revenge of the Mummy, Transformers 3D), spectacles impressionnants (WaterWorld), et découverte du monde magique du Wizarding World of Harry Potter et du tout nouveau Super Nintendo World. Ne manquez pas le fameux Studio Tour, tour en tram derrière les décors des grandes productions hollywoodiennes.",
     hotel: H("AirBnB Venice", "441 Canal, Venice, CA 90291"),
     restaurants: [
@@ -432,7 +432,7 @@ export const DAYS = [
     resume: "Hollywood Boulevard, quartier des musées, et Griffith Park.",
     location: "Hollywood / Griffith Park",
     image: "/photos/day25.png",
-    gallery: ["/photos/day25.png", "/photos/day25_2.png", "/photos/day25_3.png", "/photos/day25_4.png", "/photos/day25_5.png"],
+    gallery: ["/photos/day25.png", "/photos/day25/image192.png", "/photos/day25/image213.png", "/photos/day25/image217.png", "/photos/day25/image263.png", "/photos/day25/image50.png", "/photos/day25/image6.jpg", "/photos/day25/image66.png"],
     story: "La journée commence par une vue panoramique sur Los Angeles depuis le Griffith Observatory. Ensuite, exploration du mythique Hollywood Boulevard : Walk of Fame et ses étoiles, Hollywood & Highland, le Chinese Theatre et ses empreintes de stars. L'après-midi, immersion dans le monde du cinéma et de l'art au quartier des musées : LACMA, La Brea Tar Pits, le tout nouveau Academy Museum of Motion Pictures et le Petersen Automotive Museum. Terminez au Farmer's Market et au Grove pour du shopping.",
     hotel: H("AirBnB Venice", "441 Canal, Venice, CA 90291"),
     restaurants: [
@@ -448,7 +448,7 @@ export const DAYS = [
     resume: "Découverte de Beverly Hills et Rodeo Drive, puis route pour l'aéroport pour un départ à 18h30.",
     location: "Beverly Hills / LAX",
     image: "/photos/day26.png",
-    gallery: ["/photos/day26.png"],
+    gallery: ["/photos/day26.png", "/photos/day26/image195.png"],
     story: "La matinée est consacrée à la découverte des luxueuses avenues et boutiques de Beverly Hills, y compris la célèbre Rodeo Drive, Two Rodeo, Walk of Style, et les boutiques mythiques (Louis Vuitton, Bijan). Balade dans les Beverly Gardens Park avec le Beverly Hills Sign iconique, arrêt à la Union 76 gas station à l'architecture futuriste et à l'O'Neill House à l'architecture surprenante. Puis route vers LAX pour votre vol de retour à 18h30. Un voyage inoubliable se termine !",
     hotel: null,
     restaurants: [
