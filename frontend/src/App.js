@@ -6,7 +6,26 @@ import daysFull from "@/data/days_full.json";
 
 const Icon = ({ name }) => <i className={`fa-solid fa-${name}`}></i>;
 
-// Renders a paragraph text that may contain [LINK|url|text] markers
+// Reusable tabs for day pages/subpages
+function DayTabs({ day, active }) {
+  const cls = (name) => `tab${active === name ? " active" : ""}`;
+  return (
+    <div className="tabs" data-testid="day-tabs">
+      <Link to={`/jour/${day.id}`} className={cls("recit")} data-testid="tab-recit">
+        <Icon name="book-open" /> Le récit
+      </Link>
+      <Link to={`/jour/${day.id}/hotel`} className={cls("hotel")} data-testid="tab-hotel">
+        <Icon name="bed" /> Hôtel
+      </Link>
+      <Link to={`/jour/${day.id}/manger`} className={cls("manger")} data-testid="tab-manger">
+        <Icon name="utensils" /> Où Manger ({day.restaurants.length})
+      </Link>
+      <span className={cls("lieux")}>
+        <Icon name="location-dot" /> Lieux ({day.places.length})
+      </span>
+    </div>
+  );
+}
 function RichText({ text }) {
   if (!text) return null;
   const parts = [];
@@ -148,12 +167,7 @@ function DayPage() {
         <div className="day-hero-resume">{day.resume}</div>
       </div>
 
-      <div className="tabs" data-testid="day-tabs">
-        <span className="tab active"><Icon name="book-open" /> Le récit</span>
-        <Link to={`/jour/${day.id}/hotel`} className="tab" data-testid="tab-hotel"><Icon name="bed" /> Hôtel</Link>
-        <Link to={`/jour/${day.id}/manger`} className="tab" data-testid="tab-manger"><Icon name="utensils" /> Où Manger ({day.restaurants.length})</Link>
-        <span className="tab"><Icon name="location-dot" /> Lieux ({day.places.length})</span>
-      </div>
+      <DayTabs day={day} active="recit" />
 
       <div className="story" data-testid="day-story">
         {hasRichContent ? (
@@ -196,6 +210,8 @@ function HotelPage() {
         <div className="day-hero-resume">{day.date} — {day.location}</div>
       </div>
 
+      <DayTabs day={day} active="hotel" />
+
       {day.hotel ? (
         <div className="card" data-testid="hotel-card">
           <h3>{day.hotel.name}</h3>
@@ -236,6 +252,8 @@ function MangerPage() {
         <h1 className="day-hero-title"><Icon name="utensils" /> Où Manger</h1>
         <div className="day-hero-resume">{day.date} — {day.restaurants.length} suggestions</div>
       </div>
+
+      <DayTabs day={day} active="manger" />
 
       {day.restaurants.length === 0 ? (
         <div className="card"><p>Pas de suggestion pour ce jour — pique-nique conseillé !</p></div>
