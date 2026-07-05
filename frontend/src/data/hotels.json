@@ -1,0 +1,455 @@
+{
+ "1": [
+  {
+   "name": "Holiday Inn Express Hotel & Suites Hesperia by IHG",
+   "city": "Hesperia",
+   "families": [
+    {
+     "family": "marlier arnaud",
+     "cost_total": "199 euros",
+     "cost_eur": "199.00",
+     "status": "Paid",
+     "rooms": "2 chambres",
+     "platform": "Hotel.com",
+     "notes": ""
+    }
+   ]
+  }
+ ],
+ "2": [
+  {
+   "name": "Maswik Lodge",
+   "city": "Grand Canyon",
+   "families": [
+    {
+     "family": "dufour.frederic57@gmail.com",
+     "cost_total": "354.76 euros",
+     "cost_eur": "354.76",
+     "status": "Paid",
+     "rooms": "2 chambres",
+     "platform": "Hotel.com",
+     "notes": ""
+    }
+   ]
+  }
+ ],
+ "3": [
+  {
+   "name": "Wingate by Wyndham Page Lake Powell",
+   "city": "Page",
+   "families": [
+    {
+     "family": "marlier arnaud",
+     "cost_total": "290,50 euros",
+     "cost_eur": "290.50",
+     "status": "Paid",
+     "rooms": "2 chambres",
+     "platform": "Hotel.com",
+     "notes": ""
+    }
+   ]
+  }
+ ],
+ "4": [
+  {
+   "name": "The VIEW Campgrounds",
+   "city": "Monument Valley",
+   "families": [
+    {
+     "family": "dufour.frederic57@gmail.com",
+     "cost_total": "407,65 dollars",
+     "cost_eur": "345.00",
+     "status": "To pay there",
+     "rooms": "1 chambre",
+     "platform": "En direct",
+     "notes": ""
+    },
+    {
+     "family": "marlier arnaud",
+     "cost_total": "384,85 dollars",
+     "cost_eur": "325.34",
+     "status": "To pay there",
+     "rooms": "1 chambre",
+     "platform": "En direct",
+     "notes": "cours estimé 1,18 au 24/01"
+    }
+   ]
+  }
+ ],
+ "5": [
+  {
+   "name": "Aarchway Inn",
+   "city": "Moab",
+   "families": [
+    {
+     "family": "Frédéric Dufour",
+     "cost_total": "210,41 euros",
+     "cost_eur": "210.41",
+     "status": "Paid",
+     "rooms": "1 chambre",
+     "platform": "Hotel.com",
+     "notes": ""
+    },
+    {
+     "family": "marlier arnaud",
+     "cost_total": "241,10 dollars",
+     "cost_eur": "204.00",
+     "status": "Paid",
+     "rooms": "1 chambre",
+     "platform": "Hotel.com",
+     "notes": ""
+    }
+   ]
+  }
+ ],
+ "6": [
+  {
+   "name": "Aarchway Inn",
+   "city": "Moab",
+   "families": [
+    {
+     "family": "Frédéric Dufour",
+     "cost_total": "210,41 euros",
+     "cost_eur": "210.41",
+     "status": "Paid",
+     "rooms": "1 chambre",
+     "platform": "Hotel.com",
+     "notes": ""
+    },
+    {
+     "family": "marlier arnaud",
+     "cost_total": "241,10 dollars",
+     "cost_eur": "204.00",
+     "status": "Paid",
+     "rooms": "1 chambre",
+     "platform": "Hotel.com",
+     "notes": ""
+    }
+   ]
+  }
+ ],
+ "7": [
+  {
+   "name": "Broken Spur Inn & Steakhouse",
+   "city": "Torrey",
+   "families": [
+    {
+     "family": "marlier arnaud",
+     "cost_total": "404,64 euros",
+     "cost_eur": "404.64",
+     "status": "Paid",
+     "rooms": "2 chambres",
+     "platform": "Hotel.com",
+     "notes": ""
+    }
+   ]
+  }
+ ],
+ "8": [
+  {
+   "name": "Tropic",
+   "city": "Bryce",
+   "families": [
+    {
+     "family": "dufour.frederic57@gmail.com",
+     "cost_total": "354,42 dollars",
+     "cost_eur": "297.93",
+     "status": "Paid",
+     "rooms": "2 chambres",
+     "platform": "Hotel.com",
+     "notes": ""
+    }
+   ]
+  }
+ ],
+ "9": [
+  {
+   "name": "St. George Inn and Suites",
+   "city": "Saint Georges",
+   "families": [
+    {
+     "family": "marlier arnaud",
+     "cost_total": "129,83 euros",
+     "cost_eur": "129.83",
+     "status": "Paid",
+     "rooms": "2 chambres",
+     "platform": "Booking.com",
+     "notes": ""
+    }
+   ]
+  }
+ ],
+ "11": [
+  {
+   "name": "Park MGM",
+   "city": "Las Vegas",
+   "families": [
+    {
+     "family": "marlier arnaud",
+     "cost_total": "1152,80 dollars",
+     "cost_eur": "980.47",
+     "status": "To pay there",
+     "rooms": "2 chambres",
+     "platform": "Booking.com",
+     "notes": "cours estimé 1,18 au 24/01"
+    }
+   ]
+  }
+ ],
+ "12": [
+  {
+   "name": "Historic Dow Hotel",
+   "city": "Lone Pine",
+   "families": [
+    {
+     "family": "dufour.frederic57@gmail.com",
+     "cost_total": "127,68 dollars",
+     "cost_eur": "108.00",
+     "status": "To pay there",
+     "rooms": "1 chambre",
+     "platform": "En direct",
+     "notes": ""
+    },
+    {
+     "family": "marlier arnaud",
+     "cost_total": "127,68 dollars",
+     "cost_eur": "108.00",
+     "status": "To pay there",
+     "rooms": "1 chambre",
+     "platform": "En direct",
+     "notes": "cours estimé 1,18 au 24/01"
+    }
+   ]
+  }
+ ],
+ "13": [
+  {
+   "name": "Walker River Lodge",
+   "city": "Bridgeport",
+   "families": [
+    {
+     "family": "dufour.frederic57@gmail.com",
+     "cost_total": "337,21 dollars",
+     "cost_eur": "285.00",
+     "status": "Paid",
+     "rooms": "2 chambres",
+     "platform": "Booking.com",
+     "notes": ""
+    }
+   ]
+  }
+ ],
+ "14": [
+  {
+   "name": "Curry Village",
+   "city": "Yosemite",
+   "families": [
+    {
+     "family": "marlier arnaud",
+     "cost_total": "212,63 dollars",
+     "cost_eur": "183.57",
+     "status": "Paid",
+     "rooms": "1 chambre",
+     "platform": "En direct",
+     "notes": ""
+    },
+    {
+     "family": "dufour.frederic57@gmail.com",
+     "cost_total": "183,57 euros",
+     "cost_eur": "183.57",
+     "status": "Paid",
+     "rooms": "1 chambre",
+     "platform": "En direct",
+     "notes": ""
+    }
+   ]
+  }
+ ],
+ "15": [
+  {
+   "name": "Holiday Inn Express Hotel & Suites Livermore by IHG",
+   "city": "Livermore",
+   "families": [
+    {
+     "family": "marlier arnaud",
+     "cost_total": "216,86 euros",
+     "cost_eur": "216.86",
+     "status": "Paid",
+     "rooms": "2 chambres",
+     "platform": "Booking.com",
+     "notes": ""
+    }
+   ]
+  }
+ ],
+ "16": [
+  {
+   "name": "Marriott Vacation Club®, San Francisco",
+   "city": "San Francisco",
+   "families": [
+    {
+     "family": "dufour.frederic57@gmail.com",
+     "cost_total": "1341,54 euros",
+     "cost_eur": "1,341.54",
+     "status": "Paid",
+     "rooms": "2 chambres",
+     "platform": "Hotel.com",
+     "notes": ""
+    }
+   ]
+  }
+ ],
+ "17": [
+  {
+   "name": "Marriott Vacation Club®, San Francisco",
+   "city": "San Francisco",
+   "families": [
+    {
+     "family": "dufour.frederic57@gmail.com",
+     "cost_total": "1341,54 euros",
+     "cost_eur": "1,341.54",
+     "status": "Paid",
+     "rooms": "2 chambres",
+     "platform": "Hotel.com",
+     "notes": ""
+    }
+   ]
+  }
+ ],
+ "18": [
+  {
+   "name": "Marriott Vacation Club®, San Francisco",
+   "city": "San Francisco",
+   "families": [
+    {
+     "family": "dufour.frederic57@gmail.com",
+     "cost_total": "1341,54 euros",
+     "cost_eur": "1,341.54",
+     "status": "Paid",
+     "rooms": "2 chambres",
+     "platform": "Hotel.com",
+     "notes": ""
+    }
+   ]
+  }
+ ],
+ "19": [
+  {
+   "name": "Hampton Inn Morgan Hill",
+   "city": "Morgan Hill",
+   "families": [
+    {
+     "family": "marlier arnaud",
+     "cost_total": "330,30 euros",
+     "cost_eur": "330.33",
+     "status": "Paid",
+     "rooms": "2 chambres",
+     "platform": "Hotel.com",
+     "notes": ""
+    }
+   ]
+  }
+ ],
+ "20": [
+  {
+   "name": "Hilton Garden Inn San Luis Obispo/Pismo Beach",
+   "city": "Pismo beach",
+   "families": [
+    {
+     "family": "dufour.frederic57@gmail.com",
+     "cost_total": "307,50 euros",
+     "cost_eur": "307.50",
+     "status": "Paid",
+     "rooms": "2 chambres",
+     "platform": "Hotel.com",
+     "notes": ""
+    }
+   ]
+  }
+ ],
+ "21": [
+  {
+   "name": "Venice Airbnb",
+   "city": "Los Angeles",
+   "families": [
+    {
+     "family": "marlier arnaud",
+     "cost_total": "3361,5 euros",
+     "cost_eur": "3,361.50",
+     "status": "Half paid",
+     "rooms": "airbnb",
+     "platform": "AirbBnB finir de payer avant le 10 Juin",
+     "notes": ""
+    }
+   ]
+  }
+ ],
+ "22": [
+  {
+   "name": "Venice Airbnb",
+   "city": "Los Angeles",
+   "families": [
+    {
+     "family": "marlier arnaud",
+     "cost_total": "3361,5 euros",
+     "cost_eur": "3,361.50",
+     "status": "Half paid",
+     "rooms": "airbnb",
+     "platform": "AirbBnB finir de payer avant le 10 Juin",
+     "notes": ""
+    }
+   ]
+  }
+ ],
+ "23": [
+  {
+   "name": "Venice Airbnb",
+   "city": "Los Angeles",
+   "families": [
+    {
+     "family": "marlier arnaud",
+     "cost_total": "3361,5 euros",
+     "cost_eur": "3,361.50",
+     "status": "Half paid",
+     "rooms": "airbnb",
+     "platform": "AirbBnB finir de payer avant le 10 Juin",
+     "notes": ""
+    }
+   ]
+  }
+ ],
+ "24": [
+  {
+   "name": "Venice Airbnb",
+   "city": "Los Angeles",
+   "families": [
+    {
+     "family": "marlier arnaud",
+     "cost_total": "3361,5 euros",
+     "cost_eur": "3,361.50",
+     "status": "Half paid",
+     "rooms": "airbnb",
+     "platform": "AirbBnB finir de payer avant le 10 Juin",
+     "notes": ""
+    }
+   ]
+  }
+ ],
+ "25": [
+  {
+   "name": "Venice Airbnb",
+   "city": "Los Angeles",
+   "families": [
+    {
+     "family": "marlier arnaud",
+     "cost_total": "3361,5 euros",
+     "cost_eur": "3,361.50",
+     "status": "Half paid",
+     "rooms": "airbnb",
+     "platform": "AirbBnB finir de payer avant le 10 Juin",
+     "notes": ""
+    }
+   ]
+  }
+ ]
+}

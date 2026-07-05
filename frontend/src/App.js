@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route, Link, NavLink, useParams, useNavigate } f
 import { TRIP, DAYS, GUIDES, DOCUMENTS } from "@/data/trip";
 import daysFull from "@/data/days_full.json";
 import introFull from "@/data/intro_full.json";
+import hotelsData from "@/data/hotels.json";
 
 const Icon = ({ name }) => <i className={`fa-solid fa-${name}`}></i>;
 
@@ -362,6 +363,8 @@ function HotelPage() {
   const day = DAYS.find(d => d.id === parseInt(id));
   if (!day) return <div className="container">Jour introuvable</div>;
 
+  const bookedHotels = hotelsData[String(day.id)] || [];
+
   return (
     <div className="container" data-testid={`hotel-page-${day.id}`}>
       <Link to={`/jour/${day.id}`} className="back-link" data-testid="back-to-day">
@@ -376,12 +379,58 @@ function HotelPage() {
 
       <DayTabs day={day} active="hotel" />
 
-      {day.hotel ? (
+      {bookedHotels.length > 0 ? (
+        bookedHotels.map((h, hi) => (
+          <div key={hi} className="card" data-testid={`hotel-card-${hi}`}>
+            <h3>{h.name}</h3>
+            <div style={{ display: "flex", gap: 8, flexWrap: "wrap", margin: "6px 0 12px" }}>
+              <span className="chip">{h.city}</span>
+              {h.families.some(f => f.platform) && (
+                <span className="chip">via {[...new Set(h.families.map(f => f.platform).filter(Boolean))].join(" / ")}</span>
+              )}
+            </div>
+
+            <div className="hotel-families">
+              {h.families.map((fam, fi) => (
+                <div key={fi} className="hotel-fam-row">
+                  <div style={{ flex: 1 }}>
+                    <div className="hotel-fam-name"><Icon name="user-group" /> {fam.family || "Famille"}</div>
+                    <div className="hotel-fam-meta">{fam.rooms}</div>
+                    {fam.notes && <div className="hotel-fam-note">{fam.notes}</div>}
+                  </div>
+                  <div className="hotel-fam-cost">
+                    <div className="hotel-fam-price">{fam.cost_total}</div>
+                    {fam.cost_eur && fam.cost_total !== fam.cost_eur + " euros" && (
+                      <div className="hotel-fam-eur">≈ {fam.cost_eur} €</div>
+                    )}
+                    <div className={`hotel-fam-status hotel-status-${fam.status?.toLowerCase().replace(/\s+/g,"-") || "unknown"}`}>
+                      {fam.status}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="address" style={{ marginTop: 14 }}>
+              <Icon name="location-dot" />
+              <span>{day.hotel?.address || h.city}</span>
+            </div>
+            <a
+              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(h.name + " " + (day.hotel?.address || h.city))}`}
+              target="_blank" rel="noreferrer" className="tab active"
+              style={{ display: "inline-flex", marginTop: 12 }}
+              data-testid={`hotel-map-link-${hi}`}
+            >
+              <Icon name="map-location-dot" /> Ouvrir dans Google Maps
+            </a>
+          </div>
+        ))
+      ) : day.hotel ? (
         <div className="card" data-testid="hotel-card">
           <h3>{day.hotel.name}</h3>
           <span className="chip">Hébergement</span>
           <div className="address"><Icon name="location-dot" /> {day.hotel.address}</div>
-          <p style={{ marginTop: 18 }}>Retrouvez votre bon de réservation dans votre dossier voyage. Pensez à vérifier les horaires de check-in (généralement à partir de 15h) et check-out (11h).</p>
+          <p style={{ marginTop: 18 }}>Retrouvez votre bon de réservation dans votre dossier voyage.</p>
           <a
             href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(day.hotel.name + " " + day.hotel.address)}`}
             target="_blank" rel="noreferrer" className="tab active"

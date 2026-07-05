@@ -157,6 +157,31 @@ body {
 .countdown-title { font-family: 'Fraunces', serif; font-size: 20px; font-weight: 600; }
 .countdown-sub { font-size: 13px; opacity: 0.9; margin-top: 3px; }
 
+/* Hotel families rows */
+.hotel-families { border-top: 1px solid var(--border); margin-top: 8px; }
+.hotel-fam-row {
+  display: flex; align-items: center; gap: 16px;
+  padding: 14px 0; border-bottom: 1px solid var(--border);
+}
+.hotel-fam-row:last-child { border-bottom: none; }
+.hotel-fam-name { font-weight: 600; display: flex; align-items: center; gap: 8px; }
+.hotel-fam-name i { color: var(--brand); }
+.hotel-fam-meta { color: var(--ink-2); font-size: 13px; margin-top: 3px; }
+.hotel-fam-note { color: var(--ink-2); font-size: 12px; margin-top: 4px; font-style: italic; }
+.hotel-fam-cost { text-align: right; min-width: 130px; }
+.hotel-fam-price { font-family: 'Fraunces', serif; font-weight: 700; font-size: 18px; color: var(--ink); }
+.hotel-fam-eur { color: var(--ink-2); font-size: 12px; margin-top: 2px; }
+.hotel-fam-status {
+  display: inline-block; margin-top: 6px;
+  padding: 3px 10px; border-radius: 999px;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;
+}
+.hotel-status-paid { background: #dcf5e5; color: #1a7a3e; }
+.hotel-status-to-pay-there { background: #fef3c7; color: #92400e; }
+.hotel-status-half-paid { background: #dbeafe; color: #1e40af; }
+.hotel-status-unknown { background: #f3f4f6; color: #6b7280; }
+@media (max-width: 720px) { .hotel-fam-row { flex-direction: column; align-items: flex-start; } .hotel-fam-cost { text-align: left; } }
+
 /* Guide card */
 .guide-card {
   background: var(--paper); border: 1px solid var(--border);
