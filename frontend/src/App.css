@@ -175,6 +175,10 @@ body {
 .address i { color: var(--brand); margin-top: 3px; }
 
 /* Places list */
+.gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 18px; }
+.gallery-img { width: 100%; height: 140px; object-fit: cover; border-radius: 10px; cursor: pointer; transition: transform 0.2s; }
+.gallery-img:hover { transform: scale(1.02); }
+@media (max-width: 720px) { .gallery { grid-template-columns: repeat(2, 1fr); } .gallery-img { height: 110px; } }
 .place-item { padding: 12px 0; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 12px; }
 .place-item:last-child { border-bottom: none; }
 .place-icon { width: 32px; height: 32px; border-radius: 8px; background: var(--brand-light); color: var(--brand); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }

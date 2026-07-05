@@ -88,6 +88,14 @@ function DayPage() {
 
       <img src={day.image} alt={day.location} className="day-hero-img" onError={(e) => e.target.style.display='none'} />
 
+      {day.gallery && day.gallery.length > 1 && (
+        <div className="gallery" data-testid="day-gallery">
+          {day.gallery.slice(1).map((src, i) => (
+            <img key={i} src={src} alt={`${day.location} ${i+2}`} className="gallery-img" onError={(e) => e.target.style.display='none'} />
+          ))}
+        </div>
+      )}
+
       <div className="tabs" data-testid="day-tabs">
         <span className="tab active"><Icon name="book-open" /> Le récit</span>
         <Link to={`/jour/${day.id}/hotel`} className="tab" data-testid="tab-hotel"><Icon name="bed" /> Hôtel</Link>
@@ -206,15 +214,43 @@ function Guides() {
       </div>
 
       <h2 className="section-title" style={{ marginTop: 40 }}><Icon name="file-lines" /> Documents complémentaires</h2>
+      <p style={{ color: "var(--ink-2)", marginTop: -8, marginBottom: 16, fontSize: 14 }}>Cliquez sur un guide pour l'ouvrir sur Google Docs, télécharger en PDF ou EPUB.</p>
       {DOCUMENTS.map((d, i) => (
-        <div key={i} className="card" style={{ display: "flex", alignItems: "center", gap: 14, padding: "16px 22px" }}>
-          <div className="guide-icon"><Icon name="file-pdf" /></div>
-          <div style={{ flex: 1 }}>
-            <div style={{ fontWeight: 600 }}>{d.title}</div>
-            <div style={{ fontSize: 13, color: "var(--ink-2)" }}>{d.type}</div>
+        <div key={i} className="card" style={{ display: "flex", alignItems: "center", gap: 14, padding: "16px 22px" }} data-testid={`document-${i}`}>
+          <div className="guide-icon"><Icon name="file-lines" /></div>
+          <div style={{ flex: 1, minWidth: 0 }}>
+            <div style={{ fontWeight: 600, marginBottom: 4 }}>{d.title}</div>
+            <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+              <a href={d.url} target="_blank" rel="noreferrer" className="chip" style={{ textDecoration: "none" }} data-testid={`doc-open-${i}`}><Icon name="up-right-from-square" /> Ouvrir</a>
+              <a href={d.pdf} target="_blank" rel="noreferrer" className="chip" style={{ textDecoration: "none" }} data-testid={`doc-pdf-${i}`}><Icon name="file-pdf" /> PDF</a>
+              <a href={d.epub} target="_blank" rel="noreferrer" className="chip" style={{ textDecoration: "none" }} data-testid={`doc-epub-${i}`}><Icon name="book" /> EPUB</a>
+            </div>
           </div>
         </div>
       ))}
+    </div>
+  );
+}
+
+function CartePage() {
+  const mapId = "1URVs46aM-gP3LQryvJmRXlj6glpG5KQ";
+  return (
+    <div className="container" data-testid="carte-page">
+      <h1 className="section-title" style={{ fontSize: 32 }}><Icon name="map" /> Carte interactive</h1>
+      <p style={{ color: "var(--ink-2)", marginTop: -8, marginBottom: 20 }}>Tous les lieux du voyage sur Google My Maps.</p>
+      <div className="card" style={{ padding: 0, overflow: "hidden" }}>
+        <iframe
+          title="USA Ouest 2026"
+          src={`https://www.google.com/maps/d/embed?mid=${mapId}`}
+          width="100%" height="640" style={{ border: 0, display: "block" }}
+          data-testid="carte-iframe"
+        />
+      </div>
+      <div style={{ marginTop: 16 }}>
+        <a href={TRIP.mapLink} target="_blank" rel="noreferrer" className="tab active" style={{ display: "inline-flex" }} data-testid="carte-open-link">
+          <Icon name="up-right-from-square" /> Ouvrir dans Google Maps
+        </a>
+      </div>
     </div>
   );
 }
@@ -239,7 +275,7 @@ function App() {
           <Route path="/jour/:id/hotel" element={<HotelPage />} />
           <Route path="/jour/:id/manger" element={<MangerPage />} />
           <Route path="/guides" element={<Guides />} />
-          <Route path="/carte" element={<Placeholder title="Carte" icon="map" />} />
+          <Route path="/carte" element={<CartePage />} />
           <Route path="/recherche" element={<Placeholder title="Recherche" icon="magnifying-glass" />} />
           <Route path="/checklist" element={<Placeholder title="Checklist" icon="clipboard-check" />} />
           <Route path="/favoris" element={<Placeholder title="Favoris" icon="heart" />} />
