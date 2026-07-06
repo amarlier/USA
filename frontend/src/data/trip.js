@@ -4,7 +4,7 @@
 export const TRIP = {
   title: "USA Ouest 2026",
   subtitle: "Carnet de route — Familles Dufour Cagna & Marlier",
-  hero: "/photos/day4/image212.png",
+  hero: "https://images.unsplash.com/photo-1562705851-29abd12f5c39?q=80&w=1600&auto=format&fit=crop",
   totalDays: 26,
   totalPlaces: 179,
   mapLink: "https://www.google.com/maps/d/u/0/edit?mid=1URVs46aM-gP3LQryvJmRXlj6glpG5KQ&usp=sharing",
