@@ -1,6 +1,6 @@
 import React from "react";
 import "@/App.css";
-import { BrowserRouter, Routes, Route, Link, NavLink, useParams, useNavigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link, NavLink, useParams, useNavigate, useLocation } from "react-router-dom";
 import { TRIP, DAYS, GUIDES, DOCUMENTS } from "@/data/trip";
 import daysFull from "@/data/days_full.json";
 import introFull from "@/data/intro_full.json";
@@ -181,14 +181,44 @@ function DayNav({ dayId }) {
 
 function Header() {
   const [openJours, setOpenJours] = React.useState(false);
+  const dropdownRef = React.useRef(null);
+
+  React.useEffect(() => {
+    if (!openJours) return;
+    const handleOutside = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setOpenJours(false);
+      }
+    };
+    document.addEventListener('touchstart', handleOutside);
+    document.addEventListener('mousedown', handleOutside);
+    return () => {
+      document.removeEventListener('touchstart', handleOutside);
+      document.removeEventListener('mousedown', handleOutside);
+    };
+  }, [openJours]);
+
   return (
     <header className="header" data-testid="app-header">
       <Link to="/" className="brand" data-testid="brand-link">
         <Icon name="book-open-reader" /> USA Ouest 2026
       </Link>
       <nav className="nav">
-        <div className="nav-dropdown" onMouseLeave={() => setOpenJours(false)}>
-          <NavLink to="/" end onMouseEnter={() => setOpenJours(true)} data-testid="nav-jours">
+        <div
+          className="nav-dropdown"
+          ref={dropdownRef}
+          onMouseEnter={() => setOpenJours(true)}
+          onMouseLeave={() => setOpenJours(false)}
+        >
+          <NavLink
+            to="/"
+            end
+            data-testid="nav-jours"
+            onClick={(e) => {
+              e.preventDefault();
+              setOpenJours(o => !o);
+            }}
+          >
             <Icon name="calendar-days" /><span>Jours</span> <Icon name="chevron-down" />
           </NavLink>
           {openJours && (
@@ -204,9 +234,6 @@ function Header() {
           )}
         </div>
         <NavLink to="/carte" data-testid="nav-carte"><Icon name="map" /><span>Carte</span></NavLink>
-        <NavLink to="/recherche" data-testid="nav-recherche"><Icon name="magnifying-glass" /><span>Recherche</span></NavLink>
-        <NavLink to="/checklist" data-testid="nav-checklist"><Icon name="clipboard-check" /><span>Checklist</span></NavLink>
-        <NavLink to="/favoris" data-testid="nav-favoris"><Icon name="heart" /><span>Favoris</span></NavLink>
         <NavLink to="/guides" data-testid="nav-guides"><Icon name="book" /><span>Guides</span></NavLink>
       </nav>
     </header>
@@ -583,10 +610,19 @@ function Placeholder({ title, icon }) {
   );
 }
 
+function ScrollToTop() {
+  const location = useLocation();
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+  return null;
+}
+
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <ScrollToTop />
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -596,9 +632,6 @@ function App() {
           <Route path="/jour/:id/manger" element={<MangerPage />} />
           <Route path="/guides" element={<Guides />} />
           <Route path="/carte" element={<CartePage />} />
-          <Route path="/recherche" element={<Placeholder title="Recherche" icon="magnifying-glass" />} />
-          <Route path="/checklist" element={<Placeholder title="Checklist" icon="clipboard-check" />} />
-          <Route path="/favoris" element={<Placeholder title="Favoris" icon="heart" />} />
         </Routes>
       </BrowserRouter>
     </div>
