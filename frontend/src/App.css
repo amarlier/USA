@@ -54,14 +54,14 @@ body {
 
 .nav-dropdown { position: relative; }
 .nav-dropdown-menu {
-  position: absolute; top: 100%; left: 0; margin-top: 6px;
+  position: absolute; top: 100%; right: 0; margin-top: 6px;
   background: var(--paper); border: 1px solid var(--border);
   border-radius: 12px; box-shadow: 0 12px 30px rgba(0,0,0,0.08);
   min-width: 380px; max-width: calc(100vw - 24px); max-height: 500px; overflow-y: auto;
   z-index: 50; padding: 6px;
 }
 @media (max-width: 480px) {
-  .nav-dropdown-menu { min-width: 0; width: calc(100vw - 24px); left: -12px; }
+  .nav-dropdown-menu { min-width: 0; width: calc(100vw - 24px); right: -12px; }
   .nav-dropdown-menu a { grid-template-columns: 28px 90px 1fr; }
 }
 .nav-dropdown-menu a {
@@ -312,4 +312,4 @@ body {
 
 /* Guides page */
 .guides-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-@media (max-width: 720px) { .guides-grid { grid-template-columns: 1fr; } .hero h1 { font-size: 36px; } .day-hero-title { font-size: 28px; } .nav a span { display:none; } .container { padding: 20px 14px 60px; } }
+@media (max-width: 720px) { .guides-grid { grid-template-columns: 1fr; } .hero h1 { font-size: 36px; } .day-hero-title { font-size: 28px; } .nav > a > span, .nav-dropdown > a > span { display:none; } .container { padding: 20px 14px 60px; } }
