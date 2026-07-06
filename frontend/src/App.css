@@ -157,6 +157,27 @@ body {
 .countdown-title { font-family: 'Fraunces', serif; font-size: 20px; font-weight: 600; }
 .countdown-sub { font-size: 13px; opacity: 0.9; margin-top: 3px; }
 
+/* Lieux cards */
+.lieux-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.lieu-card {
+  display: flex; align-items: center; gap: 14px;
+  background: var(--paper); border: 1px solid var(--border);
+  border-radius: 14px; padding: 16px 20px;
+  text-decoration: none; color: var(--ink);
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+.lieu-card:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(200,72,30,0.12); border-color: var(--brand-light); }
+.lieu-icon {
+  width: 40px; height: 40px; border-radius: 12px;
+  background: var(--brand-light); color: var(--brand);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; font-size: 16px;
+}
+.lieu-body { flex: 1; min-width: 0; }
+.lieu-name { font-family: 'Fraunces', serif; font-weight: 600; font-size: 16px; margin-bottom: 4px; overflow: hidden; text-overflow: ellipsis; }
+.lieu-sub { color: var(--brand); font-size: 12px; display: flex; align-items: center; gap: 6px; }
+@media (max-width: 720px) { .lieux-grid { grid-template-columns: 1fr; } }
+
 /* Hotel families rows */
 .hotel-families { border-top: 1px solid var(--border); margin-top: 8px; }
 .hotel-fam-row {

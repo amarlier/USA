@@ -14,6 +14,9 @@ function DayTabs({ day, active }) {
   const restoCount = day.restaurants.filter(r => !isChainRestaurant(r.name)).length;
   return (
     <div className="tabs" data-testid="day-tabs">
+      <Link to={`/jour/${day.id}/lieux`} className={cls("lieux")} data-testid="tab-lieux">
+        <Icon name="location-dot" /> Lieux ({day.places.length})
+      </Link>
       <Link to={`/jour/${day.id}`} className={cls("recit")} data-testid="tab-recit">
         <Icon name="book-open" /> Le récit
       </Link>
@@ -23,9 +26,6 @@ function DayTabs({ day, active }) {
       <Link to={`/jour/${day.id}/manger`} className={cls("manger")} data-testid="tab-manger">
         <Icon name="utensils" /> Où Manger ({restoCount})
       </Link>
-      <span className={cls("lieux")}>
-        <Icon name="location-dot" /> Lieux ({day.places.length})
-      </span>
     </div>
   );
 }
@@ -343,13 +343,47 @@ function DayPage() {
         )}
       </div>
 
-      <div className="card" style={{ marginTop: 24 }}>
-        <h3><Icon name="location-dot" /> Lieux à découvrir</h3>
+      <DayNav dayId={day.id} />
+    </div>
+  );
+}
+
+function LieuxPage() {
+  const { id } = useParams();
+  const day = DAYS.find(d => d.id === parseInt(id));
+  if (!day) return <div className="container">Jour introuvable</div>;
+  const mapsUrl = (place) => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(place + " " + day.location)}`;
+  return (
+    <div className="container" data-testid={`lieux-page-${day.id}`}>
+      <Link to={`/jour/${day.id}`} className="back-link" data-testid="back-to-day">
+        <Icon name="arrow-left" /> Jour {day.id}
+      </Link>
+
+      <div className="day-hero">
+        <div className="day-hero-num">Jour {day.id} · Lieux</div>
+        <h1 className="day-hero-title"><Icon name="location-dot" /> Lieux à découvrir</h1>
+        <div className="day-hero-resume">{day.date} — {day.places.length} lieux · {day.location}</div>
+      </div>
+
+      <DayTabs day={day} active="lieux" />
+
+      <div className="lieux-grid">
         {day.places.map((place, i) => (
-          <div key={i} className="place-item">
-            <div className="place-icon"><Icon name="map-pin" /></div>
-            <div>{place}</div>
-          </div>
+          <a
+            key={i}
+            href={mapsUrl(place)}
+            target="_blank"
+            rel="noreferrer"
+            className="lieu-card"
+            data-testid={`lieu-${i}`}
+          >
+            <div className="lieu-icon"><Icon name="map-pin" /></div>
+            <div className="lieu-body">
+              <div className="lieu-name">{place}</div>
+              <div className="lieu-sub"><Icon name="map-location-dot" /> Ouvrir dans Google Maps</div>
+            </div>
+            <Icon name="up-right-from-square" />
+          </a>
         ))}
       </div>
 
@@ -557,6 +591,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/jour/:id" element={<DayPage />} />
+          <Route path="/jour/:id/lieux" element={<LieuxPage />} />
           <Route path="/jour/:id/hotel" element={<HotelPage />} />
           <Route path="/jour/:id/manger" element={<MangerPage />} />
           <Route path="/guides" element={<Guides />} />
