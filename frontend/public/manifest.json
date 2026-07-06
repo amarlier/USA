@@ -1,0 +1,24 @@
+{
+  "short_name": "USA Ouest",
+  "name": "USA Ouest 2026 — Carnet de route",
+  "description": "Carnet de voyage interactif pour le road trip USA Ouest 2026. Fonctionne hors-ligne après la première visite.",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a"
+}
