@@ -357,6 +357,30 @@ function DayPage() {
         <div className="day-hero-resume">{day.resume}</div>
       </div>
 
+      {day.reservations && day.reservations.length > 0 && (
+        <div className="reservations-box" data-testid="day-reservations">
+          <div className="reservations-title"><Icon name="circle-check" /> Réservé</div>
+          <ul>
+            {day.reservations.map((r, i) => (
+              <li key={i}>
+                {r.map ? (
+                  <a
+                    className="reservations-item-name"
+                    href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(r.map)}`}
+                    target="_blank" rel="noreferrer"
+                  >
+                    {r.name} <Icon name="location-dot" />
+                  </a>
+                ) : (
+                  <span className="reservations-item-name">{r.name}</span>
+                )}
+                {r.time && <span className="reservations-item-time">{r.time}</span>}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
       <DayTabs day={day} active="recit" />
 
       <div className="story" data-testid="day-story">

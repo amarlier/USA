@@ -92,6 +92,9 @@ export const DAYS = [
     id: 4, date: "Vendredi 31 Juillet",
     resume: "Exploration en kayak puis à pied de l'Antelope Canyon, route vers Monument Valley pour un coucher de soleil.",
     location: "Page / Antelope Canyon / Monument Valley",
+    reservations: [
+      { name: "Antelope Canyon Kayak et Randonnée Slot Canyon (8 adultes, réf. 1406830617)", time: "09h00", map: "Antelope Point Marina, Page, AZ 86040" },
+    ],
     image: "/photos/day4.png",
     gallery: ["/photos/day4.png", "/photos/day4/image141.png", "/photos/day4/image212.png", "/photos/day4/image215.png", "/photos/day4/image284.png"],
     story: "Autour de Page se trouvent les plus beaux slot canyons de l'ouest américain. L'Antelope Canyon, qui se jette dans le Glen Canyon, possède deux sections visitables dans la réserve Navajo. Le Upper Antelope Canyon est sans doute le slot canyon le plus connu au monde. Explorez-le en kayak sur le Lake Powell puis à pied avec un guide navajo. Reprenez ensuite la route vers le nord jusqu'à Monument Valley pour un coucher de soleil légendaire depuis le Visitor Center ou John Ford Point.",
@@ -202,6 +205,9 @@ export const DAYS = [
     id: 11, date: "Vendredi 7 Août",
     resume: "Découverte de Las Vegas - Pinball Hall of Fame, showroom de muscle cars et hot rods, concession Harley Davidson - piscine à l'hôtel - Découverte des casinos du Strip - Possibilité de spectacle de Magie.",
     location: "Las Vegas",
+    reservations: [
+      { name: "Spectacle Blue Man Group — Blue Man Theater, Luxor (3900 S. Las Vegas Blvd.)", time: "20h00", map: "Blue Man Theater, Luxor, 3900 S Las Vegas Blvd, Las Vegas, NV 89119" },
+    ],
     image: "/photos/day11.png",
     gallery: ["/photos/day11.png", "/photos/day11/image116.png", "/photos/day11/image218.png", "/photos/day11/image4.png"],
     story: "Las Vegas est une ville très particulière. Nous vous déconseillons vivement de vous lancer à la découverte sans plan - il faut au contraire être très organisé. Pour cette première journée, commencez par une baignade matinale à la piscine de votre hôtel avant de vous lancer à la découverte du Strip. Le Strip est la portion de Las Vegas Boulevard qui concentre le plus grand nombre d'hôtels casinos géants. Sur 4 km, du Mandalay Bay au Wynn's, sont alignés des dizaines d'établissements thématiques aux décorations extravagantes. Visitez le Pinball Hall of Fame, un musée vivant du flipper, et les showrooms de Count's Kustoms et Shelby American. En soirée, possibilité d'un spectacle de magie.",
@@ -297,6 +303,9 @@ export const DAYS = [
     id: 17, date: "Jeudi 13 Août",
     resume: "Exploration des contrastes de San Francisco, du quartier financier aux quais animés, avec une option nocturne vers Alcatraz.",
     location: "San Francisco",
+    reservations: [
+      { name: "Alcatraz Night Tour", time: "17h55", map: "Pier 33, Alcatraz Landing, San Francisco, CA 94111" },
+    ],
     image: "/photos/day17.png",
     gallery: ["/photos/day16.png", "/photos/day16/image234.png", "/photos/day16/image246.png", "/photos/day16/image281.png"],
     story: "Plongez au cœur de San Francisco, une ville de collines emblématiques, de quartiers historiques et d'une baie spectaculaire. Aujourd'hui, découverte de ses facettes modernes : SoMa et le South of Market, l'Embarcadero, le Ferry Building et ses stands gourmets, jusqu'au Fisherman's Wharf. En soirée, excursion inoubliable vers Alcatraz, l'ancienne prison fédérale mythique, pour une visite nocturne particulièrement immersive.",
@@ -415,6 +424,9 @@ export const DAYS = [
     id: 24, date: "Jeudi 20 Août",
     resume: "Venice Beach, randonnée vers le Hollywood Sign OU balade dans les escaliers de Hollywoodland, option match WNBA en soirée.",
     location: "Venice Beach / Hollywood Hills",
+    reservations: [
+      { name: "NFL Preseason — San Francisco 49ers @ Los Angeles Chargers, SoFi Stadium, Inglewood (commande #643536540)", time: "19h00", map: "SoFi Stadium, 1001 Stadium Dr, Inglewood, CA 90301" },
+    ],
     image: "/photos/day24.png",
     gallery: ["/photos/day24.png"],
     story: "La journée débute par l'exploration du quartier bohème et artistique de Venice Beach, avec ses canaux surprenants, sa promenade colorée et sa plage iconique où les skateurs et body-builders sont rois. Ensuite, deux options pour découvrir les hauteurs d'Hollywood : une randonnée jusqu'au célèbre Hollywood Sign via Wonderview Drive, ou une balade à travers le quartier historique de Hollywoodland et ses escaliers cachés. La soirée peut être ponctuée par un match de basket WNBA à la Crypto.com Arena.",

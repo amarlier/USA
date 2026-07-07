@@ -258,6 +258,21 @@ body {
 .day-hero-title { font-family: 'Fraunces', serif; font-size: 40px; font-weight: 700; margin: 0 0 12px; letter-spacing: -0.02em; }
 .day-hero-resume { font-size: 15px; line-height: 1.5; opacity: 0.95; }
 
+.reservations-box {
+  background: #eafaf1; border: 1px solid #a8e0bd; border-radius: 12px;
+  padding: 14px 18px; margin: 16px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+.reservations-title {
+  font-weight: 700; color: #1e7d46; font-size: 14px; letter-spacing: 0.02em;
+  text-transform: uppercase; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;
+}
+.reservations-box ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.reservations-box li { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-size: 15px; }
+.reservations-item-name { color: var(--ink); font-weight: 500; text-decoration: none; }
+a.reservations-item-name { cursor: pointer; }
+a.reservations-item-name:hover { text-decoration: underline; }
+.reservations-item-time { color: #1e7d46; font-weight: 600; font-size: 14px; white-space: nowrap; }
+
 .day-hero-img { width: 100%; height: 240px; object-fit: cover; border-radius: 16px; margin-bottom: 18px; display: block; }
 
 .tabs { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
