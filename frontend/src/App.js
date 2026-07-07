@@ -326,7 +326,14 @@ function Home() {
           <div className="day-body">
             <div className="day-title">{day.date}</div>
             <div className="day-sub">{day.resume}</div>
-            <div className="day-meta"><Icon name="location-dot" /> {day.places.length} lieux</div>
+            <div className="day-meta-row">
+              <div className="day-meta"><Icon name="location-dot" /> {day.places.length} lieux</div>
+              {day.reservations && day.reservations.length > 0 && (
+                <div className="day-reserved-tag" data-testid={`day-reserved-${day.id}`}>
+                  <Icon name="circle-check" /> Réservé
+                </div>
+              )}
+            </div>
           </div>
           <div className="day-arrow"><Icon name="chevron-right" /></div>
         </Link>

@@ -243,6 +243,12 @@ body {
 .day-title { font-family: 'Fraunces', serif; font-weight: 600; font-size: 18px; margin-bottom: 6px; }
 .day-sub { color: var(--ink-2); font-size: 14px; line-height: 1.45; margin-bottom: 10px; }
 .day-meta { display: flex; align-items: center; gap: 6px; color: var(--brand); font-size: 13px; font-weight: 500; }
+.day-meta-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.day-reserved-tag {
+  display: flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 700;
+  color: #1e7d46; background: #eafaf1; border: 1px solid #a8e0bd;
+  padding: 3px 9px; border-radius: 999px; text-transform: uppercase; letter-spacing: 0.02em;
+}
 .day-arrow { display: flex; align-items: center; padding-right: 20px; color: #c2ad9c; }
 
 /* Day page */
