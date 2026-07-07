@@ -2,7 +2,7 @@ import React from "react";
 import "@/App.css";
 import { BrowserRouter, Routes, Route, Link, NavLink, useParams, useNavigate, useLocation } from "react-router-dom";
 import { TRIP, DAYS, GUIDES, DOCUMENTS } from "@/data/trip";
-import daysFull from "@/data/days_full.json";
+import { fetchDayBlocks } from "./dayContent";
 import introFull from "@/data/intro_full.json";
 import hotelsData from "@/data/hotels.json";
 
@@ -32,15 +32,17 @@ function DayTabs({ day, active }) {
 function RichText({ text }) {
   if (!text) return null;
   const parts = [];
-  const regex = /\[LINK\|([^|]+)\|([^\]]+)\]/g;
+  const regex = /\[LINK\|([^|]+)\|([^\]]+)\]|\[([^\]]+)\]\(([^)]+)\)/g;
   let last = 0;
   let m;
   let i = 0;
   while ((m = regex.exec(text)) !== null) {
     if (m.index > last) parts.push(<span key={i++}>{text.slice(last, m.index)}</span>);
+    const url = m[1] !== undefined ? m[1] : m[4];
+    const label = m[1] !== undefined ? m[2] : m[3];
     parts.push(
-      <a key={i++} href={m[1]} target="_blank" rel="noreferrer" style={{ color: "var(--brand)", textDecoration: "underline" }}>
-        {m[2]}
+      <a key={i++} href={url} target="_blank" rel="noreferrer" style={{ color: "var(--brand)", textDecoration: "underline" }}>
+        {label}
       </a>
     );
     last = m.index + m[0].length;
@@ -363,10 +365,25 @@ function DayPage() {
   const { id } = useParams();
   const navigate = useNavigate();
   const day = DAYS.find(d => d.id === parseInt(id));
-  if (!day) return <div className="container">Jour introuvable</div>;
+  const [blocks, setBlocks] = React.useState([]);
+  const location = useLocation();
+  React.useEffect(() => {
+    if (!day) return;
+    let active = true;
+    fetchDayBlocks(day.id).then(b => {
+      if (!active) return;
+      setBlocks(b);
+      if (location.hash) {
+        setTimeout(() => {
+          const el = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+          if (el) el.scrollIntoView({ block: "start" });
+        }, 0);
+      }
+    });
+    return () => { active = false; };
+  }, [day && day.id]);
 
-  const fullData = daysFull.days[String(day.id)];
-  const blocks = (fullData && fullData.blocks) || [];
+  if (!day) return <div className="container">Jour introuvable</div>;
   const hasRichContent = blocks.length > 0;
 
   return (
@@ -668,23 +685,37 @@ function CartePage() {
   );
 }
 
-function getRecommendations() {
+async function getRecommendations() {
   const rx = /(vivement |fortement |très fortement )?conseill|recommand|impérative|impératif/i;
   const result = [];
-  DAYS.forEach(day => {
-    const fullData = daysFull.days[String(day.id)];
-    const blocks = (fullData && fullData.blocks) || [];
+  await Promise.all(DAYS.map(async day => {
+    const blocks = await fetchDayBlocks(day.id);
     blocks.forEach(b => {
       if (b.type === "h3" && rx.test(b.text) && !/déconseill/i.test(b.text)) {
         result.push({ dayId: day.id, date: day.date, text: b.text, slug: slugify(b.text) });
       }
     });
-  });
+  }));
   return result;
 }
 
 function RecommendationsPage() {
-  const items = getRecommendations();
+  const [items, setItems] = React.useState(null);
+  React.useEffect(() => {
+    let active = true;
+    getRecommendations().then(r => { if (active) setItems(r); });
+    return () => { active = false; };
+  }, []);
+
+  if (items === null) {
+    return (
+      <div className="container" data-testid="recommandations-page">
+        <h1 className="section-title" style={{ fontSize: 32 }}><Icon name="star" /> À ne pas manquer</h1>
+        <p style={{ color: "var(--ink-2)" }}>Chargement…</p>
+      </div>
+    );
+  }
+
   const byDay = {};
   items.forEach(it => {
     if (!byDay[it.dayId]) byDay[it.dayId] = { date: it.date, items: [] };
