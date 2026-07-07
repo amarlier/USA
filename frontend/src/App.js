@@ -579,11 +579,30 @@ function Guides() {
 }
 
 function CartePage() {
-  const mapId = "1URVs46aM-gP3LQryvJmRXlj6glpG5KQ";
+  const maps = {
+    detaillee: { id: "1URVs46aM-gP3LQryvJmRXlj6glpG5KQ", label: "Détaillée" },
+    legere: { id: "1fSCDnufJ4glesSev0Wn6fTJCtl6x-z4", label: "Itinéraire (légère)" },
+  };
+  const [active, setActive] = React.useState("legere");
+  const mapId = maps[active].id;
+  const openLink = `https://www.google.com/maps/d/viewer?mid=${mapId}`;
   return (
     <div className="container" data-testid="carte-page">
       <h1 className="section-title" style={{ fontSize: 32 }}><Icon name="map" /> Carte interactive</h1>
       <p style={{ color: "var(--ink-2)", marginTop: -8, marginBottom: 20 }}>Tous les lieux du voyage sur Google My Maps.</p>
+      <div style={{ display: "flex", gap: 8, marginBottom: 16 }}>
+        {Object.entries(maps).map(([key, m]) => (
+          <button
+            key={key}
+            onClick={() => setActive(key)}
+            className={`tab${active === key ? " active" : ""}`}
+            data-testid={`carte-tab-${key}`}
+            style={{ cursor: "pointer", border: "none" }}
+          >
+            {m.label}
+          </button>
+        ))}
+      </div>
       <div className="card" style={{ padding: 0, overflow: "hidden" }}>
         <iframe
           title="USA Ouest 2026"
@@ -593,7 +612,7 @@ function CartePage() {
         />
       </div>
       <div style={{ marginTop: 16 }}>
-        <a href={TRIP.mapLink} target="_blank" rel="noreferrer" className="tab active" style={{ display: "inline-flex" }} data-testid="carte-open-link">
+        <a href={openLink} target="_blank" rel="noreferrer" className="tab active" style={{ display: "inline-flex" }} data-testid="carte-open-link">
           <Icon name="up-right-from-square" /> Ouvrir dans Google Maps
         </a>
       </div>
