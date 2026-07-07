@@ -83,6 +83,14 @@ function isChainRestaurant(name) {
   return CHAINS_RE.test(name);
 }
 
+function slugify(text) {
+  return (text || "")
+    .toLowerCase()
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}
+
 function RenderBlocks({ blocks }) {
   if (!blocks || blocks.length === 0) return null;
   // Filter out restaurant sections: from a resto heading, skip until next H heading OR "* Nuit" paragraph
@@ -149,7 +157,7 @@ function RenderBlocks({ blocks }) {
           return <h2 key={i} className="story-h2">{b.text}</h2>;
         }
         if (b.type === "h3" || b.type === "h4") {
-          return <h3 key={i} className="story-h3">{b.text}</h3>;
+          return <h3 key={i} id={slugify(b.text)} className="story-h3">{b.text}</h3>;
         }
         return <p key={i} className="story-p"><RichText text={b.text} /></p>;
       })}
@@ -312,6 +320,15 @@ function Home() {
         <div style={{ flex: 1 }}>
           <div className="guide-card-title">Infos pratiques & guides</div>
           <div className="guide-card-sub">Pass parcs, conduite, paiement, valise…</div>
+        </div>
+        <Icon name="chevron-right" />
+      </Link>
+
+      <Link to="/conseils" className="guide-card" data-testid="conseils-shortcut">
+        <div className="guide-icon"><Icon name="star" /></div>
+        <div style={{ flex: 1 }}>
+          <div className="guide-card-title">À ne pas manquer</div>
+          <div className="guide-card-sub">Toutes les activités conseillées, regroupées par jour</div>
         </div>
         <Icon name="chevron-right" />
       </Link>
@@ -651,6 +668,57 @@ function CartePage() {
   );
 }
 
+function getRecommendations() {
+  const rx = /(vivement |fortement |très fortement )?conseill|recommand|impérative|impératif/i;
+  const result = [];
+  DAYS.forEach(day => {
+    const fullData = daysFull.days[String(day.id)];
+    const blocks = (fullData && fullData.blocks) || [];
+    blocks.forEach(b => {
+      if (b.type === "h3" && rx.test(b.text) && !/déconseill/i.test(b.text)) {
+        result.push({ dayId: day.id, date: day.date, text: b.text, slug: slugify(b.text) });
+      }
+    });
+  });
+  return result;
+}
+
+function RecommendationsPage() {
+  const items = getRecommendations();
+  const byDay = {};
+  items.forEach(it => {
+    if (!byDay[it.dayId]) byDay[it.dayId] = { date: it.date, items: [] };
+    byDay[it.dayId].items.push(it);
+  });
+  const dayIds = Object.keys(byDay).map(Number).sort((a, b) => a - b);
+  return (
+    <div className="container" data-testid="recommandations-page">
+      <h1 className="section-title" style={{ fontSize: 32 }}><Icon name="star" /> À ne pas manquer</h1>
+      <p style={{ color: "var(--ink-2)", marginTop: -8, marginBottom: 20 }}>
+        Toutes les activités marquées comme conseillées, vivement conseillées ou à réservation impérative, regroupées par jour.
+      </p>
+      {dayIds.length === 0 && <p>Aucune activité trouvée.</p>}
+      {dayIds.map(dayId => (
+        <div key={dayId} className="card" style={{ marginBottom: 16, padding: 18 }}>
+          <div style={{ fontWeight: 700, marginBottom: 10, display: "flex", alignItems: "center", gap: 8 }}>
+            <span className="day-badge-num" style={{ fontSize: 18 }}>Jour {dayId}</span>
+            <span style={{ color: "var(--ink-2)", fontWeight: 500 }}>— {byDay[dayId].date}</span>
+          </div>
+          <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: 8 }}>
+            {byDay[dayId].items.map((it, i) => (
+              <li key={i}>
+                <Link to={`/jour/${it.dayId}#${it.slug}`} className="chip" style={{ textDecoration: "none", display: "inline-flex" }} data-testid={`reco-item-${it.dayId}-${i}`}>
+                  <Icon name="star" /> {it.text}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 function Placeholder({ title, icon }) {
   return (
     <div className="container">
@@ -663,8 +731,12 @@ function Placeholder({ title, icon }) {
 function ScrollToTop() {
   const location = useLocation();
   React.useEffect(() => {
+    if (location.hash) {
+      const el = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      if (el) { el.scrollIntoView({ block: "start" }); return; }
+    }
     window.scrollTo(0, 0);
-  }, [location.pathname]);
+  }, [location.pathname, location.hash]);
   return null;
 }
 
@@ -681,6 +753,7 @@ function App() {
           <Route path="/jour/:id/hotel" element={<HotelPage />} />
           <Route path="/jour/:id/manger" element={<MangerPage />} />
           <Route path="/guides" element={<Guides />} />
+          <Route path="/conseils" element={<RecommendationsPage />} />
           <Route path="/carte" element={<CartePage />} />
         </Routes>
       </BrowserRouter>
