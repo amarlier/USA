@@ -244,6 +244,7 @@ function Header() {
           )}
         </div>
         <NavLink to="/carte" data-testid="nav-carte"><Icon name="map" /><span>Carte</span></NavLink>
+        <NavLink to="/recherche" data-testid="nav-recherche"><Icon name="magnifying-glass" /><span>Recherche</span></NavLink>
         <NavLink to="/guides" data-testid="nav-guides"><Icon name="book" /><span>Guides</span></NavLink>
       </nav>
     </header>
@@ -752,6 +753,133 @@ function RecommendationsPage() {
   );
 }
 
+function normalize(s) {
+  return (s || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+function highlight(text, query) {
+  if (!query) return text;
+  const nText = normalize(text);
+  const nQuery = normalize(query);
+  const idx = nText.indexOf(nQuery);
+  if (idx === -1) return text;
+  return (
+    <>
+      {text.slice(0, idx)}
+      <mark>{text.slice(idx, idx + query.length)}</mark>
+      {text.slice(idx + query.length)}
+    </>
+  );
+}
+
+function snippetAround(text, query, radius = 60) {
+  const nText = normalize(text);
+  const nQuery = normalize(query);
+  const idx = nText.indexOf(nQuery);
+  if (idx === -1) return text.slice(0, radius * 2);
+  const start = Math.max(0, idx - radius);
+  const end = Math.min(text.length, idx + query.length + radius);
+  return (start > 0 ? "…" : "") + text.slice(start, end) + (end < text.length ? "…" : "");
+}
+
+function SearchPage() {
+  const [query, setQuery] = React.useState("");
+  const [fullText, setFullText] = React.useState({});
+  const [loadingFull, setLoadingFull] = React.useState(true);
+
+  React.useEffect(() => {
+    let active = true;
+    Promise.all(DAYS.map(async d => ({ id: d.id, blocks: await fetchDayBlocks(d.id) })))
+      .then(all => {
+        if (!active) return;
+        const map = {};
+        all.forEach(({ id, blocks }) => { map[id] = blocks; });
+        setFullText(map);
+        setLoadingFull(false);
+      });
+    return () => { active = false; };
+  }, []);
+
+  const q = query.trim();
+  const nq = normalize(q);
+  const results = React.useMemo(() => {
+    if (nq.length < 2) return [];
+    const out = [];
+    DAYS.forEach(day => {
+      const matches = [];
+
+      if (normalize(day.location).includes(nq)) matches.push({ kind: "Lieu", label: day.location });
+      if (normalize(day.resume).includes(nq)) matches.push({ kind: "Résumé", label: snippetAround(day.resume, q) });
+      if (day.hotel && normalize(day.hotel.name).includes(nq)) matches.push({ kind: "Hôtel", label: day.hotel.name });
+      (day.restaurants || []).forEach(r => {
+        if (normalize(r.name).includes(nq) || normalize(r.description || "").includes(nq)) {
+          matches.push({ kind: "Restaurant", label: r.name });
+        }
+      });
+      (day.places || []).forEach(p => {
+        if (normalize(p).includes(nq)) matches.push({ kind: "Lieu à découvrir", label: p });
+      });
+      (day.reservations || []).forEach(r => {
+        if (normalize(r.name).includes(nq)) matches.push({ kind: "Réservation", label: r.name });
+      });
+      (fullText[day.id] || []).forEach(b => {
+        if ((b.type === "p" || b.type === "h3") && normalize(b.text || "").includes(nq)) {
+          matches.push({
+            kind: b.type === "h3" ? "Titre" : "Texte",
+            label: snippetAround(b.text, q),
+            slug: b.type === "h3" ? slugify(b.text) : null,
+          });
+        }
+      });
+
+      if (matches.length > 0) out.push({ day, matches: matches.slice(0, 6) });
+    });
+    return out;
+  }, [nq, fullText, q]);
+
+  return (
+    <div className="container" data-testid="search-page">
+      <h1 className="section-title" style={{ fontSize: 32 }}><Icon name="magnifying-glass" /> Recherche</h1>
+      <input
+        type="text"
+        autoFocus
+        value={query}
+        onChange={e => setQuery(e.target.value)}
+        placeholder="Chercher un lieu, un hôtel, un restaurant, une activité…"
+        className="search-input"
+        data-testid="search-input"
+      />
+      {loadingFull && <p style={{ color: "var(--ink-2)", marginTop: 12 }}>Indexation du contenu en cours…</p>}
+      {nq.length >= 2 && !loadingFull && results.length === 0 && (
+        <p style={{ color: "var(--ink-2)", marginTop: 16 }}>Aucun résultat pour « {q} ».</p>
+      )}
+      {nq.length > 0 && nq.length < 2 && (
+        <p style={{ color: "var(--ink-2)", marginTop: 16 }}>Continue à taper (2 caractères minimum)…</p>
+      )}
+      <div style={{ marginTop: 16, display: "flex", flexDirection: "column", gap: 12 }}>
+        {results.map(({ day, matches }) => (
+          <div key={day.id} className="card" style={{ padding: 16 }} data-testid={`search-result-day-${day.id}`}>
+            <div style={{ fontWeight: 700, marginBottom: 8, display: "flex", alignItems: "center", gap: 8 }}>
+              <span className="day-badge-num" style={{ fontSize: 16 }}>Jour {day.id}</span>
+              <span style={{ color: "var(--ink-2)", fontWeight: 500 }}>— {day.date} — {day.location}</span>
+            </div>
+            <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: 6 }}>
+              {matches.map((m, i) => (
+                <li key={i} style={{ fontSize: 14 }}>
+                  <Link to={`/jour/${day.id}${m.slug ? `#${m.slug}` : ""}`} style={{ textDecoration: "none", color: "inherit" }}>
+                    <span style={{ color: "var(--brand)", fontWeight: 600, marginRight: 6, fontSize: 11, textTransform: "uppercase" }}>{m.kind}</span>
+                    <span>{highlight(m.label, q)}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function Placeholder({ title, icon }) {
   return (
     <div className="container">
@@ -788,6 +916,7 @@ function App() {
           <Route path="/guides" element={<Guides />} />
           <Route path="/conseils" element={<RecommendationsPage />} />
           <Route path="/carte" element={<CartePage />} />
+          <Route path="/recherche" element={<SearchPage />} />
         </Routes>
       </BrowserRouter>
     </div>
