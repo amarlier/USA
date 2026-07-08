@@ -3,6 +3,7 @@ import "@/App.css";
 import { BrowserRouter, Routes, Route, Link, NavLink, useParams, useNavigate, useLocation } from "react-router-dom";
 import { TRIP, DAYS, GUIDES, DOCUMENTS } from "@/data/trip";
 import { fetchDayBlocks } from "./dayContent";
+import NoteBox from "./NoteBox";
 import introFull from "@/data/intro_full.json";
 import hotelsData from "@/data/hotels.json";
 
@@ -318,6 +319,8 @@ function Home() {
 
       <TripCountdown />
 
+      <NoteBox scope="global" title="Note globale du voyage" />
+
       <Link to="/guides" className="guide-card" data-testid="guides-shortcut">
         <div className="guide-icon"><Icon name="book" /></div>
         <div style={{ flex: 1 }}>
@@ -424,6 +427,8 @@ function DayPage() {
           </ul>
         </div>
       )}
+
+      <NoteBox scope="day" dayId={day.id} title={`Note du jour ${day.id}`} />
 
       <DayTabs day={day} active="recit" />
 
