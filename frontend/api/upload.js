@@ -26,27 +26,27 @@ module.exports = async function handler(req, res) {
       }
       const pathKey = `${s === "day" ? `day-${dayId}` : "global"}/${Date.now()}-${filename}`;
       const blob = await put(pathKey, buffer, {
-        access: "public",
+        access: "private",
         contentType: contentType || "application/octet-stream",
       });
 
       const key = filesKey(s, dayId || "");
       const files = (await redis.get(key)) || [];
-      const entry = { name: filename, url: blob.url, uploadedAt: Date.now() };
+      const entry = { name: filename, pathname: blob.pathname, uploadedAt: Date.now() };
       const updated = [...files, entry];
       await redis.set(key, updated);
       return res.status(200).json({ ok: true, file: entry, files: updated });
     }
 
     if (req.method === "DELETE") {
-      const { scope, dayId, url } = req.body || {};
+      const { scope, dayId, pathname } = req.body || {};
       const s = scope === "day" ? "day" : "global";
-      if (url) {
-        try { await del(url); } catch (e) { console.warn("blob del failed", e); }
+      if (pathname) {
+        try { await del(pathname, { access: "private" }); } catch (e) { console.warn("blob del failed", e); }
       }
       const key = filesKey(s, dayId || "");
       const files = (await redis.get(key)) || [];
-      const updated = files.filter(f => f.url !== url);
+      const updated = files.filter(f => f.pathname !== pathname);
       await redis.set(key, updated);
       return res.status(200).json({ ok: true, files: updated });
     }

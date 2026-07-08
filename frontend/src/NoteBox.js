@@ -92,12 +92,12 @@ export default function NoteBox({ scope, dayId, title }) {
     }
   };
 
-  const removeFile = async (url) => {
+  const removeFile = async (pathname) => {
     try {
       const res = await fetch("/api/upload", {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ scope, dayId, url }),
+        body: JSON.stringify({ scope, dayId, pathname }),
       });
       const data = await res.json();
       if (res.ok) setFiles(data.files || []);
@@ -128,8 +128,8 @@ export default function NoteBox({ scope, dayId, title }) {
       <div className="notebox-files">
         {files.map((f, i) => (
           <div key={i} className="notebox-file">
-            <a href={f.url} target="_blank" rel="noreferrer"><i className="fa-solid fa-paperclip"></i> {f.name}</a>
-            <button onClick={() => removeFile(f.url)} className="notebox-file-remove" aria-label="Supprimer">
+            <a href={`/api/file?pathname=${encodeURIComponent(f.pathname)}`} target="_blank" rel="noreferrer"><i className="fa-solid fa-paperclip"></i> {f.name}</a>
+            <button onClick={() => removeFile(f.pathname)} className="notebox-file-remove" aria-label="Supprimer">
               <i className="fa-solid fa-xmark"></i>
             </button>
           </div>
