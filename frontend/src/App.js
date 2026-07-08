@@ -367,21 +367,23 @@ function DayPage() {
   const day = DAYS.find(d => d.id === parseInt(id));
   const [blocks, setBlocks] = React.useState([]);
   const location = useLocation();
+  const hash = location.hash;
   React.useEffect(() => {
     if (!day) return;
     let active = true;
     fetchDayBlocks(day.id).then(b => {
       if (!active) return;
       setBlocks(b);
-      if (location.hash) {
+      if (hash) {
         setTimeout(() => {
-          const el = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+          const el = document.getElementById(decodeURIComponent(hash.slice(1)));
           if (el) el.scrollIntoView({ block: "start" });
         }, 0);
       }
     });
     return () => { active = false; };
-  }, [day && day.id]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [id, hash]);
 
   if (!day) return <div className="container">Jour introuvable</div>;
   const hasRichContent = blocks.length > 0;
