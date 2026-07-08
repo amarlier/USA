@@ -3,6 +3,7 @@ import "@/App.css";
 import { BrowserRouter, Routes, Route, Link, NavLink, useParams, useNavigate, useLocation } from "react-router-dom";
 import { TRIP, DAYS, GUIDES, DOCUMENTS } from "@/data/trip";
 import { fetchDayBlocks } from "./dayContent";
+import NoteBox from "./NoteBox";
 import introFull from "@/data/intro_full.json";
 import hotelsData from "@/data/hotels.json";
 
@@ -25,6 +26,9 @@ function DayTabs({ day, active }) {
       </Link>
       <Link to={`/jour/${day.id}/manger`} className={cls("manger")} data-testid="tab-manger">
         <Icon name="utensils" /> Où Manger ({restoCount})
+      </Link>
+      <Link to={`/jour/${day.id}/note`} className={cls("note")} data-testid="tab-note">
+        <Icon name="note-sticky" /> Note
       </Link>
     </div>
   );
@@ -317,6 +321,15 @@ function Home() {
       </div>
 
       <TripCountdown />
+
+      <Link to="/note" className="guide-card" data-testid="note-shortcut">
+        <div className="guide-icon"><Icon name="note-sticky" /></div>
+        <div style={{ flex: 1 }}>
+          <div className="guide-card-title">Note globale du voyage</div>
+          <div className="guide-card-sub">Notes partagées, pièces jointes</div>
+        </div>
+        <Icon name="chevron-right" />
+      </Link>
 
       <Link to="/guides" className="guide-card" data-testid="guides-shortcut">
         <div className="guide-icon"><Icon name="book" /></div>
@@ -630,6 +643,32 @@ function MangerPage() {
   );
 }
 
+function NotePage() {
+  const { id } = useParams();
+  const day = DAYS.find(d => d.id === parseInt(id));
+  if (!day) return <div className="container">Jour introuvable</div>;
+
+  return (
+    <div className="container" data-testid={`note-page-${day.id}`}>
+      <Link to={`/jour/${day.id}`} className="back-link" data-testid="back-to-day">
+        <Icon name="arrow-left" /> Jour {day.id}
+      </Link>
+
+      <div className="day-hero">
+        <div className="day-hero-num">Jour {day.id} · Note</div>
+        <h1 className="day-hero-title"><Icon name="note-sticky" /> Note du jour</h1>
+        <div className="day-hero-resume">{day.date} — {day.location}</div>
+      </div>
+
+      <DayTabs day={day} active="note" />
+
+      <NoteBox scope="day" dayId={day.id} title={`Note du jour ${day.id}`} />
+
+      <DayNav dayId={day.id} />
+    </div>
+  );
+}
+
 function Guides() {
   // Skip the 3 top H1 titles (Carnet de route / Familles / Ouest été 2026) since we already show them elsewhere
   const blocks = (introFull.blocks || []).filter((b, i) => !(i < 3 && b.type === "h1"));
@@ -700,6 +739,18 @@ async function getRecommendations() {
     });
   }));
   return result;
+}
+
+function GlobalNotePage() {
+  return (
+    <div className="container" data-testid="global-note-page">
+      <h1 className="section-title" style={{ fontSize: 32 }}><Icon name="note-sticky" /> Note globale du voyage</h1>
+      <p style={{ color: "var(--ink-2)", marginTop: -8, marginBottom: 20 }}>
+        Une note partagée avec tout le monde, pour le voyage entier (pense-bête général, pièces jointes).
+      </p>
+      <NoteBox scope="global" title="Note globale" />
+    </div>
+  );
 }
 
 function RecommendationsPage() {
@@ -913,8 +964,10 @@ function App() {
           <Route path="/jour/:id/lieux" element={<LieuxPage />} />
           <Route path="/jour/:id/hotel" element={<HotelPage />} />
           <Route path="/jour/:id/manger" element={<MangerPage />} />
+          <Route path="/jour/:id/note" element={<NotePage />} />
           <Route path="/guides" element={<Guides />} />
           <Route path="/conseils" element={<RecommendationsPage />} />
+          <Route path="/note" element={<GlobalNotePage />} />
           <Route path="/carte" element={<CartePage />} />
           <Route path="/recherche" element={<SearchPage />} />
         </Routes>
