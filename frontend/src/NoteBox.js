@@ -73,13 +73,23 @@ export default function NoteBox({ scope, dayId, title }) {
       e.target.value = "";
       return;
     }
+    const extMatch = file.name.match(/\.[^.]+$/);
+    const ext = extMatch ? extMatch[0] : "";
+    const defaultLabel = file.name.replace(/\.[^.]+$/, "");
+    const label = window.prompt(
+      "Nom pour ce fichier (ex: Billet avion, Passeport Papa, Réservation hôtel)",
+      /^(content|image|photo|img|file|document)$/i.test(defaultLabel) ? "" : defaultLabel
+    );
+    if (label === null) { e.target.value = ""; return; }
+    const displayName = (label.trim() || `Fichier ${new Date().toLocaleDateString("fr-FR")}`) + ext;
+
     setUploading(true);
     try {
       const dataBase64 = await fileToBase64(file);
       const res = await fetch("/api/upload", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ scope, dayId, filename: file.name, contentType: file.type, dataBase64 }),
+        body: JSON.stringify({ scope, dayId, filename: displayName, contentType: file.type, dataBase64 }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Échec de l'envoi");
