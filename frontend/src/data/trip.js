@@ -73,11 +73,11 @@ export const DAYS = [
   },
   {
     id: 3, date: "Jeudi 30 Juillet",
-    resume: "Option survol du Grand Canyon en hélicoptère, randonnée sur le South Kaibab Trail, puis route vers Page et le Lake Powell pour baignade et randonnée.",
+    resume: "Grand Canyon, randonnée sur le South Kaibab Trail, puis route vers Page et le Lake Powell pour baignade et randonnée.",
     location: "Grand Canyon / Page / Lake Powell",
     image: "/photos/day3.png",
     gallery: ["/photos/day3.png", "/photos/day3/image114.png", "/photos/day3/image12.png", "/photos/day3/image145.png", "/photos/day3/image176.png", "/photos/day3/image243.png"],
-    story: "En option, débutez par un survol du Grand Canyon en hélicoptère au lever du soleil avec Papillon (289$/pers, 25-30 min). Puis marchez sur le South Kaibab Trail : descendez jusqu'à Ooh Aah Point ou Cedar Ridge pour des points de vue vertigineux. En milieu de journée, prenez la route vers Page en passant par Desert View Watchtower et Little Colorado River Gorge. Arrivée à Page pour baignade au Lake Powell (Antelope Point Marina ou The Chains), et coucher de soleil à Horseshoe Bend.",
+    story: "Puis marchez sur le South Kaibab Trail : descendez jusqu'à Ooh Aah Point ou Cedar Ridge pour des points de vue vertigineux. En milieu de journée, prenez la route vers Page en passant par Desert View Watchtower et Little Colorado River Gorge. Arrivée à Page pour baignade au Lake Powell (Antelope Point Marina ou The Chains), et coucher de soleil à Horseshoe Bend.",
     hotel: H("Wingate by Wyndham Page Lake Powell", "671 Scenic View Rd, Page, AZ 86040"),
     restaurants: [
       R("Cameron Trading Post Restaurant", "Table service", "Trading post navajo, goûtez le Navajo Fry Bread salé ou sucré. Expérience touristique intéressante.", "US-89, Cameron, AZ 86020"),
