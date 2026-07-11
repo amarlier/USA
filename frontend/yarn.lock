@@ -3492,7 +3492,14 @@
   dependencies:
     execa "5.1.1"
 
-"@vercel/oidc@^3.6.1":
+"@vercel/functions@3.7.5":
+  version "3.7.5"
+  resolved "https://registry.yarnpkg.com/@vercel/functions/-/functions-3.7.5.tgz#5a505d2fe48b0c8eb8226c1a2e97007bde4ae467"
+  integrity sha512-ESf8BbeDebqRUyMi09JwRbQqpLn4g6fjcVVHPsHB56j2dSqRrSHO4h3X4aaxJf6iQQjzhAtDGI2xCWQ27JE8PA==
+  dependencies:
+    "@vercel/oidc" "3.8.0"
+
+"@vercel/oidc@3.8.0", "@vercel/oidc@^3.6.1":
   version "3.8.0"
   resolved "https://registry.yarnpkg.com/@vercel/oidc/-/oidc-3.8.0.tgz#0b9fca3ab12ef4df90fd724d1c247d3ed4c78155"
   integrity sha512-r00laGW6Pv778RoR6M2NxX91ycSj+PBwVo+fOb9Bif+F0IyUKt25zrvBzfEzQpeAzbqOgPZyQibEWDdDFApd+A==

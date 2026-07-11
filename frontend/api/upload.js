@@ -6,12 +6,18 @@ const redis = new Redis({
   token: process.env.KV_REST_API_TOKEN,
 });
 
+function safeDayId(dayId) {
+  return String(dayId || "").replace(/[^a-zA-Z0-9_-]/g, "").slice(0, 32);
+}
+function safeFilename(name) {
+  const base = String(name || "fichier").replace(/[/\\]/g, "_").replace(/\.\./g, "_");
+  return base.slice(0, 150) || "fichier";
+}
 function filesKey(scope, dayId) {
-  return scope === "day" ? `files:day:${dayId}` : "files:global";
+  return scope === "day" ? `files:day:${safeDayId(dayId)}` : "files:global";
 }
 
 module.exports = async function handler(req, res) {
-  res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "POST, DELETE, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
   if (req.method === "OPTIONS") return res.status(200).end();
@@ -30,11 +36,12 @@ module.exports = async function handler(req, res) {
         return res.status(400).json({ error: "filename et dataBase64 requis" });
       }
       const s = scope === "day" ? "day" : "global";
+      const cleanName = safeFilename(filename);
       const buffer = Buffer.from(dataBase64, "base64");
       if (buffer.length > 4 * 1024 * 1024) {
         return res.status(413).json({ error: "Fichier trop volumineux (max 4 Mo)" });
       }
-      const pathKey = `${s === "day" ? `day-${dayId}` : "global"}/${Date.now()}-${filename}`;
+      const pathKey = `${s === "day" ? `day-${safeDayId(dayId)}` : "global"}/${Date.now()}-${cleanName}`;
       const blob = await put(pathKey, buffer, {
         access: "private",
         contentType: contentType || "application/octet-stream",
@@ -42,7 +49,7 @@ module.exports = async function handler(req, res) {
 
       const key = filesKey(s, dayId || "");
       const files = (await redis.get(key)) || [];
-      const entry = { name: filename, pathname: blob.pathname, uploadedAt: Date.now() };
+      const entry = { name: cleanName, pathname: blob.pathname, uploadedAt: Date.now() };
       const updated = [...files, entry];
       await redis.set(key, updated);
       return res.status(200).json({ ok: true, file: entry, files: updated });
@@ -51,11 +58,13 @@ module.exports = async function handler(req, res) {
     if (req.method === "DELETE") {
       const { scope, dayId, pathname } = req.body || {};
       const s = scope === "day" ? "day" : "global";
-      if (pathname) {
-        try { await del(pathname, { access: "private" }); } catch (e) { console.warn("blob del failed", e); }
-      }
       const key = filesKey(s, dayId || "");
       const files = (await redis.get(key)) || [];
+      // only allow deleting a file that's actually registered under this scope/day
+      const belongsHere = files.some(f => f.pathname === pathname);
+      if (pathname && belongsHere) {
+        try { await del(pathname, { access: "private" }); } catch (e) { console.warn("blob del failed", e); }
+      }
       const updated = files.filter(f => f.pathname !== pathname);
       await redis.set(key, updated);
       return res.status(200).json({ ok: true, files: updated });
