@@ -5,15 +5,18 @@ const redis = new Redis({
   token: process.env.KV_REST_API_TOKEN,
 });
 
+function safeDayId(dayId) {
+  const s = String(dayId || "").replace(/[^a-zA-Z0-9_-]/g, "");
+  return s.slice(0, 32);
+}
 function noteKey(scope, dayId) {
-  return scope === "day" ? `note:day:${dayId}` : "note:global";
+  return scope === "day" ? `note:day:${safeDayId(dayId)}` : "note:global";
 }
 function filesKey(scope, dayId) {
-  return scope === "day" ? `files:day:${dayId}` : "files:global";
+  return scope === "day" ? `files:day:${safeDayId(dayId)}` : "files:global";
 }
 
 module.exports = async function handler(req, res) {
-  res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
   if (req.method === "OPTIONS") return res.status(200).end();
@@ -36,7 +39,8 @@ module.exports = async function handler(req, res) {
     if (req.method === "POST") {
       const { scope, dayId, text } = req.body || {};
       const s = scope === "day" ? "day" : "global";
-      await redis.set(noteKey(s, dayId || ""), text || "");
+      const safeText = String(text || "").slice(0, 20000);
+      await redis.set(noteKey(s, dayId || ""), safeText);
       return res.status(200).json({ ok: true });
     }
 
