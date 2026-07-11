@@ -1,6 +1,9 @@
 const { get } = require("@vercel/blob");
 
 module.exports = async function handler(req, res) {
+  if (!process.env.BLOB_READ_WRITE_TOKEN) {
+    return res.status(500).json({ error: "BLOB_READ_WRITE_TOKEN manquant sur le projet Vercel" });
+  }
   try {
     const pathname = req.query.pathname;
     if (!pathname) return res.status(400).json({ error: "pathname requis" });

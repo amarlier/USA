@@ -1,6 +1,9 @@
 const { Redis } = require("@upstash/redis");
 
-const redis = Redis.fromEnv();
+const redis = new Redis({
+  url: process.env.KV_REST_API_URL,
+  token: process.env.KV_REST_API_TOKEN,
+});
 
 function noteKey(scope, dayId) {
   return scope === "day" ? `note:day:${dayId}` : "note:global";
@@ -14,6 +17,10 @@ module.exports = async function handler(req, res) {
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
   if (req.method === "OPTIONS") return res.status(200).end();
+
+  if (!process.env.KV_REST_API_URL || !process.env.KV_REST_API_TOKEN) {
+    return res.status(500).json({ error: "KV_REST_API_URL / KV_REST_API_TOKEN manquants sur le projet Vercel" });
+  }
 
   try {
     if (req.method === "GET") {
