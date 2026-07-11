@@ -1,24 +1,6 @@
-### Option : Hélicoptère à Grand Canyon Sud au lever du soleil
-
-Papillon
-
-[http://www.papillon.com/grand-canyon-national-park/helicopter-air-tours/north-canyon-tour](http://www.papillon.com/grand-canyon-national-park/helicopter-air-tours/north-canyon-tour)
-
-25-30 minutes
-
-289$ TTC par personne + 15$ de surcharge de carburant à régler sur place
-
-Il y a aussi des tours plus long (ecostar) pour une centaine de $ de plus par personne
-
-Il y a un autre opérateur, Maverick, mais les tours sont plus longs et à partir de 399$/personne.
-
-[http://www.maverickhelicopter.com/tour-grand-canyon-southrim.aspx](http://www.maverickhelicopter.com/tour-grand-canyon-southrim.aspx)
-
-Nous vous conseillons de prendre le départ le plus tôt possible pour pouvoir ensuite démarrer tôt la balade à pied dans le canyon avant qu’il n’y ait trop de monde et qu’il fasse trop chaud.
-
 ### Grand Canyon National Park
 
-Classé au patrimoine mondial de L’Unesco, le Grand Canyon est long de 446 km, et ses deux rives sont distantes de plus 29 km en son point le plus large. Creusé par la rivière Colorado dans le plateau du même nom, les 1857 mètres de dénivelé maximum du Grand Canyon exposent près de 2 milliards d’années d’histoire géologique de la terre. Contrairement à une idée fausse, ce n’est pas le plus grand canyon du monde, ni en termes de profondeur, ni en termes de longueur ou de largeur. Mais c’est sans doute le plus impressionnant.
+Classé au patrimoine mondial de L’Unesco, le Grand Canyon est long de 446 km, et ses deux rives sont distantes de plus 29 km en son point le plus large. Creusé par la rivière Colorado dans le plateau du même nom, les 1857 mètres de dénivelé maximum du Grand Canyon exposent près de 2 milliards d’années d’histoire géologique de la terre. 
 
 En vous tenant au bord du Grand Canyon à Grand Canyon South Rim (Grand Canyon Village), difficile d’imaginer que vous êtes à plus de 2000 mètres d’altitude. La rive opposée (North Rim) est encore 300 mètres plus élevée. Le fleuve Colorado est presque deux fois plus proche de la rive sud que de la rive nord, car l’altitude plus élevée au nord entraîne plus de précipitations, donc plus d’érosion au cours des millions d’années, contribuant à creuser la rive nord deux fois plus vite que la rive sud.
 
@@ -26,11 +8,12 @@ Deux sentiers descendent de South Rim jusqu’au Colorado, le Bright Angel Trail
 
 ### Balade à Grand canyon South Rim : Bright Angel Trail et South Kaibab Trail
 
-Voir le Grand Canyon d’en haut à beau être spectaculaire, on ne peut réellement prendre toute la dimension du canyon qu’en s’y aventurant à pieds. En été, il est très fortement déconseillé de descendre jusqu’au Colorado et de remonter dans la même journée. Au fond du canyon, il existe bien un camping pour passer la nuit, mais comme évoqué plus haut, il fait une chaleur épouvantable, qui ne disparaît entièrement qu'une fois le soleil couché. Le Phantom Ranch géré par le National Park Service accueille également les visiteurs dans des cabines ou dortoires climatisés, mais il faut réserver presqu’un an à l’avance, et encore, il faut participer à une loterie pour espérer avoir une place tant le nombre de demandes excède le nombre de places disponibles.
+Voir le Grand Canyon d’en haut à beau être spectaculaire, on ne peut réellement prendre toute la dimension du canyon qu’en s’y aventurant à pieds. 
 
-Il est donc nettement plus raisonnable de ne s’aventurer que sur le premier quart, ou premier tiers des deux sentiers partant de Grand Canyon Village et s’enfonçant dans le Grand Canyon, le Bright Angel Trail et le South Kaibab Trail.
+ 
+## Balade du South Kaibab Trail
 
-La plupart des gens font les premiers kilomètres du Bright Angel Trail, qui est directement accessible depuis les parkings le long de la rive du Grand Canyon. Pourtant, le South Kaibab Trail offre une plus grande diversité de paysages dans sa partie haute et est donc plus sympa pour une première expérience du Grand Canyon. Par contre, il n’est pas possible de s’y garer, donc il faut prendre une navette gratuite (shuttle ligne Orange) depuis le Grand Canyon Visitor Center pour rejoindre le départ du trail à côté du Yaki Point. C’est vraiment cette option que nous vous conseillons.
+Cette balade offre une plus grande diversité de paysages dans sa partie haute et est donc plus sympa pour une première expérience du Grand Canyon. Il faut prendre une navette gratuite (shuttle ligne Orange) depuis le Grand Canyon Visitor Center pour rejoindre le départ du trail à côté du Yaki Point. 
 
 Plan des navettes :
 
@@ -40,11 +23,7 @@ Enfoncez-vous dans le canyon autant que vous le souhaitez, en prenant en compte 
 
 Sur le South Kaibab trail, n’allez pas plus loin que Cedar Ridge : vous y trouverez des toilettes mais pas d’eau. Comptez 2.4km aller soit 4.8km aller-retour, ce qui peut paraître peu, mais il faut prendre en compte un dénivelé important. Si cela vous semble trop, vous aurez déjà de très beaux paysages en allant jusqu’à Ooh-Aah Point (toujours pas d’eau - 1.5 km aller soit 3km aller-retour) car c’est là que le panorama s’ouvre et que vous avez tout le canyon devant vous.
 
-Sur le Bright Angel Trail, n’allez pas plus loin que la Mile and a half Resthouse, où vous trouverez un point d’eau, des toilettes (2.4km aller soit 4.8km aller-retour), sauf si vous êtes en très bonne forme physique, et que vous supportez très bien la chaleur qui va s'accroître très vite au fur et à mesure que vous descendrez.
-
 Pensez à prendre beaucoup d’eau et à vous hydrater très régulièrement : les coups de chaleurs dûs au manque d’hydratation sont la principale source de malaise dans le Grand Canyon. Et partez très tôt le matin pour éviter d’être encore sur les sentiers en milieu de journée.
-
-Dernier point : un certain nombre de nos clients se rappellent être descendus à pied jusqu’au bas du Grand Canyon et retour, en plein été, lors d’un voyage antérieur quand ils étaient enfants. Ce n’est pas totalement impossible, c’est faisable. Mais ces souvenirs sont étonnants à plus d’un titre. Tout d’abord parce ces personnes n’ont pas souvenir d’ être arrivé au pied du fleuve Colorado. Pourtant, toute personne ayant déjà été jusqu’en bas du Grand Canyon se rappelle très bien d’arriver au Colorado, ainsi que des passerelles qui permettent sa traversée. Ensuite, parce que si c’est faisable, comme nous l’avons déjà dit, il faut quand même compter 25 km aller-retour, avec 1400 mètres de dénivelé descendant pour rejoindre le fleuve, et 1400 mètres de dénivelé ascendant pour revenir sur la rive du Grand Canyon. Sachant que sur le dernier tiers le plus bas du sentier, soit environ 8 km, il fait entre 40 et 45 degrés à l’ombre en été, mais que le sentier est quasiment toujours exposé au soleil. C’est une randonnée qui est généralement considérée comme devant être faite en 9 à 12h de marche, même si des personnes sportives et bien entraînées peuvent le faire en 8h. Et c’est une randonnée qui est très fortement déconseillée en été, sauf à partir à 5h du matin afin de faire le premier tiers du retour, dans la zone la plus chaude, avant 10h du matin. Le National Park Service répond à plus d’un millier d'appels de détresse chaque année dans le Grand Canyon (de loin le chiffre le plus important de tous les parcs nationaux américains). Entre 200 et 300 opérations d’évacuation sont organisées chaque année, la majorité en été. Les températures maximales enregistrées en bas du canyon atteignent les 48 degrés à l’ombre plusieurs fois par été. Pour avoir exploré plusieurs fois le Grand Canyon sur les deux rives et jusqu’en bas du canyon (sur plusieurs jours à chaque fois), nous pouvons attester que les conditions sont particulièrement brutales et peuvent surprendre même des randonneurs avertis.
 
 Site web du parc : [http://www.nps.gov/grca/index.htm](http://www.nps.gov/grca/index.htm)
 
@@ -82,19 +61,11 @@ Après Cameron, selon l’heure et l’envie, à l’intersection de la 160, vou
 
 ### Moenave Dinosaur Tracks
 
-Environ 5 miles après la jonction avec la 160, juste avant d’arriver sur Tuba City, vous verrez sans doute sur votre gauche des panneaux indiquant la possibilité de s’arrêter pour voir des empreintes de dinosaures (emplacement exact indiqué sur votre carte). Tournez à gauche sur la petite route de terre, et roulez environ 300m. Des petites échoppes marquent l’emplacement d’un parking improvisé. Vous pouvez vous y arrêter gratuitement et aller explorer le terrain situé derrière les échoppes, en quête de véritables empreintes de dinosaures. Le parking et la visite sont gratuits, mais des Navajos vous proposeront sans doute une “visite guidée gratuite” : gratuite, mais un “tip” en fortement attendu en fin de visite (10-20$ semblent raisonnables pour un groupe de 4 personnes). Vous pouvez donc explorer tout seul, où vous laisser guider. L’avantage du guide est qu’il vous indiquera sans doute les empreintes que vous pourriez manquer en allant au hasard. Elles ne sont cependant pas trop difficiles à trouver : observez bien le paysage, vous remarquerez les traces du lit d’une ancienne rivière. C’est dans cet ancien cours d’eau que vous trouverez les empreintes. Dès que vous en aurez trouvé quelques-unes, vous aurez une meilleure idée de ce que vous cherchez, et vous en trouverez plein d’autres.  Si vous choisissez la visite “guidée”, ne vous laissez cependant pas abuser par toutes les informations qu’ils donnent : ils ont parfois l’habitude de montrer des oeufs de dinosaures fossilisés, ou des restes d’ossements, ou encore des “crottes” de dinosaures : autant de pseudo artefacts préhistoriques qui n’ont jamais été authentifiés par les paléontologues qui ont étudié ce site. Les empreintes par contre sont toutes réelles. Parfois on les voit mieux en versant un peu d’eau dedans, aussi prenez avec vous une petite bouteille d’eau :
+Environ 5 miles après la jonction avec la 160, juste avant d’arriver sur Tuba City, vous verrez sans doute sur votre gauche des panneaux indiquant la possibilité de s’arrêter pour voir des empreintes de dinosaures (emplacement exact indiqué sur votre carte). Tournez à gauche sur la petite route de terre, et roulez environ 300m. Des petites échoppes marquent l’emplacement d’un parking improvisé. Vous pouvez vous y arrêter gratuitement et aller explorer le terrain situé derrière les échoppes, en quête de véritables empreintes de dinosaures. Le parking et la visite sont gratuits, mais des Navajos vous proposeront sans doute une “visite guidée gratuite” : gratuite, mais un “tip” en fortement attendu en fin de visite (10-20$ semblent raisonnables pour un groupe de 4 personnes). Vous pouvez donc explorer tout seul, où vous laisser guider. L’avantage du guide est qu’il vous indiquera sans doute les empreintes que vous pourriez manquer en allant au hasard. Elles ne sont cependant pas trop difficiles à trouver : observez bien le paysage, vous remarquerez les traces du lit d’une ancienne rivière. C’est dans cet ancien cours d’eau que vous trouverez les empreintes. Dès que vous en aurez trouvé quelques-unes, vous aurez une meilleure idée de ce que vous cherchez, et vous en trouverez plein d’autres.  
 
 ![](/photos/image12.png)
 
 Et non, ce ne sont pas des T-Rex comme il est parfois fait mention à tort. Les paléontologues considèrent qu’il s’agissait sans doute de Coelophysis Kayentakatae et de Dilophosaurus qui devaient ressembler à ça:
-
-Coelophysis :
-
-![](/photos/image243.png)
-
-Dilophosaurus :
-
-![](/photos/image176.png)
 
 Ils mesuraient environ la taille d’un homme adulte en hauteur, pour 6m de long de la tête à la queue.
 
@@ -108,7 +79,8 @@ Le lac Powell est un lac artificiel créé sur le Colorado par la construction d
 
 ### Baignade dans le Lake Powell
 
-La première chose à faire en arrivant sur Page en été, c’est d’aller piquer une tête dans le Lake Powell. Au cœur de l’été, la température de l’eau monte jusqu’à 27 ou 28 degrés (avec une moyenne autour de 26 degrés). Nous vous proposons deux localisations sympas pour vous baigner dans de petites criques rocheuses, et éventuellement plonger/sauter depuis les rochers.
+La première chose à faire en arrivant sur Page en été, c’est d’aller piquer une tête dans le Lake Powell. Au cœur de l’été, la température de l’eau monte jusqu’à 27 ou 28 degrés.
+Nous vous proposons deux localisations sympas pour vous baigner dans de petites criques rocheuses, et éventuellement plonger/sauter depuis les rochers.
 
 ![](/photos/image145.png)
 

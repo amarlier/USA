@@ -1,8 +1,9 @@
-Puis prenez la route direction Victorville, Barstow puis Kingman. Selon l’heure et l’envie, il est possible de faire un détour par une portion historique de la Route 66 entre Victorville et Barstow.
+Prenez la route direction Victorville, Barstow puis Kingman. Selon l’heure et l’envie, il est possible de faire un détour par une portion historique de la Route 66 entre Victorville et Barstow.
 
 ### Passage par la Route 66 entre Victorville et Barstow
 
-Prenez l’exit 150 en approchant de Victorville. Puis prenez la 7th St vers le nord qui suit l’ancien tracé de la route 66 jusqu’au centre de Victorville : il ne reste plus grand-chose des motels, stations services et autres cafés qui jalonnaient cette tranche de la route 66 historique. Juste avant que la route 66 tourne à gauche sur D Street, vous pouvez faire un premier crochet sur la C Street à votre droite pour voir un Motel atypique de la route 66, le Green Spot Motel.
+Prenez l’exit 150 en approchant de Victorville. 
+Puis prenez la 7th St vers le nord qui suit l’ancien tracé de la route 66 jusqu’au centre de Victorville : il ne reste plus grand-chose des motels, stations services et autres cafés qui jalonnaient cette tranche de la route 66 historique. Juste avant que la route 66 tourne à gauche sur D Street, vous pouvez faire un premier crochet sur la C Street à votre droite pour voir un Motel atypique de la route 66, le Green Spot Motel.
 
 Puis en tournant dans D Street, sur votre gauche, juste en face de la gare de bus Greyhound, vous trouverez un petit musée gratuit de la route 66 : le California Route 66 Museum.
 

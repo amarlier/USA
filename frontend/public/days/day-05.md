@@ -6,8 +6,6 @@ Puis reprenez la route en direction de Mexican Hat, vers le nord.
 
 En quittant Monument Valley, prenez la route du nord, la 163 direction Mexican Hat. C’est sur cette section de la route 163 toute droite entre Monument Valley et Mexican Hat que Forrest Gump décide de mettre fin à ses années de marathons à travers tous les Etats-Unis.
 
-![](/photos/image159.png)
-
 Retournez-vous pour apercevoir le paysage saisissant qui a servi de toile de fond à cette scène mythique du film.
 
 Après Mexican Hat, deux options de trajet s’offrent à vous pour rejoindre Moab.
