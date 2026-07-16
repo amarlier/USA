@@ -595,7 +595,7 @@ function HotelPage() {
   );
 }
 
-function FlightExtraRow({ icon, label, items, url }) {
+function FlightExtraRow({ icon, label, items }) {
   if (!items || items.length === 0) return null;
   return (
     <div className="flight-extra-row">
@@ -604,8 +604,23 @@ function FlightExtraRow({ icon, label, items, url }) {
         <div className="flight-extra-label">{label}</div>
         <div className="flight-extra-items">{items.join(" · ")}</div>
       </div>
-      {url && (
-        <a href={url} target="_blank" rel="noreferrer" className="flight-extra-link">Gérer</a>
+    </div>
+  );
+}
+
+function FlightFamilyBlock({ fam }) {
+  const hasData = (fam.seats?.length || fam.baggage?.length || fam.meals?.length);
+  return (
+    <div className="flight-family-block">
+      <div className="flight-family-name"><Icon name="user-group" /> Famille {fam.name}</div>
+      {hasData ? (
+        <>
+          <FlightExtraRow icon="chair" label="Sièges" items={fam.seats} />
+          <FlightExtraRow icon="suitcase" label="Bagages" items={fam.baggage} />
+          <FlightExtraRow icon="utensils" label="Repas" items={fam.meals} />
+        </>
+      ) : (
+        <div className="flight-family-pending">Détails en attente</div>
       )}
     </div>
   );
@@ -696,9 +711,9 @@ function FlightTripCard({ trip }) {
           <FlightSegmentDetail seg={seg} />
           <FlightSegmentDetailArrival seg={seg} />
           <div className="flight-extras">
-            <FlightExtraRow icon="chair" label="Sièges" items={seg.seats} url={seg.seats_url} />
-            <FlightExtraRow icon="suitcase" label="Bagages" items={seg.baggage} url={seg.baggage_url} />
-            <FlightExtraRow icon="utensils" label="Repas" items={seg.meals} url={seg.meals_url} />
+            {(seg.families || []).map((fam, fi) => (
+              <FlightFamilyBlock key={fi} fam={fam} />
+            ))}
           </div>
         </div>
       )}

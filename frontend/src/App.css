@@ -252,14 +252,15 @@ body {
 .flight-detail-place-strong { font-size: 15px; }
 .flight-detail-info { color: var(--ink-2); font-size: 13px; margin-top: 8px; line-height: 1.6; }
 
-.flight-extras { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 12px; }
+.flight-extras { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 18px; }
+.flight-family-block { display: flex; flex-direction: column; gap: 10px; }
+.flight-family-name { font-weight: 700; font-size: 13px; color: var(--ink); display: flex; align-items: center; gap: 6px; }
+.flight-family-pending { color: var(--ink-2); font-size: 13px; font-style: italic; }
 .flight-extra-row { display: flex; align-items: flex-start; gap: 12px; }
 .flight-extra-icon { color: var(--brand); font-size: 15px; margin-top: 2px; width: 18px; text-align: center; flex-shrink: 0; }
 .flight-extra-text { flex: 1; }
 .flight-extra-label { font-weight: 600; font-size: 13px; color: var(--ink); }
 .flight-extra-items { color: var(--ink-2); font-size: 13px; margin-top: 2px; }
-.flight-extra-link { color: var(--brand); font-size: 13px; font-weight: 500; text-decoration: none; white-space: nowrap; align-self: center; }
-.flight-extra-link:hover { text-decoration: underline; }
 
 @media (max-width: 600px) {
   .flight-route-tabs { gap: 14px; }
