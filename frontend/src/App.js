@@ -6,6 +6,7 @@ import { fetchDayBlocks } from "./dayContent";
 import NoteBox from "./NoteBox";
 import introFull from "@/data/intro_full.json";
 import hotelsData from "@/data/hotels.json";
+import flightsData from "@/data/flights.json";
 
 const Icon = ({ name }) => <i className={`fa-solid fa-${name}`}></i>;
 
@@ -248,6 +249,7 @@ function Header() {
           )}
         </div>
         <NavLink to="/carte" data-testid="nav-carte"><Icon name="map" /><span>Carte</span></NavLink>
+        <NavLink to="/vols" data-testid="nav-vols"><Icon name="plane" /><span>Vols</span></NavLink>
         <NavLink to="/recherche" data-testid="nav-recherche"><Icon name="magnifying-glass" /><span>Recherche</span></NavLink>
         <NavLink to="/guides" data-testid="nav-guides"><Icon name="book" /><span>Guides</span></NavLink>
       </nav>
@@ -589,6 +591,171 @@ function HotelPage() {
       )}
 
       <DayNav dayId={day.id} />
+    </div>
+  );
+}
+
+function FlightExtraRow({ icon, label, items }) {
+  if (!items || items.length === 0) return null;
+  return (
+    <div className="flight-extra-row">
+      <div className="flight-extra-icon"><Icon name={icon} /></div>
+      <div className="flight-extra-text">
+        <div className="flight-extra-label">{label}</div>
+        <div className="flight-extra-items">{items.join(" · ")}</div>
+      </div>
+    </div>
+  );
+}
+
+function FlightFamilyBlock({ fam }) {
+  const hasData = (fam.seats?.length || fam.baggage?.length || fam.meals?.length);
+  return (
+    <div className="flight-family-block">
+      <div className="flight-family-name"><Icon name="user-group" /> Famille {fam.name}</div>
+      {hasData ? (
+        <>
+          <FlightExtraRow icon="chair" label="Sièges" items={fam.seats} />
+          <FlightExtraRow icon="suitcase" label="Bagages" items={fam.baggage} />
+          <FlightExtraRow icon="utensils" label="Repas" items={fam.meals} />
+        </>
+      ) : (
+        <div className="flight-family-pending">Détails en attente</div>
+      )}
+    </div>
+  );
+}
+
+function FlightSegmentDetail({ seg }) {
+  return (
+    <div className="flight-detail-timeline">
+      <div className="flight-detail-point">
+        <div className="flight-detail-dot" />
+        <div className="flight-detail-line" />
+      </div>
+      <div className="flight-detail-body">
+        <div className="flight-detail-top">
+          <div>
+            <div className="flight-detail-time">{seg.departure_time}</div>
+            <div className="flight-detail-place">{seg.departure_city}, aéroport {seg.departure_airport} ({seg.departure_code})</div>
+          </div>
+          {seg.status && <span className="flight-status-chip">{seg.status}</span>}
+        </div>
+        <div className="flight-detail-info">
+          {seg.airline && <div>Effectué par {seg.airline}{seg.flight_number ? `, ${seg.flight_number}` : ""}</div>}
+          {seg.aircraft && <div>{seg.aircraft}</div>}
+          {(seg.duration || seg.class) && (
+            <div>{seg.duration ? `Durée: ${seg.duration}` : ""}{seg.duration && seg.class ? " , " : ""}{seg.class || ""}</div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function FlightSegmentDetailArrival({ seg }) {
+  return (
+    <div className="flight-detail-timeline flight-detail-timeline-end">
+      <div className="flight-detail-point">
+        <div className="flight-detail-dot flight-detail-dot-filled" />
+      </div>
+      <div className="flight-detail-body">
+        <div className="flight-detail-time">{seg.arrival_time}{seg.arrival_offset && <sup className="flight-offset">{seg.arrival_offset}</sup>}</div>
+        <div className="flight-detail-place flight-detail-place-strong">{seg.arrival_city}, {seg.arrival_airport}</div>
+      </div>
+    </div>
+  );
+}
+
+function FlightTripCard({ trip }) {
+  const [expanded, setExpanded] = React.useState(false);
+  if (!trip) return null;
+  const seg = (trip.segments || [])[0];
+  const hasData = seg && (seg.airline || seg.flight_number || seg.departure_code);
+
+  if (!hasData) {
+    return <div className="card" data-testid="flight-empty">Détails du vol à compléter.</div>;
+  }
+
+  return (
+    <div className="card flight-card" data-testid="flight-card">
+      <div className="flight-airline">{trip.airline_label || seg.airline}</div>
+
+      <div className="flight-summary-route">
+        <div className="flight-endpoint">
+          <div className="flight-date">{trip.date}</div>
+          <div className="flight-time">{seg.departure_time}</div>
+          <div className="flight-code">{seg.departure_code}</div>
+        </div>
+        <div className="flight-status-wrap">
+          {seg.status && <span className="flight-status-chip">{seg.status}</span>}
+        </div>
+        <div className="flight-endpoint flight-endpoint-arrival">
+          <div className="flight-date">{trip.date}</div>
+          <div className="flight-time">{seg.arrival_time}{seg.arrival_offset && <sup className="flight-offset">{seg.arrival_offset}</sup>}</div>
+          <div className="flight-code">{seg.arrival_code}</div>
+        </div>
+      </div>
+
+      <button
+        type="button"
+        className="flight-details-toggle"
+        onClick={() => setExpanded(x => !x)}
+        data-testid="flight-details-toggle"
+      >
+        Afficher les détails du vol <Icon name={expanded ? "chevron-up" : "chevron-down"} />
+      </button>
+
+      {expanded && (
+        <div className="flight-details-expanded">
+          <FlightSegmentDetail seg={seg} />
+          <FlightSegmentDetailArrival seg={seg} />
+          <div className="flight-extras">
+            {(seg.families || []).map((fam, fi) => (
+              <FlightFamilyBlock key={fi} fam={fam} />
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function FlightsPage() {
+  const [active, setActive] = React.useState("outbound");
+  const trip = flightsData[active];
+
+  return (
+    <div className="container" data-testid="flights-page">
+      <Link to="/" className="back-link" data-testid="back-to-home">
+        <Icon name="arrow-left" /> Accueil
+      </Link>
+
+      <div className="day-hero">
+        <div className="day-hero-num">Vols</div>
+        <h1 className="day-hero-title"><Icon name="plane" /> Vols</h1>
+      </div>
+
+      <div className="flight-route-tabs">
+        <button
+          type="button"
+          className={`flight-route-tab${active === "outbound" ? " active" : ""}`}
+          onClick={() => setActive("outbound")}
+          data-testid="flight-tab-outbound"
+        >
+          {flightsData.outbound?.route || "Aller"}
+        </button>
+        <button
+          type="button"
+          className={`flight-route-tab${active === "return" ? " active" : ""}`}
+          onClick={() => setActive("return")}
+          data-testid="flight-tab-return"
+        >
+          {flightsData.return?.route || "Retour"}
+        </button>
+      </div>
+
+      <FlightTripCard trip={trip} />
     </div>
   );
 }
@@ -969,6 +1136,7 @@ function App() {
           <Route path="/conseils" element={<RecommendationsPage />} />
           <Route path="/note" element={<GlobalNotePage />} />
           <Route path="/carte" element={<CartePage />} />
+          <Route path="/vols" element={<FlightsPage />} />
           <Route path="/recherche" element={<SearchPage />} />
         </Routes>
       </BrowserRouter>

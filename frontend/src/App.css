@@ -207,6 +207,67 @@ body {
 .hotel-status-unknown { background: #f3f4f6; color: #6b7280; }
 @media (max-width: 720px) { .hotel-fam-row { flex-direction: column; align-items: flex-start; } .hotel-fam-cost { text-align: left; } }
 
+.flight-route-tabs { display: flex; gap: 24px; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+.flight-route-tab {
+  background: none; border: none; padding: 8px 2px 14px; font-size: 16px; font-weight: 500;
+  color: var(--ink-2); cursor: pointer; position: relative; font-family: inherit;
+}
+.flight-route-tab.active { color: var(--ink); font-weight: 700; }
+.flight-route-tab.active::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 3px; background: var(--brand); border-radius: 3px;
+}
+
+.flight-card { padding: 24px 26px; }
+.flight-airline { font-weight: 700; font-size: 15px; letter-spacing: 0.5px; color: var(--ink); margin-bottom: 18px; }
+.flight-summary-route { display: flex; align-items: center; gap: 16px; }
+.flight-summary-route .flight-endpoint { flex: none; }
+.flight-summary-route .flight-endpoint-arrival { text-align: right; }
+.flight-status-wrap { flex: 1; display: flex; justify-content: center; }
+.flight-date { font-weight: 700; font-size: 13px; color: var(--ink); margin-bottom: 4px; }
+.flight-time { font-family: 'Fraunces', serif; font-weight: 700; font-size: 24px; color: var(--ink); }
+.flight-offset { font-size: 12px; color: var(--brand); margin-left: 2px; }
+.flight-code { color: var(--ink-2); font-size: 14px; margin-top: 2px; }
+.flight-status-chip {
+  display: inline-block; padding: 4px 14px; border-radius: 999px;
+  background: var(--brand-light); color: var(--brand); font-size: 13px; font-weight: 600;
+}
+.flight-details-toggle {
+  width: 100%; margin-top: 20px; background: var(--brand); color: #fff; border: none;
+  border-radius: 10px; padding: 13px 18px; font-size: 15px; font-weight: 600; font-family: inherit;
+  cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+.flight-details-toggle:hover { opacity: 0.92; }
+
+.flight-details-expanded { margin-top: 20px; padding-top: 14px; border-top: 1px solid var(--border); }
+.flight-detail-timeline { display: flex; gap: 14px; }
+.flight-detail-point { display: flex; flex-direction: column; align-items: center; width: 12px; }
+.flight-detail-dot { width: 12px; height: 12px; border-radius: 50%; border: 2px solid #c0392b; background: #fff; flex-shrink: 0; }
+.flight-detail-dot-filled { background: #c0392b; }
+.flight-detail-line { flex: 1; width: 2px; background: #c0392b; margin: 2px 0; min-height: 60px; }
+.flight-detail-body { flex: 1; padding-bottom: 18px; }
+.flight-detail-timeline-end .flight-detail-body { padding-bottom: 0; }
+.flight-detail-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.flight-detail-time { font-family: 'Fraunces', serif; font-weight: 700; font-size: 18px; color: var(--ink); }
+.flight-detail-place { color: var(--ink); font-size: 14px; font-weight: 600; margin-top: 2px; }
+.flight-detail-place-strong { font-size: 15px; }
+.flight-detail-info { color: var(--ink-2); font-size: 13px; margin-top: 8px; line-height: 1.6; }
+
+.flight-extras { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 18px; }
+.flight-family-block { display: flex; flex-direction: column; gap: 10px; }
+.flight-family-name { font-weight: 700; font-size: 13px; color: var(--ink); display: flex; align-items: center; gap: 6px; }
+.flight-family-pending { color: var(--ink-2); font-size: 13px; font-style: italic; }
+.flight-extra-row { display: flex; align-items: flex-start; gap: 12px; }
+.flight-extra-icon { color: var(--brand); font-size: 15px; margin-top: 2px; width: 18px; text-align: center; flex-shrink: 0; }
+.flight-extra-text { flex: 1; }
+.flight-extra-label { font-weight: 600; font-size: 13px; color: var(--ink); }
+.flight-extra-items { color: var(--ink-2); font-size: 13px; margin-top: 2px; }
+
+@media (max-width: 600px) {
+  .flight-route-tabs { gap: 14px; }
+  .flight-route-tab { font-size: 14px; }
+  .flight-summary-route { flex-wrap: wrap; }
+}
+
 /* Guide card */
 .guide-card {
   background: var(--paper); border: 1px solid var(--border);
