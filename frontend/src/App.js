@@ -645,7 +645,7 @@ function FlightSegmentDetailArrival({ seg }) {
         <div className="flight-detail-dot flight-detail-dot-filled" />
       </div>
       <div className="flight-detail-body">
-        <div className="flight-detail-time">{seg.arrival_time}</div>
+        <div className="flight-detail-time">{seg.arrival_time}{seg.arrival_offset && <sup className="flight-offset">{seg.arrival_offset}</sup>}</div>
         <div className="flight-detail-place flight-detail-place-strong">{seg.arrival_city}, {seg.arrival_airport}</div>
       </div>
     </div>
@@ -677,7 +677,7 @@ function FlightTripCard({ trip }) {
         </div>
         <div className="flight-endpoint flight-endpoint-arrival">
           <div className="flight-date">{trip.date}</div>
-          <div className="flight-time">{seg.arrival_time}</div>
+          <div className="flight-time">{seg.arrival_time}{seg.arrival_offset && <sup className="flight-offset">{seg.arrival_offset}</sup>}</div>
           <div className="flight-code">{seg.arrival_code}</div>
         </div>
       </div>

@@ -225,6 +225,7 @@ body {
 .flight-status-wrap { flex: 1; display: flex; justify-content: center; }
 .flight-date { font-weight: 700; font-size: 13px; color: var(--ink); margin-bottom: 4px; }
 .flight-time { font-family: 'Fraunces', serif; font-weight: 700; font-size: 24px; color: var(--ink); }
+.flight-offset { font-size: 12px; color: var(--brand); margin-left: 2px; }
 .flight-code { color: var(--ink-2); font-size: 14px; margin-top: 2px; }
 .flight-status-chip {
   display: inline-block; padding: 4px 14px; border-radius: 999px;
