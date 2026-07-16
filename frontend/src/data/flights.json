@@ -1,0 +1,46 @@
+{
+  "outbound": {
+    "route": "Paris vers Los Angeles",
+    "date": "mar., 28 juil.",
+    "segments": [
+      {
+        "status": "Prévu",
+        "airline": "Air France",
+        "flight_number": "AF022",
+        "aircraft": "Boeing 777-300",
+        "class": "Economy Class",
+        "duration": "11h35",
+        "departure_time": "10:20",
+        "departure_code": "CDG",
+        "departure_city": "Paris",
+        "departure_airport": "Paris-Charles de Gaulle",
+        "arrival_time": "12:55",
+        "arrival_code": "LAX",
+        "arrival_city": "Los Angeles",
+        "arrival_airport": "Los Angeles International Airport"
+      }
+    ]
+  },
+  "return": {
+    "route": "Los Angeles vers Paris",
+    "date": "",
+    "segments": [
+      {
+        "status": "",
+        "airline": "",
+        "flight_number": "",
+        "aircraft": "",
+        "class": "",
+        "duration": "",
+        "departure_time": "",
+        "departure_code": "",
+        "departure_city": "",
+        "departure_airport": "",
+        "arrival_time": "",
+        "arrival_code": "",
+        "arrival_city": "",
+        "arrival_airport": ""
+      }
+    ]
+  }
+}
