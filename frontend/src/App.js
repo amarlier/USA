@@ -595,6 +595,22 @@ function HotelPage() {
   );
 }
 
+function FlightExtraRow({ icon, label, items, url }) {
+  if (!items || items.length === 0) return null;
+  return (
+    <div className="flight-extra-row">
+      <div className="flight-extra-icon"><Icon name={icon} /></div>
+      <div className="flight-extra-text">
+        <div className="flight-extra-label">{label}</div>
+        <div className="flight-extra-items">{items.join(" · ")}</div>
+      </div>
+      {url && (
+        <a href={url} target="_blank" rel="noreferrer" className="flight-extra-link">Gérer</a>
+      )}
+    </div>
+  );
+}
+
 function FlightSegmentDetail({ seg }) {
   return (
     <div className="flight-detail-timeline">
@@ -679,6 +695,11 @@ function FlightTripCard({ trip }) {
         <div className="flight-details-expanded">
           <FlightSegmentDetail seg={seg} />
           <FlightSegmentDetailArrival seg={seg} />
+          <div className="flight-extras">
+            <FlightExtraRow icon="chair" label="Sièges" items={seg.seats} url={seg.seats_url} />
+            <FlightExtraRow icon="suitcase" label="Bagages" items={seg.baggage} url={seg.baggage_url} />
+            <FlightExtraRow icon="utensils" label="Repas" items={seg.meals} url={seg.meals_url} />
+          </div>
         </div>
       )}
     </div>

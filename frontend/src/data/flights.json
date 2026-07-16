@@ -17,7 +17,13 @@
         "arrival_time": "12:55",
         "arrival_code": "LAX",
         "arrival_city": "Los Angeles",
-        "arrival_airport": "Los Angeles International Airport"
+        "arrival_airport": "Los Angeles International Airport",
+        "seats": ["49E Siège standard", "49D Siège standard", "49H Siège standard", "49G Siège standard"],
+        "seats_url": "https://wwws.airfrance.fr/ancillaries/handover?path=seatmap&shopId=3199f288-d730-4456-a81f-32aa8f55929e&reservationId=d61fbb89-d7ff-40ab-9169-dbd2158d1e41&passengerId=2&segmentId=1",
+        "baggage": ["2 x Bagages en soute", "4 x Bagage à main", "4 x Petit sac"],
+        "baggage_url": "https://wwws.airfrance.fr/ancillaries/handover?path=baggage&shopId=3199f288-d730-4456-a81f-32aa8f55929e&reservationId=d61fbb89-d7ff-40ab-9169-dbd2158d1e41&connectionId=1",
+        "meals": ["Repas", "En-cas", "1 x Repas enfant"],
+        "meals_url": "https://wwws.airfrance.fr/ancillaries/handover?path=meals&shopId=3199f288-d730-4456-a81f-32aa8f55929e&reservationId=d61fbb89-d7ff-40ab-9169-dbd2158d1e41&connectionId=1"
       }
     ]
   },
