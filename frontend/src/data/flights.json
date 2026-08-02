@@ -1,0 +1,75 @@
+{
+  "outbound": {
+    "route": "Paris vers Los Angeles",
+    "date": "mar., 28 juil.",
+    "segments": [
+      {
+        "status": "Prévu",
+        "airline": "Air France",
+        "flight_number": "AF022",
+        "aircraft": "Boeing 777-300",
+        "class": "Economy Class",
+        "duration": "11h35",
+        "departure_time": "10:20",
+        "departure_code": "CDG",
+        "departure_city": "Paris",
+        "departure_airport": "Paris-Charles de Gaulle",
+        "arrival_time": "12:55",
+        "arrival_code": "LAX",
+        "arrival_city": "Los Angeles",
+        "arrival_airport": "Los Angeles International Airport",
+        "families": [
+          {
+            "name": "Marlier",
+            "seats": ["49E Siège standard", "49D Siège standard", "49H Siège standard", "49G Siège standard"],
+            "baggage": ["2 x Bagages en soute", "4 x Bagage à main", "4 x Petit sac"],
+            "meals": ["Repas", "En-cas", "1 x Repas enfant"]
+          },
+          {
+            "name": "Dufour",
+            "seats": [],
+            "baggage": [],
+            "meals": []
+          }
+        ]
+      }
+    ]
+  },
+  "return": {
+    "route": "Los Angeles vers Paris",
+    "date": "sam., 22 août",
+    "segments": [
+      {
+        "status": "Prévu",
+        "airline": "Air France",
+        "flight_number": "AF025",
+        "aircraft": "Boeing 777-300",
+        "class": "Economy Class",
+        "duration": "10h50",
+        "departure_time": "18:25",
+        "departure_code": "LAX",
+        "departure_city": "Los Angeles",
+        "departure_airport": "Los Angeles International Airport",
+        "arrival_time": "14:15",
+        "arrival_offset": "+1",
+        "arrival_code": "CDG",
+        "arrival_city": "Paris",
+        "arrival_airport": "Paris-Charles de Gaulle",
+        "families": [
+          {
+            "name": "Marlier",
+            "seats": ["44D Siège Economy Comfort", "44E Siège Economy Comfort", "44G Siège Economy Comfort", "44H Siège Economy Comfort"],
+            "baggage": ["2 x Bagages en soute", "4 x Bagage à main", "4 x Petit sac"],
+            "meals": ["Petit-déjeuner", "Repas", "1 x Repas enfant"]
+          },
+          {
+            "name": "Dufour",
+            "seats": [],
+            "baggage": [],
+            "meals": []
+          }
+        ]
+      }
+    ]
+  }
+}
