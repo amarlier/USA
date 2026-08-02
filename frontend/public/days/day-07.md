@@ -1,35 +1,7 @@
 
-### Negro Bill Canyon / Grandstaff Canyon Trail
+### Dead Horse Point State Park
 
-Alternative sympa pour la matinée avant de quitter Moab.
-
-Rejoignez le parking du Negro Bill Canyon (désormais également appelé Grandstaff Canyon Trail) pour une superbe balade le long d’un petit cours d’eau, et vous menant jusqu’à la Morning Glory Arch. Avec un peu de chance vous pourrez voir des descentes en rappel depuis le sommet de l’Arche.
-
-La balade est très sympa et partiellement à l’ombre, et avec la possibilité de se rafraîchir dans la rivière au besoin. Compter 3.5 km à l’aller comme au retour, soit environ 2h. Elle n’est pas trop fréquentée et les paysages sont splendides.
-
-### Autre option alternative : Canyonlands National Park - Island in the Sky
-
-Le Canyonlands National Park est un parc de canyons situé à la confluence de la Green River et de la Colorado River. Le parc est séparé en trois districts bien distincts et qui ne communiquent pas, chacun séparé par une bras de la rivière Colorado ou de la Green River. The Needles est la section au Sud-Est, accessible au sud de Moab par la 191 puis la 211. C’est une région isolée qui propose des grandes randonnées exigeantes dans un climat désertique. La section The Maze, localisée au Sud-Ouest est très difficilement accessible et est un labyrinthe de canyons techniques nécessitant de l’équipement et une grande expérience du canyoning. Enfin, la section Island in the Sky que vous allez visiter est la plus proche de Moab, sur un plateau triangulaire localisé directement au nord de la confluence des deux rivières. Cette section offre notamment des panoramas à couper le souffle sur des canyons tortueux.
-
-![](/photos/image121.png)
-
-En arrivant sur Canyonlands par la 313, vous passerez par la guérite d’entrée du parc, puis un peu plus loin sur votre droite, le Visitor Center. Ce n’est pas indispensable de s’y arrêter. Environ 750 mètres (½ miles) après le Visitor Center, un parking accessible sur votre gauche conduit au Shafer Canyon Overlook, un point de vue très joli sur un des deux canyons qui isole cette partie du parc du plateau plus au nord. Le point du vue surplombe les impressionnants lacets de la Shafer Canyon Road, une route de terre accessible aux 4x4 qui permet de rejoindre la Potash Road et au-delà Moab.
-
-Puis reprenez la route. Environ 2 ou 300 mètres après le point de vue, vous emprunterez The Neck, un promontoire étroit entre deux canyons, seul point d’accès à Island in the Sky, une immense Mesa (plateau haut perché) triangulaire encadrée par la Colorado River et la Green River.
-
-![](/photos/image15.png)
-
-Puis continuez jusqu’au parking du Mesa Arch Trail, sur votre gauche, une courte balade qui vous mènera à une petite arche qui découpe dans le paysage un surprenant panorama. Assurément l’un des plus beaux points de vue de l’Ouest Américain. Il y a souvent beaucoup de monde, le mieux étant d’y arriver tôt le matin, avant la foule et quand les couleurs sont saisissantes après le lever du soleil.
-
-Puis accessibles en voiture, le Green River Overlook et le Grand View Point Overlook (un peu plus éloigné à la pointe sud du parc) sont également impressionnants.
-
-Si vous souhaitez marcher un peu, le Upheaval Dome Trail est une balade sympa qui mène à un étrange cratère donc la nature exacte continue de faire débat.
-
-Plan et infos : [http://www.nps.gov/cany/planyourvisit/islandinthesky.htm](http://www.nps.gov/cany/planyourvisit/islandinthesky.htm)
-
-### En complément de Canyonlands : Dead Horse Point State Park
-
-Puis en remontant sur Moab, marquez l’arrêt au Dead Horse Point State Park sur votre droite, pour avoir une vue imprenable sur les méandres de la Colorado River. Outre les canyons et la rivière, vous apercevrez d’étranges bassins multicolores (selon les dates ils peuvent être bleu électrique ou dégradés du bleu à l’orange) : ce sont en fait des bassins d’évaporation d’une des plus grandes mines de potasse au monde. Moab se trouve en effet au-dessus d’une réserve souterraine de 2 milliards de tonnes de potasse, ce minerai utilisé principalement pour l’élaboration des engrais. La mine était dans les années 60 une mine traditionnelle où les mineurs creusaient des tunnels pour accéder aux filons de potasse. Mais un accident mortel dans lequel 25 mineurs se retrouvèrent bloqués et seulement 7 survécurent poussèrent la compagnie à chercher des techniques alternatives d’extraction. A partir des années 70, il fut décidé de pomper de l’eau dans la rivière Colorado, et de l’injecter dans la mine à plus de 1200 mètres sous la surface. Le chlorure de potassium se dissout alors dans l’eau, qui est ensuite pompée dans les bassins d’évaporation que vous voyez. Là, l’eau est artificiellement teintée en bleu pour accélérer naturellement le processus d’évaporation, et le dépôt de la potasse au fond des bassins.
+Dead Horse Point State Park sur votre droite, pour avoir une vue imprenable sur les méandres de la Colorado River. Outre les canyons et la rivière, vous apercevrez d’étranges bassins multicolores (selon les dates ils peuvent être bleu électrique ou dégradés du bleu à l’orange) : ce sont en fait des bassins d’évaporation d’une des plus grandes mines de potasse au monde. Moab se trouve en effet au-dessus d’une réserve souterraine de 2 milliards de tonnes de potasse, ce minerai utilisé principalement pour l’élaboration des engrais. La mine était dans les années 60 une mine traditionnelle où les mineurs creusaient des tunnels pour accéder aux filons de potasse. Mais un accident mortel dans lequel 25 mineurs se retrouvèrent bloqués et seulement 7 survécurent poussèrent la compagnie à chercher des techniques alternatives d’extraction. A partir des années 70, il fut décidé de pomper de l’eau dans la rivière Colorado, et de l’injecter dans la mine à plus de 1200 mètres sous la surface. Le chlorure de potassium se dissout alors dans l’eau, qui est ensuite pompée dans les bassins d’évaporation que vous voyez. Là, l’eau est artificiellement teintée en bleu pour accélérer naturellement le processus d’évaporation, et le dépôt de la potasse au fond des bassins.
 
 Arrêtez-vous au Visitor Center pour régler votre droit d’entrée. De là vous pouvez marcher le long du Rim Trail jusqu’au Dead Horse Point, en suivant la falaise. Comptez 5 kilomètres aller-retour, avec peu de dénivelé, ou 8 kilomètres pour faire la boucle complète. Le Dead Horse Point est également accessible en voiture si vous êtes pressé ou qu’il fait très chaud.
 
@@ -66,16 +38,6 @@ C’est une balade très sympa pour qui s’intéresse à la paléontologie, mai
 Puis rejoignez Green River. Nous vous mettons quelques options complémentaires sur Green River, mais vous n’aurez sans doute pas le temps, il vous reste beaucoup de route et d’autres arrêts possibles en chemin.
 
 Une première option en été en arrivant sur Green River, est de remonter Hasting Road puis Beach Road vers le nord jusqu’à Swaseys Beach, une jolie plage de sable en bordure de la Green River. Vous pourrez vous y baigner (en été, s’il fait suffisamment chaud) mais soyez très attentif aux courants.
-
-Puis sur Green River même, une bonne introduction à la géologie, l’hydrologie et l’histoire du Plateau du Colorado que vous allez maintenant traverser pendant plusieurs jours, est présentée au John Wesley Powell River History Museum de Green River. Vous y découvrirez également l’incroyable histoire de John Wesley Powell et de son expédition sur le Colorado, jusque dans le Grand Canyon alors réputé infranchissable en bateau. Il donnera son nom au Lake Powell.
-
-A l’entrée du musée vous trouverez également la plus grande tranche de pastèque au monde (c’est en tout cas ce que clame l’écriteau).
-
-Green River est également la capitale américaine du melon. Traversez (en voiture) le pont sur la Green River et continuez jusqu’au Stand de vente de melons (Vetere Melons) sur votre droite un peu après la station service. Vous pourrez y goûter de nombreuses variétés de melons différents et en acheter si vous le souhaitez.
-
-### Suggestion de restaurants à Green River
-
-Puis prenez la route de Torrey avec arrêt optionnel possible au Goblin Valley State Park.
 
 ### Goblin Valley State Park
 
