@@ -1,30 +1,7 @@
-### Balade dans le labyrinthe de Fiery Furnace (réservation impérative 7 jours avant)
 
-Fiery Furnace est une portion rarement visitée de Arches National Park. Et pour cause, l’accès en est interdit si vous ne disposez pas d’un permis spécial. Ces permis sont à réserver en ligne 7 jours avant. Ils sont pour une heure donnée. Ils coûtent 10$ par personne. Tous les participants à la balade doivent être présents lors du retrait des permis, et doivent assister à une petite vidéo de quelques minutes.
+### Negro Bill Canyon / Grandstaff Canyon Trail
 
-Réservation du permis (7 jours avant la visite) :
-
-[https://www.recreation.gov/ticket/234668/ticket/10087108](https://www.recreation.gov/ticket/234668/ticket/10087108)
-
-Les détenteurs d’un permis ou d’une réservation pour Fiery Furnace n’ont pas besoin de Timed Entry Ticket pour entrer dans le parc le jour de la balade.
-
-![](/photos/image219.png)
-
-Fiery Furnace est un labyrinthe de canyons très joli, et super fun à explorer. Lorsque vous retirerez vos permis, vous avez le choix de faire la balade seuls, ou bien dans un groupe mené par un ranger. Le park ranger qui délivre les permis vous expliquera que si c’est votre première fois, il est recommandé de le faire avec un park ranger, que vous risquez de vous perdre, que c’est compliqué, difficile, que vous ne trouverez plus votre chemin, et que vous allez mourir perdu au fond d’un canyon, dévoré par les coyotes. Très honnêtement, c’est un tableau extrêmement exagéré de ce qui vous attend ;-). Nous classons personnellement cette balade plutôt comme une balade facile, pas spécialement fatigante, relativement courte (nous avons dû mettre 2h sans nous presser, à chaque visite), et franchement amusante. Reste l’orientation : le parcours à travers le labyrinthe de canyons nécessite en effet d’être attentif : il est fléché, avec de petites flèches disposées tout au long de la balade. Elles sont en effet petites et discrètes, et ressemblent à ça :
-
-![](/photos/image87.png)
-
-N’exagérons rien quand même, elles ne sont pas cachées, mais disposées là où un changement de direction est nécessaire. Si vous en ratez une, généralement vous le comprenez en arrivant à une intersection dépourvue d’indication pour choisir la suite de votre chemin ou dans un cul de sac. Il faudra alors être capable de faire demi-tour et revenir sur vos pas pour retrouver l'intersection que vous avez manquée. Rien de compliqué, mais il faut avoir un tout petit peu le sens de l’orientation. Autre point : le park ranger vous indiquera que l’étroitesse des canyons ne permet pas au signal GPS de passer et que vous ne pourrez pas vous fier à un tracé GPS pour vous diriger. Cela est très exagéré également. Maps.me vous indique votre position avec une très bonne précision sur environ 80-90% du parcours. Il n’y a en effet que lors des brefs passages par des goulots très étroits qu’on perd provisoirement le signal. Il suffit de se remettre à découvert dans un endroit moins encaissé pour retrouver instantanément sa position sur Maps.me et comprendre où l’on se trouve par rapport au tracé de la balade qui est chargé dans votre carte. Au final, la recherche de l’itinéraire n’est pas un vrai problème, mais est au contraire ce qui rend cette balade amusante, en y ajoutant un côté chasse au trésor, course d’orientation très fun notamment avec les plus jeunes.
-
-Dernier point important. Le park ranger et la vidéo de présentation insisteront beaucoup sur la nécessité de ne pas marcher sur du biological soil crust. Il s’agit de terrain dont on pourrait aisément croire qu’il s’agit d’un sol minéral, à mi-chemin du sable et de la terre, mais ce sont en réalité des organismes vivants, très fragiles, et irrémédiablement détruits si vous marchez dessus. En général on les repère car ces portions de sols sont plus foncées que le reste de l’environnement. Par sécurité, essayez de rester soit sur les rochers, soit sur le sable, et évitez au maximum de marcher sur des sols de terre.
-
-Voici un exemple de biological soil crust :
-
-![](/photos/image153.png)
-
-### Option alternative : Negro Bill Canyon / Grandstaff Canyon Trail
-
-Si vous n’arrivez pas à avoir de permis pour Fiery Furnace, voici une alternative sympa pour la matinée avant de quitter Moab.
+Alternative sympa pour la matinée avant de quitter Moab.
 
 Rejoignez le parking du Negro Bill Canyon (désormais également appelé Grandstaff Canyon Trail) pour une superbe balade le long d’un petit cours d’eau, et vous menant jusqu’à la Morning Glory Arch. Avec un peu de chance vous pourrez voir des descentes en rappel depuis le sommet de l’Arche.
 
