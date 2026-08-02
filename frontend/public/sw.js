@@ -1,6 +1,5 @@
-const CACHE_VERSION = "v1";
-const STATIC_CACHE = `usa-ouest-static-${CACHE_VERSION}`;
-const RUNTIME_CACHE = `usa-ouest-runtime-${CACHE_VERSION}`;
+const STATIC_CACHE = "usa-ouest-static";
+const RUNTIME_CACHE = "usa-ouest-runtime";
 
 const PRECACHE_URLS = [
   "./",
@@ -79,17 +78,14 @@ self.addEventListener("fetch", (event) => {
   }
 
   event.respondWith(
-    caches.match(request).then((cached) => {
-      if (cached) return cached;
-      return fetch(request)
-        .then((response) => {
-          if (response.ok && response.type === "basic") {
-            const copy = response.clone();
-            caches.open(RUNTIME_CACHE).then((cache) => cache.put(request, copy));
-          }
-          return response;
-        })
-        .catch(() => cached);
-    })
+    fetch(request)
+      .then((response) => {
+        if (response.ok && response.type === "basic") {
+          const copy = response.clone();
+          caches.open(RUNTIME_CACHE).then((cache) => cache.put(request, copy));
+        }
+        return response;
+      })
+      .catch(() => caches.match(request))
   );
 });
