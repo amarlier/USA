@@ -1,6 +1,5 @@
-const CACHE_VERSION = "v2";
-const STATIC_CACHE = `usa-ouest-static-${CACHE_VERSION}`;
-const RUNTIME_CACHE = `usa-ouest-runtime-${CACHE_VERSION}`;
+const STATIC_CACHE = "usa-ouest-static";
+const RUNTIME_CACHE = "usa-ouest-runtime";
 
 const PRECACHE_URLS = [
   "./",
