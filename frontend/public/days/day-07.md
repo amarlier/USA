@@ -1,3 +1,16 @@
+### Planning
+
+9h00 — Départ de Moab
+9h45 — Arrivée Dead Horse Point
+9h45-11h05 — Visite (1h20)
+11h05 — Départ vers Goblin Valley (~1h50 de route)
+12h55 — Arrivée Goblin Valley — pique-nique
+12h55-14h25 — Exploration (1h30)
+14h25 — Départ vers Hanksville (35 min)
+15h00 — Hanksville (15-20 min, ravitaillement)
+15h20 — Départ vers Torrey (1h)
+16h20 — Arrêt photo bisons, Red River Ranch (juste avant Torrey)
+16h30-16h45 — Arrivée à Torrey
 
 ### Dead Horse Point State Park
 
