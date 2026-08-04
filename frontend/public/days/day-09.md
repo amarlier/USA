@@ -22,20 +22,6 @@ Pour une expérience plus longue et avec un peu moins de monde, une fois que vou
 
 Puis faites en voiture les différents points de vue, notamment Inspiration Point et Bryce Point.
 
-### Fairyland Loop Trail
-
-Si vous n’avez pas peur de marcher, une alternative (où vous aurez le parc pour vous tout seul, sans croiser personne), est de faire le Fairyland Loop Trail à partir du Fairyland Point à l’entrée du parc. Les paysages sont somptueux, mais la balade est longue et le dénivelé assez important. Comptez 4h environ. Le Fairyland Loop Trail rejoint le Rim trail (en surplomb de l'amphithéâtre de Bryce, au-dessus des hoodoos) au niveau du General Store (où vous pouvez faire une pause et vous restaurer, ou prendre une glace). Le retour jusqu’au parking du Fairyland Point se fait via le Rim Trail (ou alors l’un d’entre vous peut aller chercher la voiture en terminant la boucle seul puis revenir chercher le reste du groupe).
-
-Plus d’informations sur la parc sur [http://www.nps.gov/brca/index.htm](http://www.nps.gov/brca/index.htm)
-
-S’il semble y avoir beaucoup de monde dans la région, et que vous anticipez une foule importante sur Bryce, une option alternative ou complémentaire est possible quelques kilomètres à l’ouest de Bryce, dans le Red Canyon :
-
-### Option hors des sentiers battus : Balade du Buckhorn Trail au Red Canyon
-
-Un peu après Bryce quand on vient de l’Est, vous passez dans la zone du Red Canyon, une petite extension de Bryce en dehors du National Park, mais beaucoup moins fréquentée. Pour faire un balade très sympa le long d’une ligne de crête dans des paysages somptueux et avec beaucoup moins de monde qu’à Bryce (vous serez sans doute seul sur ce sentier), rejoignez le Red Canyon Campground (entrée localisée sur votre carte), et rejoignez le parking à côté du bloc sanitaire dans la boucle Est du camping (à gauche quand vous entrez dans le camping). Garez-vous et lancez-vous sur le Buckhorn Trail, un sentier d’un kilomètre et demi environ, avec un dénivelé important au début (donc 3km aller retour, comptez une heure, une heure et demie en fonction du temps passé sur le panorama en fin de sentier). Toute la deuxième moitié de la balade se fait sur un sentier qui longe une crête, dans des paysages absolument somptueux et déserts. Ce passage peut être impressionnant pour des personnes sujettes au vertige, même s’il n’y a pas de danger particulier.
-
-Au bout de la balade, un promontoire rocheux offre un panorama à 360 degrés sur le Red Canyon et Bryce Canyon un peu plus loin. La balade est vraiment sympa, les paysages sont magnifiques et la fréquentation minimale.
-
 Puis reprenez votre véhicule et prenez la direction de Hatch puis Orderville.
 
 Selon l’heure, vous pouvez marquer une pause déjeuner à Hatch :
@@ -63,16 +49,6 @@ Vous traversez alors une région rocheuse magnifique et emprunterez une des rout
 ### Balade sur le Many Pools Trail (vivement conseillée)
 
 Cette première balade magnifique et hors des sentiers battus se situe environ 5km après la East Entrance Ranger Station. Vous trouverez sur votre gauche un petit parking (localisation exacte indiquée sur votre carte). De là, vous longerez la route à pieds en continuant pendant une centaine de mètres, et sur votre gauche, trouverez un petit sentier qui descend de façon abrupte en contrebas. De là, suivez, en le remontant, le petit cours d’eau non permanent qui remplit périodiquement de petites “potholes”, des petites mares ou piscines qui ponctuent le sentier. Remontez autant que vous le souhaitez : le paysage est juste époustouflant et généralement vous êtes seuls au monde dans cette portion du parc non balisée. Comptez une petite heure maximum pour cet arrêt, moins si vous n’allez pas jusqu’en haut.
-
-### Exploration du Pine Creek Canyon et du Hanging Gardens Slot Canyon (vous n’aurez sans doute pas le temps)
-
-Environ 1 miles après le parking du Many Pools Trail, vous passerez sous un court tunnel. Juste après le tunnel, vous pouvez vous arrêter sur un “parking” sur votre gauche. De là, un petit sentier descend dans le canyon en contrebas où s’écoule par intermittence la Pine Creek, un petit cours d’eau alimenté par les précipitations mais le plus souvent à sec. Une fois que vous avez rejoint la Pine Creek et le canyon principal, vous pouvez explorer le canyon qui longe la route 9 en partant soit sur la droite soit sur la gauche.
-
-Si vous partez sur la gauche, environ 250-300 mètres après la bifurcation, sur votre droite, un canyon secondaire s’enfonce profondément dans la falaise. On peut aisément le manquer, car il est rempli d’arbres et de végétation qui en masque l’entrée, et gène la progression dans le canyon. C’est le Hanging Gardens Slot Canyon, un canyon très étroit comme on en trouve beaucoup dans l’Ouest Américain, mais rarement avec de la végétation et des arbres comme ici. N’hésitez pas à l’explorer également.
-
-![](/photos/image175.png)
-
-Par contre n’entrez pas dans ces canyons s’il y a de l’eau courante dans les cours d’eau, ou si le temps est à l’orage, car les canyons sont dangereux en cas de crue éclair (flash flood) qui peuvent faire monter le niveau de l’eau en très peu de temps.
 
 Puis continuez en voiture en direction du Zion-Mount Carmel Tunnel.
 
