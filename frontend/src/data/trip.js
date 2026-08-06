@@ -182,8 +182,8 @@ export const DAYS = [
   },
   {
     id: 10, date: "Jeudi 6 Août",
-    resume: "Balade les pieds dans l'eau dans le slot canyon inondé de la Kanarra Creek avec franchissement de 2 cascades - puis route pour Las Vegas.",
-    location: "Kanarra Creek / Las Vegas",
+    resume: "Route pour Las Vegas.",
+    location: "Las Vegas",
     image: "/photos/day10.png",
     gallery: ["/photos/day10.png", "/photos/day10/image115.png", "/photos/day10/image166.png", "/photos/day10/image188.png", "/photos/day10/image214.png", "/photos/day10/image224.png", "/photos/day10/image241.png", "/photos/day10/image242.png", "/photos/day10/image39.png", "/photos/day10/image73.png"],
     story: "Pour cette dernière matinée dans les parcs du Colorado, exploration du slot canyon inondé de la Kanarra Creek (réservation obligatoire). Prenez la I15 direction Cedar City, sortie 51 vers Kanarraville. La balade se fait littéralement les pieds dans l'eau, avec 2 franchissements de cascades aménagées d'échelles. Un moment magique et rafraîchissant. Puis route vers Las Vegas (env. 3h) : arrivée en fin d'après-midi, installation à l'hôtel Park MGM sur le Strip, puis premier contact avec les néons de la ville la nuit tombée.",
@@ -199,7 +199,7 @@ export const DAYS = [
       R("Vickie's Diner", "Table service", "Petit diner girly super sympa pour un bon breakfast américain.", "953 E Sahara Ste A-2, Las Vegas"),
       R("Denny's", "Table service", "Diner américain 24h/24, Value Menu intéressant.", "3397 S Las Vegas Blvd, Las Vegas"),
     ],
-    places: ["Kanarra Creek", "Kanarra Falls", "Route I-15", "Las Vegas Strip"],
+    places: ["Route I-15", "Las Vegas Strip"],
   },
   {
     id: 11, date: "Vendredi 7 Août",
