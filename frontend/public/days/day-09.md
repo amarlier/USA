@@ -46,12 +46,6 @@ Rejoignez la East Entrance Ranger Station, qui marque l’entrée Est du parc na
 
 Vous traversez alors une région rocheuse magnifique et emprunterez une des routes les plus scéniques de l’Ouest Américain, sur laquelle de nombreux arrêts sont possibles, notamment le Zion Canyon Overlook Trail, le Many Pools Trail, le Shelf Canyon ou l’exploration du Pine Creek Canyon et du Hanging Gardens Slot Canyon.
 
-### Balade sur le Many Pools Trail (vivement conseillée)
-
-Cette première balade magnifique et hors des sentiers battus se situe environ 5km après la East Entrance Ranger Station. Vous trouverez sur votre gauche un petit parking (localisation exacte indiquée sur votre carte). De là, vous longerez la route à pieds en continuant pendant une centaine de mètres, et sur votre gauche, trouverez un petit sentier qui descend de façon abrupte en contrebas. De là, suivez, en le remontant, le petit cours d’eau non permanent qui remplit périodiquement de petites “potholes”, des petites mares ou piscines qui ponctuent le sentier. Remontez autant que vous le souhaitez : le paysage est juste époustouflant et généralement vous êtes seuls au monde dans cette portion du parc non balisée. Comptez une petite heure maximum pour cet arrêt, moins si vous n’allez pas jusqu’en haut.
-
-Puis continuez en voiture en direction du Zion-Mount Carmel Tunnel.
-
 ### Balade du Zion Canyon Overlook Trail (conseillé si vous avez le temps et qu’il n’y a pas trop de monde)
 
 Juste à l'entrée du Zion-Mount Carmel Tunnel, vous pouvez vous arrêter sur un petit parking immédiatement sur votre gauche, afin de faire la courte mais magnifique balade du Zion Canyon Overlook qui vous offrira un point de vue saisissant sur le Zion Canyon. Attention, le parking est souvent plein car il y a très peu de places. Vous pouvez attendre qu’une place se libère, ou vous garer sur un second parking, environ 160 mètres avant le tunnel sur la droite (mais dans ce cas, faites TRES attention en rejoignant à pieds le départ du sentier car vous longerez la route et les touristes regardent souvent plus le paysage que la route et les piétons).
@@ -59,14 +53,6 @@ Juste à l'entrée du Zion-Mount Carmel Tunnel, vous pouvez vous arrêter sur un
 La balade démarre de l’autre côté de la route par rapport au parking principal, juste à gauche du tunnel. La balade est assez courte : comptez 20 minutes à une demi-heure en tout. Elle peut être impressionnante pour des personnes ayant le vertige car un court passage est à flanc de falaise, mais avec des protections. Lorsque vous serez au point de vue panoramique, regardez bien l’immense falaise sur votre gauche : c’est dans cette falaise qu’est creusée l’incroyable tunnel que vous avez emprunté.
 
 Le seul défaut de cette balade est qu’il peut y avoir beaucoup de monde en saison.
-
-### Exploration du Shelf Canyon (vivement conseillé)
-
-Au niveau du deuxième parking évoqué ci-dessus, descendez dans le canyon qui donne directement sur ce parking (il y a normalement deux chemins d’accès, plus ou moins accidentés, un directement au niveau du parking, et un 50 mètres plus bas le long de la route, sans doute plus simple d’accès).
-
-Puis remontez ce splendide canyon vers le nord, canyon qui va progressivement se resserrer pour devenir un slot canyon, un canyon très étroit. Il n’est pas rare qu’il y ait de la boue voire de l’eau, mais jamais très profond, et uniquement sur de courtes distances. Il faut un peu escalader pour progresser (rien de bien sorcier). La section étroite est magnifique, ainsi que le reste du canyon d’une manière générale.
-
-Une petite exploration vraiment sympa, pas trop difficile, et relativement courte (comptez moins d’une heure aller et retour).
 
 ### Zion-Mount Carmel Tunnel
 
@@ -76,17 +62,6 @@ Les travaux de construction prirent 3 ans, entre 1927 et 1930. La taille du tunn
 
 Puis à la sortie du Zion-Mount Carmel Tunnel, continuez sur la highway 9 vers l’ouest. La Zion-Mount Carmel Highway s’achève après le point par une portion en lacet pour descendre depuis la sortie du tunnel qui traverse la falaise du Zion Canyon.
 
-### Baignade et Cliff Jumping dans un swimming hole
-
-Si vous souhaitez vous rafraîchir avant de poursuivre votre chemin, nous vous proposons de vous arrêter sur un de ces lacets pour rejoindre un très joli swimming hole, une zone de retenue d’eau sur la Pine Creek qui crée un piscine naturelle où il est également possible de sauter depuis de hauts rochers. Cet arrêt est évidemment plus approprié en été, quand il fait très chaud dans le canyon.
-
-Au niveau du 4ème virage (le point exact est sur votre carte), garez-vous sur le parking juste à l’entrée du virage sur votre gauche. Traversez la route avec beaucoup de précaution jusqu’au parapet qui sépare la route d’un petit précipice. Longez le parapet vers la gauche et passez de l’autre côté du parapet à son extrémité, puis longez le dans l’autre sens jusqu’à un petit sentier qui descend de façon abrupte dans le canyon. En 5-10 minutes, vous atteindrez la Pine Creek, une petite rivière, et une retenue d’eau suffisamment importante pour qu’on puisse s’y baigner. L’emplacement exact est sur votre carte.
-
-![](/photos/image48.png)
-
-![](/photos/image124.png)
-
-Vous pouvez sauter depuis les rochers (Cliff Jumping), mais avant, il est impératif de descendre dans le swimming hole et de bien sonder le fond pour savoir où le niveau de l’eau est suffisamment important, et s’il n’y a pas d’obstacle cachés (racines, tronc d’arbre, rocher) sous le niveau de l’eau. Généralement, il y a toujours d’autres nageurs déjà installés et des personnes qui sautent : vous pouvez alors sauter là où ils sautent et prendre exemple sur eux. Sauter toujours les deux pieds en avant, ne pas plonger la tête la première.
 
 Puis rejoignez Springdale en sortant du Zion National Park et continuez en direction de La Verkin puis St George.
 
@@ -98,42 +73,9 @@ Partez découvrir le cimetière de la ville fantôme de Grafton. Juste après Sp
 
 Le reste de la ville fantôme ne comporte que quelques bâtiments, dont la plupart sur des propriétés privées. Certains sont d’époque, d’autres furent reconstruits lorsque le site servit de décor pour le tournage du western classique Butch Cassidy and the Sundance Kid avec Paul Newman et Robert Redford. La petite bourgade fondée 1859 par des pionniers Mormons n’a jamais hébergé plus de 20 ou 30 familles et était déjà quasiment entièrement désertée au début du XXème siècle.
 
-### Fort Zion (localisé à 20 minutes après Springdale)
-
-Roadside attraction western et animalière :
-
 Enfin rejoignez St George et votre hôtel :
 
 Votre hôtel
 
 ### St George
-
-Sur St George, vous pouvez aller grimper dans les boulders de granite du Pioneer Park qui domine la ville. Vous y trouverez un petit slot canyon, les St George Narrows (emplacement exact sur votre carte).
-
-Vous pouvez aussi passer au Pioneer Courthouse Visitor Center and Museum, un petit musée gratuit (mais donation acceptée) logé dans l’ancien tribunal de la ville, et qui rassemble des centaines d’objets historiques racontant l’histoire de la colonisation de la région par les Mormons. C’est très bien fait, on y apprend beaucoup de choses et des volontaires très sympathiques vous guideront au besoin dans le petit musée et répondront à vos questions.
-
-Vous pouvez aussi visiter un site de fouille paléontologique, qui recèle notamment des impressionnantes empreintes de pas de dinosaures :
-
-Juste à côté se trouve le Slick Rock Park, un petit parc municipal, où l’on trouve des rochers artificiels pour faire de l’escalade. Très sympa :
-
-### Découverte du C-A-L Ranch Store
-
-Profitez également du passage par St George pour vous arrêter au C-A-L Ranch Store : ce magasin de fourniture d’équipement agricole est juste incroyable, que ce soit au niveau du rayon vêtement où vous pouvez acheter l’attirail intégral du parfait cow boy, qu’au niveau du rayon des armes à feu etc…
-
-C-A-L Ranch Store
-
-2849 E 850 N St, St. George, UT 84790
-
-### Suggestion de restaurants à St George
-
-Si vous n’avez jamais eu l’occasion de manger au Cracker Barrel sur votre parcours, n’hésitez pas à vous arrêter à celui de St George. C’est une de nos valeurs sûres et de nos chaînes préférées aux Etats-Unis :
-
-![](/photos/image224.png)
-
-Pour un arrêt plus rapide, en mode fast food, ou pour manger une glace en passant,  le Freddy’s est également une enseigne que nous apprécions particulièrement :
-
-Autres options pour manger sur St George :
-
-Et pour faire des courses, deux Walmarts :
-
 * Nuit à St George
